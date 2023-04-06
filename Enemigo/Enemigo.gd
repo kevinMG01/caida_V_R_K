@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var cantidad = 50
+var cantidad = 130
 var movimiento = Vector2()
 
 var jugador = null
@@ -18,7 +18,7 @@ func _physics_process(delta):
 	#else:
 	#	movimiento = Vector2()
 	
-	movimiento = movimiento.normalized()* cantidad
+	#movimiento = movimiento.normalized()* cantidad
 	movimiento = move_and_slide(movimiento)
 		
 func deteccion():

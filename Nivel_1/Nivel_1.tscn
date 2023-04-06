@@ -6,11 +6,14 @@
 
 [node name="Nivel_1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 500, 257 )
-
 [node name="Enemigo" parent="." instance=ExtResource( 3 )]
-position = Vector2( 142, 409 )
+position = Vector2( 954, 405 )
+
+[node name="Enemigo2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 36, 1334 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 472, -257 )
 
 [node name="suelo" parent="." instance=ExtResource( 2 )]
-position = Vector2( -12, 557 )
+position = Vector2( 17, 2083 )

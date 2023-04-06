@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 
-var cantidad = 90
+var cantidad = 150
 var movimiento = Vector2()
 
-var gravedad = 5
+var gravedad = 0.05
 
 func _physics_process(delta):
 	move()
