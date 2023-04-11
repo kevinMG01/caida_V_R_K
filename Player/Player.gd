@@ -4,12 +4,14 @@ extends KinematicBody2D
 var cantidad = 150
 var movimiento = Vector2()
 
-var gravedad = 0.05
-
+var gravedad = 70
+var masa = 2
+	
 func _physics_process(delta):
 	move()
+	
 	movimiento = move_and_slide(movimiento)
-	movimiento.y = movimiento.y + gravedad
+	movimiento.y = gravedad * masa
 	#movimiento = movimiento.normalized()* cantidad
 	pass
 

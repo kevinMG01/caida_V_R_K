@@ -1,19 +1,45 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://suelo/suelo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Enemigo/Enemigo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Nivel_1/Nivel_1.gd" type="Script" id=4]
 
 [node name="Nivel_1" type="Node2D"]
-
-[node name="Enemigo" parent="." instance=ExtResource( 3 )]
-position = Vector2( 954, 405 )
-
-[node name="Enemigo2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 36, 1334 )
+script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 472, -257 )
+position = Vector2( 471, -257 )
 
-[node name="suelo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 17, 2083 )
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Enemigo" parent="Enemigos" instance=ExtResource( 3 )]
+position = Vector2( 1014, 401 )
+
+[node name="Enemigo2" parent="Enemigos" instance=ExtResource( 3 )]
+position = Vector2( 36, 1158 )
+
+[node name="Enemigo3" parent="Enemigos" instance=ExtResource( 3 )]
+position = Vector2( 913, 1856 )
+
+[node name="Enemigo4" parent="Enemigos" instance=ExtResource( 3 )]
+position = Vector2( 22, 2591 )
+
+[node name="Enemigo5" parent="Enemigos" instance=ExtResource( 3 )]
+position = Vector2( 915, 3386 )
+
+[node name="Pared" type="Node" parent="."]
+
+[node name="suelo" parent="Pared" instance=ExtResource( 2 )]
+position = Vector2( 6, 3978 )
+
+[node name="suelo4" parent="Pared" instance=ExtResource( 2 )]
+position = Vector2( 6, -457 )
+
+[node name="suelo2" parent="Pared" instance=ExtResource( 2 )]
+position = Vector2( -131, 282 )
+scale = Vector2( 0.1, 110 )
+
+[node name="suelo3" parent="Pared" instance=ExtResource( 2 )]
+position = Vector2( 989, 316 )
+scale = Vector2( 0.1, 110 )
