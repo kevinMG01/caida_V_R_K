@@ -12,7 +12,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 17.0
+radius = 30.4138
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -23,7 +23,3 @@ animation = "move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, 116 )
-current = true
