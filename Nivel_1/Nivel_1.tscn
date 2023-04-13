@@ -9,7 +9,7 @@
 script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 471, -333 )
+position = Vector2( 471, -493 )
 
 [node name="minimo" type="Position2D" parent="Player" groups=["min"]]
 position = Vector2( -471, -304 )
@@ -18,7 +18,7 @@ position = Vector2( -471, -304 )
 position = Vector2( 632, 4231 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( 0, 64 )
+position = Vector2( 0, 86 )
 current = true
 limit_left = 0
 limit_right = 1100
@@ -27,19 +27,19 @@ limit_bottom = 4000
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="Enemigo" parent="Enemigos" instance=ExtResource( 3 )]
-position = Vector2( 1014, 401 )
+position = Vector2( 935, 401 )
 
 [node name="Enemigo2" parent="Enemigos" instance=ExtResource( 3 )]
-position = Vector2( 36, 1158 )
+position = Vector2( 70, 1158 )
 
 [node name="Enemigo3" parent="Enemigos" instance=ExtResource( 3 )]
-position = Vector2( 913, 1856 )
+position = Vector2( 917, 1856 )
 
 [node name="Enemigo4" parent="Enemigos" instance=ExtResource( 3 )]
-position = Vector2( 22, 2591 )
+position = Vector2( 72, 2566 )
 
 [node name="Enemigo5" parent="Enemigos" instance=ExtResource( 3 )]
-position = Vector2( 915, 3386 )
+position = Vector2( 905, 3316 )
 
 [node name="Pared" type="Node" parent="."]
 

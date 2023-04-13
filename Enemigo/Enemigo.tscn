@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Enemigo/Enemigo.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -7,7 +7,10 @@
 radius = 19.4165
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 962, 275.391 )
+extents = Vector2( 962, 206 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 968, 271.5 )
 
 [node name="Enemigo" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -22,8 +25,16 @@ texture = ExtResource( 2 )
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 63, -111.609 )
+position = Vector2( 63, -181 )
 shape = SubResource( 2 )
+
+[node name="abajo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="abajo"]
+position = Vector2( 57, 297.5 )
+shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="abajo" to="." method="_on_abajo_body_entered"]
+[connection signal="body_exited" from="abajo" to="." method="_on_abajo_body_exited"]
