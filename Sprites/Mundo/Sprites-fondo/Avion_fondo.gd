@@ -2,15 +2,15 @@ extends KinematicBody2D
 
 
 var movimiento = Vector2()
-var velocity = 20
-var cantidad = 900
+var velocity = 30
+var cantidad = 800
 var distancia = 200
 var comensar = false
 var caminar = false
 
 #rotacion
 var speed = 0.08
-var comenzar_rot = false
+var comenzar_area = false
 
 
 func _ready():
@@ -21,7 +21,8 @@ func _ready():
 
 
 func _physics_process(delta):
-	move()
+	if comenzar_area == true:
+		move()
 	movimiento = move_and_slide(movimiento)
 	movimiento.x = lerp(movimiento.x,0,0.21)
 	
@@ -39,7 +40,6 @@ func move():
 		if caminar == false:
 			movimiento.x += velocity
 			cantidad -= 1
-			print(cantidad)
 			if cantidad == 0:
 				caminar = true
 		if caminar == true:
@@ -52,6 +52,7 @@ func move():
 	pass
 
 
+
 #func _on_Area2D_body_entered(body):
 #	if body.get_name() == "Player_l":
 #		global_Var.vida -= 1
@@ -61,3 +62,9 @@ func move():
 #		global_Var.vida -= 1
 #		global_Var.cantidad_j_2 = 0
 #		body.queue_free()
+
+
+func _on_Area2D_body_entered(body):
+	if body.get_name() == "Player":
+		comenzar_area = true
+		pass
