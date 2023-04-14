@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://suelo/suelo.tscn" type="PackedScene" id=2]
@@ -7,11 +7,20 @@
 [ext_resource path="res://Sprites/Mundo/Sprites-fondo/Avion_fondo.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Mundo/fondo.jpeg" type="Texture" id=6]
 [ext_resource path="res://Sprites/Mundo/meta.jpeg" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=8]
 
 [node name="Nivel_1" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Fondo" type="Node2D" parent="."]
+
+[node name="Fondo4" type="Sprite" parent="Fondo"]
+position = Vector2( 582, -814 )
+texture = ExtResource( 6 )
+
+[node name="Fondo5" type="Sprite" parent="Fondo"]
+position = Vector2( -693, -810 )
+texture = ExtResource( 6 )
 
 [node name="Fondo" type="Sprite" parent="Fondo"]
 position = Vector2( 580, -84 )
@@ -45,7 +54,6 @@ position = Vector2( 471, -493 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 0, 86 )
-current = true
 limit_left = 0
 limit_right = 1100
 limit_bottom = 4000
@@ -79,3 +87,12 @@ position = Vector2( 7, 2453 )
 
 [node name="Enemigo5" parent="Enemigos1" instance=ExtResource( 3 )]
 position = Vector2( 1109, 3268 )
+
+[node name="Avion_negro2" type="Node2D" parent="."]
+position = Vector2( -580, 60 )
+
+[node name="Avion_negro" parent="Avion_negro2" instance=ExtResource( 8 )]
+position = Vector2( -236, -1188 )
+
+[node name="Camera_avion" type="Camera2D" parent="Avion_negro2/Avion_negro"]
+current = true

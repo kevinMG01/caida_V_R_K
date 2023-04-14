@@ -1,16 +1,14 @@
 extends Node2D
 
+var spawn_1 = true
+var player_1 = preload("res://Player/Player.tscn")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-#	get_tree().get_nodes_in_group("camara")[0].set_limit(MARGIN_LEFT, get_tree().get_nodes_in_group("min")[0].get_pos().x)
-#	get_tree().get_nodes_in_group("camara")[0].set_limit(MARGIN_TOP, get_tree().get_nodes_in_group("min")[0].get_pos().y)
-#	get_tree().get_nodes_in_group("camara")[0].set_limit(MARGIN_RIGHT, get_tree().get_nodes_in_group("max")[0].get_pos().x)
-#	get_tree().get_nodes_in_group("camara")[0].set_limit(MARGIN_BOTTOM, get_tree().get_nodes_in_group("max")[0].get_pos().y)
-	pass
-	
+func spawn_player():
+	if spawn_1 == true:
+		var newplayer = player_1.instance()
+		add_child(newplayer)
+		newplayer.global_position = get_tree().get_nodes_in_group("spawn_1")[0].global_position
+		spawn_1 = false
+		#if global_Var.comensar:
+		#	spawn_1 = true
+		#	global_Var.cantidad = 1
