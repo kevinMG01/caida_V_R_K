@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/avion-blanco.png-902054b7c2ab14c5b7bda4f96c9ac18e.stex"
+path="res://.import/avion-blanco.png-a30f12241f1a76b8cb2eb2e5ac260d87.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Mundo/avion-blanco.png"
-dest_files=[ "res://.import/avion-blanco.png-902054b7c2ab14c5b7bda4f96c9ac18e.stex" ]
+source_file="res://Sprites/Mundo/Sprites-fondo/avion-blanco.png"
+dest_files=[ "res://.import/avion-blanco.png-a30f12241f1a76b8cb2eb2e5ac260d87.stex" ]
 
 [params]
 

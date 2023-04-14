@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/avion-blan.png-54cbb630b222891c3175bc30451feecb.stex"
+path="res://.import/avion-blan.png-2b5701c3d87374765eb82bdd97e8d412.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Mundo/avion-blan.png"
-dest_files=[ "res://.import/avion-blan.png-54cbb630b222891c3175bc30451feecb.stex" ]
+source_file="res://Sprites/Mundo/Sprites-fondo/avion-blan.png"
+dest_files=[ "res://.import/avion-blan.png-2b5701c3d87374765eb82bdd97e8d412.stex" ]
 
 [params]
 
