@@ -14,17 +14,9 @@ var nivel = 1
 
 func _physics_process(delta):
 	movimiento = Vector2()
-	if nivel == 1:
-		deteccion()
+	deteccion()
 	if nivel == 2:
 		deteccion_seguir()
-	
-	#if jugador != null:
-	#	movimiento = position.direction_to(jugador.position)
-	#else:
-	#	movimiento = Vector2()
-	
-	#movimiento = movimiento.normalized()* cantidad
 	movimiento = move_and_slide(movimiento)
 		
 func deteccion():
@@ -33,8 +25,6 @@ func deteccion():
 			movimiento.x -= cantidad
 		if global_position.x < jugador.global_position.x - 6:
 			movimiento.x += cantidad
-		if global_position.y < jugador.global_position.x - 6:
-			movimiento.y += cantidad
 
 func deteccion_seguir():
 	
