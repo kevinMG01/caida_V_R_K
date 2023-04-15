@@ -40,17 +40,9 @@ func deteccion_seguir():
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
 		jugador = body
-		
-		
-
 
 func _on_Area2D_body_exited(body):
 	jugador = null
-	pass # Replace with function body.
-
-
-
-
 
 func _on_abajo_body_entered(body):
 	if body.get_name() == "Player":
@@ -58,3 +50,5 @@ func _on_abajo_body_entered(body):
 
 func _on_abajo_body_exited(body):
 	jugador_abajo = null
+
+
