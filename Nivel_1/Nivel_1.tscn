@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://suelo_fin_nivel/suelo_fin_nivel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://suelo/suelo.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Sprites/Mundo/fondo.jpeg" type="Texture" id=6]
 [ext_resource path="res://Sprites/Mundo/meta.jpeg" type="Texture" id=7]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/Mundo/Avion_fondo_izquierda/Avion_fondo_izquierda.tscn" type="PackedScene" id=9]
 
 [node name="Nivel_1" type="Node2D"]
 script = ExtResource( 4 )
@@ -49,6 +50,20 @@ position = Vector2( 55, 1181 )
 [node name="Avion_fondo3" parent="Avion_fondo_derecha" instance=ExtResource( 5 )]
 position = Vector2( 25, 2550 )
 
+[node name="avion_fondo_izquierda" type="Node2D" parent="."]
+
+[node name="Avion_fondo_izquierda" parent="avion_fondo_izquierda" instance=ExtResource( 9 )]
+position = Vector2( 1079, 344 )
+
+[node name="Avion_fondo_izquierda2" parent="avion_fondo_izquierda" instance=ExtResource( 9 )]
+position = Vector2( 1079, 904 )
+
+[node name="Avion_fondo_izquierda3" parent="avion_fondo_izquierda" instance=ExtResource( 9 )]
+position = Vector2( 1067, 1636 )
+
+[node name="Avion_fondo_izquierda4" parent="avion_fondo_izquierda" instance=ExtResource( 9 )]
+position = Vector2( 1075, 2908 )
+
 [node name="Pared" type="Node" parent="."]
 
 [node name="suelo" parent="Pared" instance=ExtResource( 2 )]
@@ -56,11 +71,11 @@ position = Vector2( -31, 3978 )
 scale = Vector2( 1.2, 1 )
 
 [node name="suelo2" parent="Pared" instance=ExtResource( 2 )]
-position = Vector2( -84, 551 )
+position = Vector2( -84, 492 )
 scale = Vector2( 0.1, 130 )
 
 [node name="suelo3" parent="Pared" instance=ExtResource( 2 )]
-position = Vector2( 1099, 554 )
+position = Vector2( 1099, 491 )
 scale = Vector2( 0.1, 130 )
 
 [node name="Enemigos1" type="Node2D" parent="."]

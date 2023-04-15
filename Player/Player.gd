@@ -35,10 +35,10 @@ func move():
 	movimiento.x = 0
 	if Input.is_action_pressed("ui_left"):
 		movimiento.x -= cantidad
-	
+		$AnimatedSprite.flip_h = true
 	if Input.is_action_pressed("ui_right"):
 		movimiento.x += cantidad
-	
+		$AnimatedSprite.flip_h = false
 func move_pawer_up():
 	movimiento.x = 0
 	if Input.is_action_pressed("ui_left"):
