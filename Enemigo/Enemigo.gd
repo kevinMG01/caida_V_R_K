@@ -50,5 +50,3 @@ func _on_abajo_body_entered(body):
 
 func _on_abajo_body_exited(body):
 	jugador_abajo = null
-
-
