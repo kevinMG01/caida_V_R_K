@@ -6,6 +6,7 @@ var player_1 = preload("res://Player/Player.tscn")
 
 func _physics_process(delta):
 	spawn_player()
+	#no
 	pass
 	
 
