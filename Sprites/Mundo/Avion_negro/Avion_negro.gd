@@ -4,7 +4,7 @@ extends KinematicBody2D
 
 var movimiento = Vector2()
 var velocity = 30
-var cantidad = 900
+var cantidad = 1000
 var distancia = 200
 var comensar = false
 var caminar = false
@@ -35,12 +35,18 @@ func move():
 		if caminar == false:
 			movimiento.x += velocity
 			cantidad -= 1
+			if cantidad <= 400:
+				global_Var.camara_avion_apagado = false
+				$Camera2D.current = false
 			if cantidad == 0:
+				self.queue_free()
 				caminar = true
+				
+
 		if caminar == true:
 			movimiento.x -= velocity
 			cantidad += 1
-			if cantidad == 200:
+			if cantidad == 900:
 				caminar = false
 			pass
 	

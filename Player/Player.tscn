@@ -32,3 +32,9 @@ shape = SubResource( 2 )
 [node name="paracaidas" type="CollisionShape2D" parent="."]
 position = Vector2( -1.5, -28 )
 shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_right = 1100
+limit_bottom = 4000
