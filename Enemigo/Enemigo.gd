@@ -4,19 +4,20 @@ extends KinematicBody2D
 var cantidad = 200
 var movimiento = Vector2()
 
+
 var jugador = null
 
-var jugador_abajo = null
-var cantidad_abajo = 180
 
-var nivel = 1
+var jugador_abajo = null
+var cantidad_abajo = 110
+
 
 
 func _physics_process(delta):
 	movimiento = Vector2()
-	deteccion()
-	if nivel == 2:
+	if global_Var.deteccion_enemigo == true:
 		deteccion_seguir()
+	deteccion()
 	movimiento = move_and_slide(movimiento)
 		
 func deteccion():
@@ -32,10 +33,10 @@ func deteccion_seguir():
 		movimiento = position.direction_to(jugador_abajo.position)
 	else:
 		movimiento = Vector2()
-	
 	movimiento = movimiento.normalized()* cantidad_abajo
-	
-	pass
+
+
+
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
