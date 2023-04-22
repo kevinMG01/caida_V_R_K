@@ -31,7 +31,7 @@ shape = SubResource( 2 )
 [node name="abajo" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="abajo"]
-position = Vector2( 1, 297.5 )
+position = Vector2( 11, 403.5 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -9,7 +9,7 @@ var jugador = null
 
 
 var jugador_abajo = null
-var cantidad_abajo = 110
+var cantidad_abajo = 180
 
 
 
