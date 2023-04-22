@@ -39,15 +39,13 @@ func deteccion_seguir():
 func _on_lateral_body_entered(body):
 	if body.get_name() == "Player":
 		jugador = body
-		
+
 func _on_lateral_body_exited(body):
 	jugador = null
-
 
 func _on_abajo_body_entered(body):
 	if body.get_name() == "Player":
 		jugador_abajo = body
-
 
 func _on_abajo_body_exited(body):
 	jugador_abajo = null
