@@ -1,63 +1,53 @@
 extends KinematicBody2D
 
 
-var movimiento = Vector2()
-var velocity = 20
 var cantidad = 200
-var distancia = 100
-var comensar = false
-var caminar = false
-
-#rotacion
-var speed = 0.08
-var comenzar_rot = false
+var movimiento = Vector2()
 
 
-func _ready():
-	comensar = true
-	comenzar_rot = true
-	pass 
+var jugador = null
+
+
+var jugador_abajo = null
+var cantidad_abajo = 180
+
 
 
 func _physics_process(delta):
-	move()
+	movimiento = Vector2()
+	if global_Var.deteccion_enemigo == true:
+		deteccion_seguir()
+	deteccion()
 	movimiento = move_and_slide(movimiento)
-	movimiento.x = lerp(movimiento.x,0,0.21)
-	
-	
-	if comenzar_rot == true:
-		get_node("CollisionShape2D").rotate(speed)
-	if comenzar_rot == true:
-		get_node("Sprite").rotate(speed)
-	pass
-
-func move():
-#	var cantidad = 5
-	if comensar == true:
 		
-		if caminar == false:
-			movimiento.x += velocity
-			cantidad -= 1
-			print(cantidad)
-			if cantidad == 0:
-				caminar = true
-		if caminar == true:
-			movimiento.x -= velocity
-			cantidad += 1
-			if cantidad == 200:
-				caminar = false
-			pass
+func deteccion():
+	if jugador != null:
+		if global_position.x > jugador.global_position.x + 6:
+			movimiento.x -= cantidad
+		if global_position.x < jugador.global_position.x - 6:
+			movimiento.x += cantidad
+
+func deteccion_seguir():
 	
-	pass
+	if jugador_abajo != null:
+		movimiento = position.direction_to(jugador_abajo.position)
+	else:
+		movimiento = Vector2()
+	movimiento = movimiento.normalized()* cantidad_abajo
 
 
-#func _on_Area2D_body_entered(body):
-#	if body.get_name() == "Player_l":
-#		global_Var.vida -= 1
-#		global_Var.cantidad = 0
-#		body.queue_free()
-#	if body.get_name() == "Player_ll":
-#		global_Var.vida -= 1
-#		global_Var.cantidad_j_2 = 0
-#		body.queue_free()
+func _on_lateral_body_entered(body):
+	if body.get_name() == "Player":
+		jugador = body
+		
+func _on_lateral_body_exited(body):
+	jugador = null
 
+
+func _on_abajo_body_entered(body):
+	if body.get_name() == "Player":
+		jugador_abajo = body
+
+
+func _on_abajo_body_exited(body):
+	jugador_abajo = null
