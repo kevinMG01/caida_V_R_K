@@ -9,14 +9,13 @@ var jugador = null
 
 
 var jugador_abajo = null
-var cantidad_abajo = 180
+var cantidad_abajo = 170
 
 
 
 func _physics_process(delta):
 	movimiento = Vector2()
-	if global_Var.deteccion_enemigo == true:
-		deteccion_seguir()
+	deteccion_seguir()
 	deteccion()
 	movimiento = move_and_slide(movimiento)
 		
@@ -49,3 +48,4 @@ func _on_abajo_body_entered(body):
 
 func _on_abajo_body_exited(body):
 	jugador_abajo = null
+
