@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Nivel_4/Nivel_4.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/fondo.jpeg" type="Texture" id=2]
 [ext_resource path="res://Sprites/Mundo/meta.jpeg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemigo/Enemigo_Ave/Enemigo_Ave.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -56,7 +58,14 @@ texture = ExtResource( 2 )
 
 [node name="Enemigo_normal" type="Node2D" parent="."]
 
+[node name="Enemigo" parent="Enemigo_normal" instance=ExtResource( 6 )]
+position = Vector2( 1098, -5459 )
+
 [node name="Enemigo_Ave" type="Node2D" parent="."]
+position = Vector2( 16, -36 )
+
+[node name="Enemigo_Ave" parent="Enemigo_Ave" instance=ExtResource( 5 )]
+position = Vector2( 18, -6323 )
 
 [node name="Pared" type="Node2D" parent="."]
 
