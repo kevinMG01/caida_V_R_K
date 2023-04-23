@@ -7,8 +7,7 @@ var player_1 = preload("res://Player/Player.tscn")
 func _physics_process(delta):
 	spawn_player()
 	
-	pass
-	
+
 
 func spawn_player():
 	if global_Var.camara_avion_apagado == false:
