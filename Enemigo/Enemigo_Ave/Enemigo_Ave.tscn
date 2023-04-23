@@ -20,7 +20,7 @@ extents = Vector2( 1284, 123.5 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 1290, 160.25 )
 
-[node name="Enemigo_Ave" type="KinematicBody2D"]
+[node name="Enemigo_Ave" type="KinematicBody2D" groups=["enemigo_ave"]]
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
