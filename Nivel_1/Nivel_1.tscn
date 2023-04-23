@@ -74,7 +74,7 @@ scale = Vector2( 0.1, 70 )
 [node name="Enemigos1" type="Node2D" parent="."]
 
 [node name="Enemigo4" parent="Enemigos1" instance=ExtResource( 7 )]
-position = Vector2( 7, 2453 )
+position = Vector2( -5, 2133 )
 
 [node name="Enemigo5" parent="Enemigos1" instance=ExtResource( 7 )]
 position = Vector2( 1109, 3268 )

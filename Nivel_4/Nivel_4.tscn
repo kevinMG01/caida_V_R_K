@@ -1,3 +1,13 @@
 [gd_scene format=2]
 
 [node name="Nivel_4" type="Node2D"]
+
+[node name="Fondo" type="Node2D" parent="."]
+
+[node name="Enemigo_normal" type="Node2D" parent="."]
+
+[node name="Enemigo_Ave" type="Node2D" parent="."]
+
+[node name="Pared" type="Node2D" parent="."]
+
+[node name="Avion_negro" type="Node2D" parent="."]
