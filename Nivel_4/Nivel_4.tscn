@@ -59,13 +59,40 @@ texture = ExtResource( 2 )
 [node name="Enemigo_normal" type="Node2D" parent="."]
 
 [node name="Enemigo" parent="Enemigo_normal" instance=ExtResource( 6 )]
-position = Vector2( 1098, -5459 )
+position = Vector2( 706, -5402 )
+
+[node name="Enemigo2" parent="Enemigo_normal" instance=ExtResource( 6 )]
+position = Vector2( 573, -2425 )
+
+[node name="Enemigo3" parent="Enemigo_normal" instance=ExtResource( 6 )]
+position = Vector2( 88, -598 )
+
+[node name="Enemigo4" parent="Enemigo_normal" instance=ExtResource( 6 )]
+position = Vector2( 1239, -179 )
 
 [node name="Enemigo_Ave" type="Node2D" parent="."]
 position = Vector2( 16, -36 )
 
 [node name="Enemigo_Ave" parent="Enemigo_Ave" instance=ExtResource( 5 )]
 position = Vector2( 18, -6323 )
+
+[node name="Enemigo_Ave3" parent="Enemigo_Ave" instance=ExtResource( 5 )]
+position = Vector2( 513, -3555 )
+
+[node name="Enemigo_Ave2" parent="Enemigo_Ave" instance=ExtResource( 5 )]
+position = Vector2( 1180, -4719 )
+
+[node name="Enemigo_Ave4" parent="Enemigo_Ave" instance=ExtResource( 5 )]
+position = Vector2( 1247, -1684 )
+
+[node name="Enemigo_Ave5" parent="Enemigo_Ave" instance=ExtResource( 5 )]
+position = Vector2( 695, 970 )
+
+[node name="Enemigo_Ave6" parent="Enemigo_Ave" instance=ExtResource( 5 )]
+position = Vector2( 1228, 1798 )
+
+[node name="Enemigo_Ave7" parent="Enemigo_Ave" instance=ExtResource( 5 )]
+position = Vector2( 49, 2793 )
 
 [node name="Pared" type="Node2D" parent="."]
 

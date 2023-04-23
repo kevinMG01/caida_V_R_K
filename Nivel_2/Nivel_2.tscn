@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Nivel_2/Nivel_2.gd" type="Script" id=1]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/Mundo/fondo.jpeg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Mundo/meta.jpeg" type="Texture" id=4]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Enemigo/Enemigo_Ave/Enemigo_Ave.tscn" type="PackedScene" id=6]
 [ext_resource path="res://suelo_fin_nivel/suelo_fin_nivel.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -53,22 +52,22 @@ texture = ExtResource( 3 )
 position = Vector2( 0, 2 )
 
 [node name="Enemigo" parent="Enemigo" instance=ExtResource( 2 )]
-position = Vector2( 1058, 1377 )
+position = Vector2( 717, 1053 )
 
 [node name="Enemigo6" parent="Enemigo" instance=ExtResource( 2 )]
-position = Vector2( 31, 2074 )
+position = Vector2( 70, 2054 )
 
 [node name="Enemigo7" parent="Enemigo" instance=ExtResource( 2 )]
-position = Vector2( 1060, 2779 )
+position = Vector2( 1222, 2674 )
 
 [node name="Enemigo3" parent="Enemigo" instance=ExtResource( 2 )]
-position = Vector2( 1081, 68 )
+position = Vector2( 1237, 84 )
 
 [node name="Enemigo5" parent="Enemigo" instance=ExtResource( 2 )]
-position = Vector2( 1055, -1201 )
+position = Vector2( 157, -1259 )
 
 [node name="Enemigo4" parent="Enemigo" instance=ExtResource( 2 )]
-position = Vector2( 18, -580 )
+position = Vector2( 910, -444 )
 
 [node name="Pared" type="Node2D" parent="."]
 
@@ -105,9 +104,6 @@ position = Vector2( 552, -1821 )
 
 [node name="Avion_negro" parent="Avion_negro" instance=ExtResource( 5 )]
 position = Vector2( -799, -1862 )
-
-[node name="Enemigo_Ave" parent="." instance=ExtResource( 6 )]
-position = Vector2( 81, 566 )
 
 [node name="suelo_fin_nivel" parent="." instance=ExtResource( 7 )]
 position = Vector2( 617, 3911 )

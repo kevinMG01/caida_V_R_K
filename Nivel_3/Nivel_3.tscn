@@ -61,40 +61,37 @@ texture = ExtResource( 2 )
 position = Vector2( 1074, 3125 )
 
 [node name="Enemigo2" parent="Enemigo_normal" instance=ExtResource( 5 )]
-position = Vector2( 22, -1724 )
+position = Vector2( 109, -4144 )
+
+[node name="Enemigo4" parent="Enemigo_normal" instance=ExtResource( 5 )]
+position = Vector2( 1132, -3640 )
 
 [node name="Enemigo" parent="Enemigo_normal" instance=ExtResource( 5 )]
 position = Vector2( 999, -4669 )
 
-[node name="Enemigo4" parent="Enemigo_normal" instance=ExtResource( 5 )]
-position = Vector2( 1068, -3255 )
-
 [node name="Enemigo5" parent="Enemigo_normal" instance=ExtResource( 5 )]
-position = Vector2( 39, -236 )
-
-[node name="Enemigo6" parent="Enemigo_normal" instance=ExtResource( 5 )]
-position = Vector2( 1068, 437 )
+position = Vector2( 664, -2781 )
 
 [node name="Enemigo7" parent="Enemigo_normal" instance=ExtResource( 5 )]
-position = Vector2( 45, 2525 )
+position = Vector2( 1194, -2206 )
+
+[node name="Enemigo6" parent="Enemigo_normal" instance=ExtResource( 5 )]
+position = Vector2( 94, -205 )
 
 [node name="Enemigo8" parent="Enemigo_normal" instance=ExtResource( 5 )]
-position = Vector2( 67, 1080 )
+position = Vector2( 660, 586 )
+
+[node name="Enemigo9" parent="Enemigo_normal" instance=ExtResource( 5 )]
+position = Vector2( 1102, 1247 )
+
+[node name="Enemigo10" parent="Enemigo_normal" instance=ExtResource( 5 )]
+position = Vector2( 21, 2260 )
 
 [node name="Enemigo_Ave" type="Node2D" parent="."]
 position = Vector2( 31, 0 )
 
 [node name="Enemigo_Ave" parent="Enemigo_Ave" instance=ExtResource( 6 )]
-position = Vector2( 0, -4199 )
-
-[node name="Enemigo_Ave2" parent="Enemigo_Ave" instance=ExtResource( 6 )]
-position = Vector2( 18, -2785 )
-
-[node name="Enemigo_Ave3" parent="Enemigo_Ave" instance=ExtResource( 6 )]
-position = Vector2( 1057, -1288 )
-
-[node name="Enemigo_Ave4" parent="Enemigo_Ave" instance=ExtResource( 6 )]
-position = Vector2( 1046, 1541 )
+position = Vector2( 1198, -1584 )
 
 [node name="Pared" type="Node2D" parent="."]
 
@@ -109,7 +106,7 @@ shape = SubResource( 1 )
 position = Vector2( 1160, 45 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/StaticBody2D2"]
-position = Vector2( -5, -506 )
+position = Vector2( -5, -665 )
 scale = Vector2( 5, 530 )
 shape = SubResource( 1 )
 
