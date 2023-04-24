@@ -18,7 +18,7 @@ extents = Vector2( 18, 12 )
 extents = Vector2( 1284, 123.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 1290, 160.25 )
+extents = Vector2( 1290, 214.125 )
 
 [node name="Enemigo_Ave" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -43,7 +43,7 @@ shape = SubResource( 3 )
 position = Vector2( 3, 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="abajo"]
-position = Vector2( -551, 276 )
+position = Vector2( -551, 329.875 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="lateral" to="." method="_on_lateral_body_entered"]
