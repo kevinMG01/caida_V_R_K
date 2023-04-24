@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo_menu.jpeg-eba9dc8bfaf678a240de4a7ecae612b3.stex"
+path="res://.import/lovepik-flying-bird-png-image_401007851_wh1200.png-7b31785be1e2d2e0abcc93eb337302dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/fondo_menu.jpeg"
-dest_files=[ "res://.import/fondo_menu.jpeg-eba9dc8bfaf678a240de4a7ecae612b3.stex" ]
+source_file="res://Sprites/Menu/nuevo/lovepik-flying-bird-png-image_401007851_wh1200.png"
+dest_files=[ "res://.import/lovepik-flying-bird-png-image_401007851_wh1200.png-7b31785be1e2d2e0abcc93eb337302dd.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

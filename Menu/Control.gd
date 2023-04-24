@@ -16,4 +16,9 @@ func _on_TextureButton_pressed():
 
 func _on_salir_pressed():
 	
-	pass # Replace with function body.
+	pass 
+
+
+func _on_controles_pressed():
+	get_tree().change_scene("res://Menu/Controles/Controles.tscn")
+	pass 

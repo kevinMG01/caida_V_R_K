@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controles_2.png-92374e562648ed281995bf0fe4fa6bee.stex"
+path="res://.import/Subrayado de salir 1.png-f8c2c29866763651508a582515f4050e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/controles_2.png"
-dest_files=[ "res://.import/controles_2.png-92374e562648ed281995bf0fe4fa6bee.stex" ]
+source_file="res://Sprites/Menu/nuevo/Subrayado de salir 1.png"
+dest_files=[ "res://.import/Subrayado de salir 1.png-f8c2c29866763651508a582515f4050e.stex" ]
 
 [params]
 

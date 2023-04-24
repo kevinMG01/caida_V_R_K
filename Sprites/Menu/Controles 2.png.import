@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo_menu.jpeg-eba9dc8bfaf678a240de4a7ecae612b3.stex"
+path="res://.import/Controles 2.png-0db541e1ac387ca7bc6a8c04dc29795d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/fondo_menu.jpeg"
-dest_files=[ "res://.import/fondo_menu.jpeg-eba9dc8bfaf678a240de4a7ecae612b3.stex" ]
+source_file="res://Sprites/Menu/Controles 2.png"
+dest_files=[ "res://.import/Controles 2.png-0db541e1ac387ca7bc6a8c04dc29795d.stex" ]
 
 [params]
 
