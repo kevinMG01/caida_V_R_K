@@ -1,16 +1,29 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menu/Control.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Menu/jugar.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Menu/salir.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Menu/nuevo/Jugar 1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Menu/nuevo/Salir 1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Menu/nuevo/Bordes menu 1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Menu/nuevo/Bordes menu 2.png" type="Texture" id=5]
+[ext_resource path="res://Menu/Menu.gd" type="Script" id=5]
 [ext_resource path="res://Sprites/Menu/nuevo/Subrayado de salir 1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Menu/nuevo/Subrayado de jugar 1.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Menu/Controles 2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Menu/nuevo/Bordes menu 2.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Menu/fondo_menu.jpeg" type="Texture" id=10]
+[ext_resource path="res://Sprites/Menu/nuevo/Salir 2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Menu/Controles 1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Menu/nuevo/Jugar 2.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "play",
+"speed": 1.0
+} ]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="Fondo" type="Node2D" parent="."]
 
@@ -19,15 +32,11 @@ position = Vector2( 510, 304 )
 scale = Vector2( 0.814062, 0.847222 )
 texture = ExtResource( 10 )
 
-[node name="BordesMenu2" type="Sprite" parent="Fondo"]
-position = Vector2( 515, 301 )
-scale = Vector2( 0.533333, 0.559259 )
-texture = ExtResource( 5 )
-
-[node name="BordesMenu1" type="Sprite" parent="Fondo"]
-position = Vector2( 509, 299 )
-scale = Vector2( 0.533333, 0.559259 )
-texture = ExtResource( 4 )
+[node name="nube_ariba_y_abajo" type="AnimatedSprite" parent="Fondo"]
+position = Vector2( 514, 304 )
+scale = Vector2( 0.54, 0.57 )
+frames = SubResource( 1 )
+animation = "play"
 
 [node name="SubrayadoDeJugar1" type="Sprite" parent="Fondo"]
 position = Vector2( 505, 305 )
@@ -57,12 +66,16 @@ rect_scale = Vector2( 0.5, 0.5 )
 margin_right = 651.0
 margin_bottom = 185.0
 texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 14 )
 
 [node name="salir" type="TextureButton" parent="Control/VBoxContainer"]
 margin_top = 189.0
 margin_right = 651.0
 margin_bottom = 374.0
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 11 )
 
 [node name="fondo" type="NinePatchRect" parent="Control"]
 margin_right = 40.0
@@ -74,7 +87,9 @@ margin_top = 483.0
 margin_right = 1017.0
 margin_bottom = 523.0
 rect_scale = Vector2( 0.7, 0.7 )
-texture_normal = ExtResource( 8 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 8 )
 
 [connection signal="pressed" from="Control/VBoxContainer/inicio" to="Control" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/salir" to="Control" method="_on_salir_pressed"]
