@@ -94,7 +94,7 @@ position = Vector2( 695, 970 )
 position = Vector2( 1228, 1798 )
 
 [node name="Enemigo_Ave7" parent="Enemigo_Ave" instance=ExtResource( 5 )]
-position = Vector2( 49, 2793 )
+position = Vector2( 37, 2829 )
 
 [node name="Pared" type="Node2D" parent="."]
 
@@ -108,7 +108,7 @@ shape = SubResource( 1 )
 [node name="StaticBody2D2" type="StaticBody2D" parent="Pared"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/StaticBody2D2"]
-position = Vector2( 1087, -1276 )
+position = Vector2( 1272, -1276 )
 scale = Vector2( 1, 530 )
 shape = SubResource( 1 )
 

@@ -61,7 +61,7 @@ position = Vector2( 641, -11780 )
 texture = ExtResource( 1 )
 
 [node name="Meta" type="Sprite" parent="Fondo"]
-position = Vector2( 639, 3448 )
+position = Vector2( 643, 3370 )
 texture = ExtResource( 2 )
 
 [node name="Fondo13" type="Sprite" parent="Fondo"]
@@ -89,7 +89,7 @@ shape = SubResource( 1 )
 position = Vector2( 1324, 113 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared/pared3"]
-position = Vector2( -681, 3928 )
+position = Vector2( -689, 3816 )
 scale = Vector2( 65, 1 )
 shape = SubResource( 2 )
 
