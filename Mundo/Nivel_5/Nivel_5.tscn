@@ -95,9 +95,9 @@ scale = Vector2( 65, 1 )
 shape = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 239, -12730 )
+position = Vector2( 555, -12822 )
 
 [node name="Santa_claus" type="Node2D" parent="."]
 
 [node name="Enemigo_Santa_Claus" parent="Santa_claus" instance=ExtResource( 4 )]
-position = Vector2( 95, -12913 )
+position = Vector2( 175, -13077 )

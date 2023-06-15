@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 
 var movimiento = Vector2()
-var velocity = 30
-var cantidad = 400
+var velocity = 100
+var cantidad = 200
 var comensar = false
 var caminar = false
 
@@ -41,7 +41,7 @@ func move():
 		if caminar == true:
 			movimiento.x -= velocity
 			cantidad += 1
-			if cantidad == 400:
+			if cantidad == 200:
 				caminar = false
 			pass
 

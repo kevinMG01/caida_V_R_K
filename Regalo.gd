@@ -7,7 +7,7 @@ var movimiento = Vector2()
 #powuer up
 var vel_power = 280
 
-var gravedad = 5
+var gravedad = 40
 var masa = 2
 	
 func _physics_process(delta):

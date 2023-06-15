@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Enemigo/Enemigo_Santa_Claus/Enemigo_Santa_Claus.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Mundo/Nivel_5/BOSS.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 22 )
@@ -18,17 +18,19 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4, -4 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -5, -6 )
+scale = Vector2( 0.25, 0.26 )
 frames = SubResource( 2 )
 animation = "santa"
 
 [node name="Regalos" type="Position2D" parent="." groups=["spawn"]]
-position = Vector2( 0, 30 )
+position = Vector2( -6, 28 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
