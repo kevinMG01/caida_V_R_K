@@ -103,7 +103,7 @@ shape = SubResource( 4 )
 position = Vector2( 552, -1821 )
 
 [node name="Avion_negro" parent="Avion_negro" instance=ExtResource( 5 )]
-position = Vector2( -799, -1862 )
+position = Vector2( -722, -1862 )
 
 [node name="suelo_fin_nivel" parent="." instance=ExtResource( 7 )]
 position = Vector2( 617, 3911 )

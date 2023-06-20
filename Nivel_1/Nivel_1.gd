@@ -11,6 +11,7 @@ func _physics_process(delta):
 
 func spawn_player():
 	if global_Var.camara_avion_apagado == false:
+		yield(get_tree().create_timer(1),"timeout")
 		if spawn_1 == true:
 			var newplayer = player_1.instance()
 			add_child(newplayer)
