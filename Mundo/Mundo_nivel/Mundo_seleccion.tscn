@@ -1,0 +1,110 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Mundo/Mundo_nivel/Mundo_seleccion.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.756863, 0.12549, 0.12549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.862745, 0.721569, 0.0901961, 1 )
+
+[sub_resource type="AnimationNodeBlendTree" id=5]
+
+[sub_resource type="AnimationNodeStateMachine" id=6]
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=7]
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=8]
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=9]
+
+[sub_resource type="AnimationNodeBlendSpace1D" id=11]
+blend_point_0/node = SubResource( 5 )
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource( 6 )
+blend_point_1/pos = -1.0
+blend_point_2/node = SubResource( 7 )
+blend_point_2/pos = 0.0
+blend_point_3/node = SubResource( 8 )
+blend_point_3/pos = 1.0
+blend_point_4/node = SubResource( 9 )
+blend_point_4/pos = 2.0
+max_space = 4.0
+snap = 1.0
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+
+[sub_resource type="Animation" id=13]
+resource_name = "1"
+
+[sub_resource type="Animation" id=14]
+resource_name = "2"
+
+[sub_resource type="Animation" id=15]
+resource_name = "3"
+
+[node name="Mundo_seleccion" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="control" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="control"]
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+theme = SubResource( 1 )
+scroll_vertical_enabled = false
+
+[node name="paneles_nivel" type="HBoxContainer" parent="control/ScrollContainer"]
+margin_right = 3072.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+
+[node name="zona_nivel_1" type="PanelContainer" parent="control/ScrollContainer/paneles_nivel"]
+margin_right = 1021.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 2 )
+
+[node name="zona_nivel_2" type="PanelContainer" parent="control/ScrollContainer/paneles_nivel"]
+margin_left = 1025.0
+margin_right = 2046.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+
+[node name="zona_nivel_3" type="PanelContainer" parent="control/ScrollContainer/paneles_nivel"]
+margin_left = 2050.0
+margin_right = 3072.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 4 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 11 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/blend_position = 3.00513
+parameters/1/playback = SubResource( 12 )
+parameters/2/blend_position = 0
+parameters/3/blend_position = 0
+parameters/4/blend_position = Vector2( 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/1 = SubResource( 13 )
+anims/2 = SubResource( 14 )
+anims/3 = SubResource( 15 )
+
+[connection signal="scroll_ended" from="control/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
+[connection signal="scroll_started" from="control/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
