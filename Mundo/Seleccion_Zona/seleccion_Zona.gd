@@ -1,8 +1,9 @@
 extends Control
 
 
-onready var scroller: ScrollContainer = $control/ScrollContainer
+onready var scroller: ScrollContainer = $ScrollContainer
 onready var animation_tree : AnimationTree = $AnimationTree
+
 var is_scrolling : bool = false
 
 
@@ -41,16 +42,24 @@ func _process(delta):
 			scroller.scroll_horizontal = rect_size.x * int(round(scroll))
 			set_process(false)
 	pass
-	
 
 
 
-func _on_ScrollContainer_scroll_ended():
-	is_scrolling = false
-	pass # Replace with function body.
 
 
-func _on_ScrollContainer_scroll_started():
-	is_scrolling = true
-	set_process(true)
-	pass # Replace with function body.
+
+#scroll_to = (rect_size.x * extra_arg_0)
+#	scroll_to_index = extra_arg_0
+#	is_manual_scrolling = true
+#	set_process(true)
+
+
+
+
+
+
+
+
+
+
+
