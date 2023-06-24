@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/REGALOS.png-0c6b095a3a1de6d9355002dbcf55ebfd.stex"
+path="res://.import/REGALOS.png-20f7ad251c5da01ef328726512ff5070.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mundo/Nivel_5/REGALOS.png"
-dest_files=[ "res://.import/REGALOS.png-0c6b095a3a1de6d9355002dbcf55ebfd.stex" ]
+source_file="res://Mundo/Niveles/Nivel_5/REGALOS.png"
+dest_files=[ "res://.import/REGALOS.png-20f7ad251c5da01ef328726512ff5070.stex" ]
 
 [params]
 

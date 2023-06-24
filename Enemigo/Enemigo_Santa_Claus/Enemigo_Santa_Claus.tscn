@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Enemigo/Enemigo_Santa_Claus/Enemigo_Santa_Claus.gd" type="Script" id=1]
-[ext_resource path="res://Mundo/Nivel_5/BOSS.png" type="Texture" id=2]
+[ext_resource path="res://Mundo/Niveles/Nivel_5/BOSS.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 22 )

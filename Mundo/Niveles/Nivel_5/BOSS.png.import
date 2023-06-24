@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BOSS.png-85f142d39d705c820946a6dfa876de0d.stex"
+path="res://.import/BOSS.png-2d4e1dd0d7ee7419e9a14bf22ce5e09d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mundo/Nivel_5/BOSS.png"
-dest_files=[ "res://.import/BOSS.png-85f142d39d705c820946a6dfa876de0d.stex" ]
+source_file="res://Mundo/Niveles/Nivel_5/BOSS.png"
+dest_files=[ "res://.import/BOSS.png-2d4e1dd0d7ee7419e9a14bf22ce5e09d.stex" ]
 
 [params]
 

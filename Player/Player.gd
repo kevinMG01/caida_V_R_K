@@ -12,12 +12,7 @@ var tiene_paracaida = true
 	
 	
 func _physics_process(delta):
-	teclados()
-	if tiene_paracaida == true:
-		move_con_paracaidas()
-	if tiene_paracaida == false:
-		move_sin_paracaidas()
-	
+	move_con_paracaidas()
 	power_up()
 	movimiento = move_and_slide(movimiento)
 	movimiento.y = gravedad * masa
@@ -25,32 +20,34 @@ func _physics_process(delta):
 	pass
 
 
-func teclados():
-	if Input.is_action_just_pressed("R"):
-		 tiene_paracaida = !tiene_paracaida
-		
-	
-
-
 
 func move_con_paracaidas():
-	movimiento.x = 0
-	if Input.is_action_pressed("ui_left"):
-		movimiento.x -= cantidad
-		$AnimatedSprite.flip_h = true
-	if Input.is_action_pressed("ui_right"):
-		movimiento.x += cantidad
-		$AnimatedSprite.flip_h = false
-func move_sin_paracaidas():
-	cantidad = 70
-	gravedad = 150
-	movimiento.x = 0
-	if Input.is_action_pressed("ui_left"):
-		movimiento.x -= cantidad
-		$AnimatedSprite.flip_h = true
-	if Input.is_action_pressed("ui_right"):
-		movimiento.x += cantidad
-		$AnimatedSprite.flip_h = false
+	if !is_on_floor():
+		if Input.is_action_just_pressed("ui_down"):
+			 tiene_paracaida = !tiene_paracaida
+
+	if tiene_paracaida == true:
+		cantidad = 150
+		gravedad = 70
+		movimiento.x = 0
+		if Input.is_action_pressed("ui_left"):
+			movimiento.x -= cantidad
+			$AnimatedSprite.flip_h = true
+		elif Input.is_action_pressed("ui_right"):
+			movimiento.x += cantidad
+			$AnimatedSprite.flip_h = false
+
+	elif tiene_paracaida == false:
+		cantidad = 70
+		gravedad = 150
+		movimiento.x = 0
+		if Input.is_action_pressed("ui_left"):
+			movimiento.x -= cantidad
+			$AnimatedSprite.flip_h = true
+		if Input.is_action_pressed("ui_right"):
+			movimiento.x += cantidad
+			$AnimatedSprite.flip_h = false
+
 
 
 
