@@ -5,6 +5,21 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "Idle_suelo",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Move_suelo",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Up_suelo",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "move",
@@ -24,7 +39,7 @@ script = ExtResource( 1 )
 position = Vector2( -3, 12 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
-animation = "move"
+animation = "Up_suelo"
 
 [node name="player-cuerpo" type="CollisionShape2D" parent="."]
 position = Vector2( 2.5, 51.425 )
