@@ -1,90 +1,58 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://suelo/suelo.tscn" type="PackedScene" id=1]
-[ext_resource path="res://suelo_fin_nivel/suelo_fin_nivel.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites/Mundo/Avion_fondo_izquierda/Avion_fondo_izquierda.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Nivel_1.gd" type="Script" id=2]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Sprites/Mundo/Avion_fondo_derecha/Avion_fondo.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_1.gd" type="Script" id=7]
-[ext_resource path="res://Sprites/Mundo/meta.jpeg" type="Texture" id=8]
-[ext_resource path="res://Sprites/Mundo/fondo.jpeg" type="Texture" id=9]
+[ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 1 fondo.jpg" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Nivel_1" type="Node2D"]
-script = ExtResource( 7 )
+script = ExtResource( 2 )
 
-[node name="Fondo" type="Node2D" parent="."]
-
-[node name="Fondo5" type="Sprite" parent="Fondo"]
-position = Vector2( -638, 1200 )
-texture = ExtResource( 9 )
-
-[node name="Fondo" type="Sprite" parent="Fondo"]
-position = Vector2( 1902, 1195 )
-texture = ExtResource( 9 )
-
-[node name="Fondo2" type="Sprite" parent="Fondo"]
-position = Vector2( 634, 1193 )
-texture = ExtResource( 9 )
-
-[node name="Meta" type="Sprite" parent="Fondo"]
-position = Vector2( 636, 3435 )
+[node name="Nivel1Fondo" type="Sprite" parent="."]
+position = Vector2( 639, 1749 )
+scale = Vector2( 1.0224, 0.999429 )
 texture = ExtResource( 8 )
 
-[node name="Fondo3" type="Sprite" parent="Fondo"]
-position = Vector2( 633, 2466 )
-texture = ExtResource( 9 )
+[node name="Pared" type="Node2D" parent="."]
 
-[node name="Avion_fondo_derecha" type="Node2D" parent="."]
+[node name="pared_D" type="StaticBody2D" parent="Pared"]
 
-[node name="Avion_fondo" parent="Avion_fondo_derecha" instance=ExtResource( 5 )]
-position = Vector2( 46, 1607 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/pared_D"]
+position = Vector2( -26, 2552 )
+scale = Vector2( 6, 150 )
+shape = SubResource( 1 )
 
-[node name="Avion_fondo2" parent="Avion_fondo_derecha" instance=ExtResource( 5 )]
-position = Vector2( -29, 2705 )
+[node name="pared_Iz" type="StaticBody2D" parent="Pared"]
 
-[node name="Avion_fondo3" parent="Avion_fondo_derecha" instance=ExtResource( 5 )]
-position = Vector2( 25, 2550 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/pared_Iz"]
+position = Vector2( 1291, 2544 )
+scale = Vector2( 6, 150 )
+shape = SubResource( 1 )
 
-[node name="avion_fondo_izquierda" type="Node2D" parent="."]
+[node name="suelo" type="StaticBody2D" parent="Pared"]
 
-[node name="Avion_fondo_izquierda2" parent="avion_fondo_izquierda" instance=ExtResource( 3 )]
-position = Vector2( 1107, 1880 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/suelo"]
+position = Vector2( 608, 4000 )
+scale = Vector2( 70, 4 )
+shape = SubResource( 1 )
 
-[node name="Avion_fondo_izquierda3" parent="avion_fondo_izquierda" instance=ExtResource( 3 )]
-position = Vector2( 1091, 3092 )
+[node name="Fondo_relleno" type="Node2D" parent="."]
 
-[node name="Avion_fondo_izquierda4" parent="avion_fondo_izquierda" instance=ExtResource( 3 )]
-position = Vector2( 1075, 2908 )
+[node name="Enemigos" type="Node2D" parent="."]
 
-[node name="Pared" type="Node" parent="."]
+[node name="Enemigo" parent="Enemigos" instance=ExtResource( 4 )]
+position = Vector2( 58, 2253 )
 
-[node name="suelo" parent="Pared" instance=ExtResource( 1 )]
-position = Vector2( 35, 3978 )
-scale = Vector2( 1.2, 1 )
+[node name="min" type="Position2D" parent="." groups=["min"]]
 
-[node name="suelo2" parent="Pared" instance=ExtResource( 1 )]
-position = Vector2( -96, 2111 )
-scale = Vector2( 0.1, 70 )
+[node name="max" type="Position2D" parent="." groups=["max"]]
 
-[node name="suelo3" parent="Pared" instance=ExtResource( 1 )]
-position = Vector2( 1235, 2135 )
-scale = Vector2( 0.1, 70 )
+[node name="Avion" type="Node2D" parent="."]
 
-[node name="Enemigos1" type="Node2D" parent="."]
+[node name="Avion_negro" parent="Avion" instance=ExtResource( 6 )]
+position = Vector2( -534, 321 )
 
-[node name="Enemigo4" parent="Enemigos1" instance=ExtResource( 4 )]
-position = Vector2( 6, 2288 )
-
-[node name="Avion_negro2" type="Node2D" parent="."]
-position = Vector2( -580, 60 )
-
-[node name="Avion_negro" parent="Avion_negro2" instance=ExtResource( 6 )]
-position = Vector2( -132, 932 )
-
-[node name="player_posicion" type="Position2D" parent="Avion_negro2/Avion_negro" groups=["spawn"]]
-position = Vector2( -183, -14 )
-
-[node name="suelo_fin_nivel" parent="." instance=ExtResource( 2 )]
-position = Vector2( 606, 3973 )
-scale = Vector2( 1.2, 1 )
+[node name="player" type="Position2D" parent="Avion/Avion_negro" groups=["spawn"]]
+position = Vector2( -218, -25 )
