@@ -81,7 +81,7 @@ shape = SubResource( 1 )
 position = Vector2( 1202, 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/pared2"]
-position = Vector2( -63, 1141 )
+position = Vector2( 92, 1141 )
 shape = SubResource( 2 )
 
 [node name="pared3" type="StaticBody2D" parent="Pared"]

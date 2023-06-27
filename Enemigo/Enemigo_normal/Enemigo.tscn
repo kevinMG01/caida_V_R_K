@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/globo-removebg-preview.png" type="Texture" id=2]
@@ -8,6 +8,9 @@ radius = 27.074
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1302, 207.5 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 33.8378
 
 [node name="Enemigo" type="KinematicBody2D" groups=["enemigo"]]
 script = ExtResource( 1 )
@@ -28,5 +31,11 @@ collision_layer = 3
 position = Vector2( 3, -162.5 )
 shape = SubResource( 2 )
 
+[node name="muerte_payer" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="muerte_payer"]
+shape = SubResource( 3 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="muerte_payer" to="." method="_on_muerte_payer_body_entered"]

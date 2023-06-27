@@ -38,3 +38,9 @@ func power_up():
 			yield(get_tree().create_timer(1,5),"timeout")
 			cantidad = 150
 	pass
+
+
+func _on_colicion_muerte_body_entered(body):
+#	if body.get_name() == "Enemigo":
+#		body.queue_free()
+	pass # Replace with function body.

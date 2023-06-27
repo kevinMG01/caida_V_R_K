@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Nivel_4/Nivel_4.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/fondo.jpeg" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
 
 [node name="Nivel_4" type="Node2D"]
 script = ExtResource( 1 )
@@ -92,7 +94,7 @@ position = Vector2( 695, 970 )
 position = Vector2( 1228, 1798 )
 
 [node name="Enemigo_Ave7" parent="Enemigo_Ave" instance=ExtResource( 5 )]
-position = Vector2( 49, 2793 )
+position = Vector2( 37, 2829 )
 
 [node name="Pared" type="Node2D" parent="."]
 
@@ -106,7 +108,7 @@ shape = SubResource( 1 )
 [node name="StaticBody2D2" type="StaticBody2D" parent="Pared"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/StaticBody2D2"]
-position = Vector2( 1152, -1276 )
+position = Vector2( 1272, -1276 )
 scale = Vector2( 1, 530 )
 shape = SubResource( 1 )
 
@@ -124,3 +126,12 @@ position = Vector2( -692, -7006 )
 
 [node name="Player" type="Position2D" parent="Avion_negro" groups=["spawn"]]
 position = Vector2( 632, -6976 )
+
+[node name="deteccion_ave" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deteccion_ave"]
+position = Vector2( 540, 3456 )
+scale = Vector2( 55, 1 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="deteccion_ave" to="." method="_on_deteccion_ave_body_entered"]
