@@ -7,30 +7,21 @@ var movimiento = Vector2()
 
 var gravedad = 70
 var masa = 2
+var salto = 100
 
 var tiene_paracaida = true
-	
+var esta_en_suelo = false
 	
 func _physics_process(delta):
 	move_con_paracaidas()
 	power_up()
-	movimiento = move_and_slide(movimiento)
-	movimiento.y = gravedad * masa
+	movimiento = move_and_slide(movimiento, Vector2(0, -1))
+	
+	if esta_en_suelo == false:
+		movimiento.y = gravedad * masa
+	elif esta_en_suelo == true:
+		movimiento.y = movimiento.y + gravedad * delta
 	#movimiento = movimiento.normalized()* cantidad
-	
-#	var minimo = get_tree().get_nodes_in_group("min")[0].global_position
-#	var maximo = get_tree().get_nodes_in_group("max")[0].global_position
-	
-#	if (global_position.x < minimo.x):
-#		global_position.x = minimo.x +5
-#	elif (global_position.x > maximo.x):
-#		global_position.x = maximo.x -5
-	
-#	if (global_position.y > maximo.y):
-#		global_position.y = maximo.y +5
-#	elif (global_position.y < minimo.y):
-#		global_position.y = minimo.y -5
-	
 	
 	pass
 
@@ -40,6 +31,12 @@ func move_con_paracaidas():
 	if !is_on_floor():
 		if Input.is_action_just_pressed("ui_down"):
 			 tiene_paracaida = !tiene_paracaida
+	if is_on_floor():
+		esta_en_suelo = true
+		tiene_paracaida = true
+		if Input.is_action_just_pressed("ui_up"):
+			movimiento.y = -salto
+		pass
 
 	if tiene_paracaida == true:
 		cantidad = 150

@@ -3,9 +3,9 @@ extends KinematicBody2D
 
 
 var movimiento = Vector2()
-var velocity = 10
+var velocity = 20
 
-var cantidad = 700
+var cantidad = 900
 
 var distancia = 200
 var comensar = false
