@@ -46,8 +46,10 @@ shape = SubResource( 1 )
 position = Vector2( 58, 2253 )
 
 [node name="min" type="Position2D" parent="." groups=["min"]]
+position = Vector2( -11, 385 )
 
 [node name="max" type="Position2D" parent="." groups=["max"]]
+position = Vector2( 1080, 3485 )
 
 [node name="Avion" type="Node2D" parent="."]
 

@@ -18,18 +18,18 @@ func _physics_process(delta):
 	movimiento.y = gravedad * masa
 	#movimiento = movimiento.normalized()* cantidad
 	
-	#var minimo = get_tree().get_nodes_in_group("min")[0].global_position
-	#var maximo = get_tree().get_nodes_in_group("max")[0].global_position
+#	var minimo = get_tree().get_nodes_in_group("min")[0].global_position
+#	var maximo = get_tree().get_nodes_in_group("max")[0].global_position
+#	
+#	if (global_position.x < minimo.x):
+#		global_position.x = minimo.x +5
+#	elif (global_position.x > minimo.x):
+#		global_position.x = maximo.x -5
 	
-	#if (global_position.x < minimo.x):
-	#	global_position.x = minimo.x +5
-	#elif (global_position.x > minimo.x):
-	#	global_position.x = maximo.x -5
-	
-	#if (global_position.y > maximo.y):
-	#	global_position.y = maximo.y +5
-	#elif (global_position.y < minimo.y):
-	#	global_position.y = minimo.y -5
+#	if (global_position.y > maximo.y):
+#		global_position.y = maximo.y +5
+#	elif (global_position.y < minimo.y):
+#		global_position.y = minimo.y -5
 	
 	
 	pass
