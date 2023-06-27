@@ -1,15 +1,25 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=40 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Mundo/Seleccion_Zona/seleccion_Zona.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Mapa de niveles de la zona 1.jpg" type="Texture" id=3]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Banderas de la zona 1 sprite 1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Banderas de la zona 1 sprite 2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Numero del nivel 1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Numero del nivel 3.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Numero del nivel 4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Numero del nivel 5.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Numero del nivel 2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 3.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 2.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="Theme" id=7]
 HScrollBar/styles/scroll = SubResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.317647, 0.882353, 0.847059, 1 )
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.137255, 0.701961, 0.576471, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.760784, 0.945098, 0.270588, 1 )
@@ -22,6 +32,30 @@ bg_color = Color( 0.152941, 0.231373, 0.909804, 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.423529, 0.0509804, 0.788235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.0627451, 0.886275, 0.921569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.396078, 0.509804, 0.960784, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "move",
+"speed": 15.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.0627451, 0.886275, 0.921569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.396078, 0.509804, 0.960784, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=29]
 
 [sub_resource type="AnimationNodeAnimation" id=8]
 animation = "zona_1"
@@ -102,7 +136,75 @@ margin_bottom = 600.0
 rect_min_size = Vector2( 1024, 0 )
 rect_pivot_offset = Vector2( -227, 0 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 21 )
+
+[node name="MapaDeNivelesDeLaZona1" type="Sprite" parent="ScrollContainer/HBoxContainer/Zona_1"]
+position = Vector2( 514, 300 )
+texture = ExtResource( 3 )
+
+[node name="buton" type="Control" parent="ScrollContainer/HBoxContainer/Zona_1"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Zona_1_N_1" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
+margin_left = 140.0
+margin_top = 188.0
+margin_right = 220.0
+margin_bottom = 278.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="NumeroDelNivel1" type="Sprite" parent="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_1"]
+position = Vector2( 37, 42 )
+texture = ExtResource( 6 )
+
+[node name="Zona_1_N_2" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
+margin_left = 259.0
+margin_top = 431.0
+margin_right = 339.0
+margin_bottom = 521.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="NumeroDelNivel2" type="Sprite" parent="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_2"]
+position = Vector2( 41, 43 )
+texture = ExtResource( 10 )
+
+[node name="Zona_1_N_3" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
+margin_left = 426.0
+margin_top = 230.0
+margin_right = 506.0
+margin_bottom = 320.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="NumeroDelNivel3" type="Sprite" parent="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_3"]
+position = Vector2( 37, 39 )
+texture = ExtResource( 7 )
+
+[node name="Zona_1_N_4" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
+margin_left = 658.0
+margin_top = 233.0
+margin_right = 738.0
+margin_bottom = 323.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="NumeroDelNivel4" type="Sprite" parent="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_4"]
+position = Vector2( 39, 43 )
+texture = ExtResource( 8 )
+
+[node name="Zona_1_N_5" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
+margin_left = 789.0
+margin_top = 404.0
+margin_right = 869.0
+margin_bottom = 494.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="NumeroDelNivel5" type="Sprite" parent="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_5"]
+position = Vector2( 38, 42 )
+texture = ExtResource( 9 )
 
 [node name="Zona_2" type="PanelContainer" parent="ScrollContainer/HBoxContainer"]
 margin_left = 1024.0
@@ -143,20 +245,41 @@ custom_styles/panel = SubResource( 5 )
 [node name="Atras" type="Button" parent="."]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -35.0
-margin_right = 76.0
-margin_bottom = 35.0
-icon = ExtResource( 1 )
+margin_left = 21.0
+margin_top = 31.0
+margin_right = 105.0
+margin_bottom = 83.0
+custom_styles/hover = SubResource( 24 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/normal = SubResource( 25 )
+
+[node name="atras_ani" type="AnimatedSprite" parent="Atras"]
+position = Vector2( 43, 24.5 )
+scale = Vector2( 1, 1.03333 )
+frames = SubResource( 22 )
+animation = "move"
+frame = 1
 
 [node name="Adelante" type="Button" parent="."]
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -76.0
-margin_top = -35.0
-margin_bottom = 35.0
-icon = ExtResource( 1 )
+margin_left = -97.0
+margin_top = 23.0
+margin_right = -13.0
+margin_bottom = 76.0
+custom_styles/hover = SubResource( 27 )
+custom_styles/pressed = SubResource( 28 )
+custom_styles/normal = SubResource( 29 )
+
+[node name="adelante_ani" type="AnimatedSprite" parent="Adelante"]
+position = Vector2( 41, 24 )
+scale = Vector2( 1, 1.03333 )
+frames = SubResource( 22 )
+animation = "move"
+frame = 1
+flip_h = true
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 15 )
@@ -173,5 +296,10 @@ anims/zona_5 = SubResource( 20 )
 
 [connection signal="scroll_ended" from="ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
 [connection signal="scroll_started" from="ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_1" to="." method="_on_Zona_1_N_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_2" to="." method="_on_Zona_1_N_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_3" to="." method="_on_Zona_1_N_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_4" to="." method="_on_Zona_1_N_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_5" to="." method="_on_Zona_1_N_5_pressed"]
 [connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
 [connection signal="pressed" from="Adelante" to="." method="_on_Adelante_pressed"]

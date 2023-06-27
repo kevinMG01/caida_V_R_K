@@ -14,6 +14,8 @@ var scroll_to_index : int = 0 # animation tree
 
 
 func _ready():
+	$Atras/atras_ani.playing = true
+	$Adelante/adelante_ani.playing = true
 	yield(get_tree(), "idle_frame")
 	scroller.scroll_horizontal = rect_size.x * 0 #nosda el tamaaño de la ventana y mueve 2 posicciones mas
 	pass 
@@ -53,8 +55,41 @@ func _on_ScrollContainer_scroll_started():
 #Boton_scroll
 func _on_Atras_pressed():
 	scroller.scroll_horizontal -= rect_size.x * 1
-	pass # Replace with function body.
+	pass 
 
 func _on_Adelante_pressed():
 	scroller.scroll_horizontal += rect_size.x * 1
-	pass # Replace with function body.
+	pass 
+
+
+#Botones de niveles
+
+
+
+func _on_Zona_1_N_1_pressed():
+	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
+	pass
+
+
+func _on_Zona_1_N_2_pressed():
+	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_2.tscn")
+	pass
+
+
+func _on_Zona_1_N_3_pressed():
+	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_3.tscn")
+	pass
+
+
+func _on_Zona_1_N_4_pressed():
+	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_4.tscn")
+	pass
+
+
+func _on_Zona_1_N_5_pressed():
+	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_5.tscn")
+	pass 
+	
+	
+	
+	

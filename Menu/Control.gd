@@ -10,7 +10,7 @@ func _ready():
 
 func _on_TextureButton_pressed():
 	#cuando sea presionado
-	get_tree().change_scene("res://Nivel_1/Nivel_1.tscn")
+	get_tree().change_scene("res://Mundo/Seleccion_Zona/seleccion_Zona.tscn")
 	pass 
 
 

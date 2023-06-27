@@ -3,6 +3,8 @@ extends Node2D
 var spawn_1 = true
 var player_1 = preload("res://Player/Player.tscn")
 
+func _ready():
+	global_Var.camara_avion_apagado = true
 
 func _physics_process(delta):
 	spawn_player()
