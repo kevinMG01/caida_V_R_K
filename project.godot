@@ -15,16 +15,37 @@ _global_script_class_icons={
 [application]
 
 config/name="V_R_K_(CAIDA)"
-run/main_scene="res://Nivel_1/Nivel_1.tscn"
+run/main_scene="res://Menu/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 global_Var="*res://Global_var/Global_var.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[global]
+
+tou=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+R={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":82,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 

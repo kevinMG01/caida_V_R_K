@@ -35,7 +35,7 @@ func move():
 		if caminar == false:
 			movimiento.x += velocity
 			cantidad -= 1
-			if cantidad <= 400:
+			if cantidad <= 360:
 				global_Var.camara_avion_apagado = false
 				$Camera2D.current = false
 			if cantidad == 0:

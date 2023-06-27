@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Nivel_2/Nivel_2.gd" type="Script" id=1]
+[ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_2.gd" type="Script" id=1]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/Mundo/fondo.jpeg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Mundo/meta.jpeg" type="Texture" id=4]
@@ -103,7 +103,7 @@ shape = SubResource( 4 )
 position = Vector2( 552, -1821 )
 
 [node name="Avion_negro" parent="Avion_negro" instance=ExtResource( 5 )]
-position = Vector2( -799, -1862 )
+position = Vector2( -722, -1862 )
 
 [node name="suelo_fin_nivel" parent="." instance=ExtResource( 7 )]
 position = Vector2( 617, 3911 )

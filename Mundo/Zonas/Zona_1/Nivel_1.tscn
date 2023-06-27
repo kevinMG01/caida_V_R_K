@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Nivel_1.gd" type="Script" id=2]
+[ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 1 fondo.jpg" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Nivel_1" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Nivel1Fondo" type="Sprite" parent="."]
+position = Vector2( 639, 1749 )
+scale = Vector2( 1.0224, 0.999429 )
+texture = ExtResource( 8 )
+
+[node name="Pared" type="Node2D" parent="."]
+
+[node name="pared_D" type="StaticBody2D" parent="Pared"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/pared_D"]
+position = Vector2( -26, 2552 )
+scale = Vector2( 6, 150 )
+shape = SubResource( 1 )
+
+[node name="pared_Iz" type="StaticBody2D" parent="Pared"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/pared_Iz"]
+position = Vector2( 1291, 2544 )
+scale = Vector2( 6, 150 )
+shape = SubResource( 1 )
+
+[node name="suelo" type="StaticBody2D" parent="Pared"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared/suelo"]
+position = Vector2( 608, 4000 )
+scale = Vector2( 70, 4 )
+shape = SubResource( 1 )
+
+[node name="Fondo_relleno" type="Node2D" parent="."]
+
+[node name="Enemigos" type="Node2D" parent="."]
+
+[node name="Enemigo" parent="Enemigos" instance=ExtResource( 4 )]
+position = Vector2( 58, 2253 )
+
+[node name="min" type="Position2D" parent="." groups=["min"]]
+position = Vector2( -11, 385 )
+
+[node name="max" type="Position2D" parent="." groups=["max"]]
+position = Vector2( 1080, 3485 )
+
+[node name="Avion" type="Node2D" parent="."]
+
+[node name="Avion_negro" parent="Avion" instance=ExtResource( 6 )]
+position = Vector2( -534, 321 )
+
+[node name="player" type="Position2D" parent="Avion/Avion_negro" groups=["spawn"]]
+position = Vector2( -218, -25 )
