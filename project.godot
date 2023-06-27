@@ -6,7 +6,7 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 _global_script_classes=[  ]
 _global_script_class_icons={
@@ -15,7 +15,12 @@ _global_script_class_icons={
 [application]
 
 config/name="V_R_K_(CAIDA)"
+<<<<<<< Updated upstream
 run/main_scene="res://Menu/Menu.tscn"
+=======
+run/main_scene="res://Player/Player.tscn"
+config/features=PackedStringArray("4.0")
+>>>>>>> Stashed changes
 config/icon="res://icon.png"
 
 [autoload]
@@ -53,4 +58,4 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/defaults/default_environment="res://default_env.tres"

@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 var cantidad = 165
@@ -11,7 +11,15 @@ var jugador = null
 func _physics_process(delta):
 	movimiento = Vector2()
 	deteccion()
+<<<<<<< Updated upstream:Enemigo/Enemigo_normal/Enemigo.gd
 	movimiento = move_and_slide(movimiento)
+=======
+	if nivel == 2:
+		deteccion_seguir()
+	set_velocity(movimiento)
+	move_and_slide()
+	movimiento = velocity
+>>>>>>> Stashed changes:Enemigo/Enemigo.gd
 		
 func deteccion():
 	if jugador != null:

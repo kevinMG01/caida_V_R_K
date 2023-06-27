@@ -3,7 +3,11 @@
 [ext_resource path="res://suelo_fin_nivel/suelo_fin_nivel.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
+<<<<<<< Updated upstream
 extents = Vector2( 347.5, 18.5 )
+=======
+size = Vector2( 147.5, 15 )
+>>>>>>> Stashed changes
 
 [node name="suelo_fin_nivel" type="Area2D"]
 script = ExtResource( 1 )
