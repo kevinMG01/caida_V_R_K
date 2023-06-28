@@ -28,7 +28,7 @@ func _physics_process(delta):
 	if comenzar_rot == true:
 		get_node("CollisionShape2D").rotate(speed)
 	if comenzar_rot == true:
-		get_node("Sprite").rotate(speed)
+		get_node("Sprite2D").rotate(speed)
 	pass
 
 func move():

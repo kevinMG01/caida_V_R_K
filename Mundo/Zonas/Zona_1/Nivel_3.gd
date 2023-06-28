@@ -13,7 +13,7 @@ func _physics_process(delta):
 func spawn_player():
 	if global_Var.camara_avion_apagado == false:
 		if spawn_1 == true:
-			var newplayer = player_1.instance()
+			var newplayer = player_1.instantiate()
 			add_child(newplayer)
 			newplayer.global_position = get_tree().get_nodes_in_group("spawn")[0].global_position
 			spawn_1 = false

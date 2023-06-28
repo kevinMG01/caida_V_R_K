@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 
 
@@ -25,7 +25,9 @@ func _ready():
 
 func _physics_process(delta):
 	move()
-	movimiento = move_and_slide(movimiento)
+	set_velocity(movimiento)
+	move_and_slide()
+	movimiento = velocity
 	movimiento.x = lerp(movimiento.x,0,0.21)
 	
 

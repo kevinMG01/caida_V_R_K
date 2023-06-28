@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://bpl4lum4ksxqc"]
 
-[ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Player/playe-idle.png" type="Texture" id=2]
+[ext_resource type="Script" path="res://Player/Player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bd30vnpctmv7g" path="res://Sprites/Player/playe-idle.png" id="2"]
 
+<<<<<<< Updated upstream
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [  ],
@@ -21,20 +22,37 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
+=======
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2")
+}],
+>>>>>>> Stashed changes
 "loop": true,
-"name": "move",
+"name": &"move",
 "speed": 5.0
-} ]
+}]
 
+<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.875, 20.575 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 16.5, 27.5 )
+=======
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(14.875, 15.75)
 
-[node name="Player" type="KinematicBody2D"]
-script = ExtResource( 1 )
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(34.5, 26)
+>>>>>>> Stashed changes
 
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1")
+
+<<<<<<< Updated upstream
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -3, 12 )
 scale = Vector2( 0.2, 0.2 )
@@ -45,8 +63,22 @@ animation = "move"
 position = Vector2( 2.5, 51.425 )
 shape = SubResource( 2 )
 
+=======
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("1")
+animation = &"move"
+
+[node name="player-cuerpo" type="CollisionShape2D" parent="."]
+position = Vector2(3.875, 42.75)
+shape = SubResource("2")
+
+[node name="paracaidas" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -28)
+shape = SubResource("3")
+
+>>>>>>> Stashed changes
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
 limit_left = 0
 limit_right = 1260
 limit_bottom = 3500

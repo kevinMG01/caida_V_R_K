@@ -12,9 +12,13 @@ func _on_suelo_fin_nivel_body_entered(body):
 		global_Var.nivel += 1
 		global_Var.deteccion_enemigo = true
 		if global_Var.nivel == 2:
+<<<<<<< Updated upstream
 			global_Var.camara_avion_apagado = true
 			yield(get_tree().create_timer(1, 5),"timeout")
 			get_tree().change_scene("res://Nivel_2/Nivel_2.tscn")
+=======
+			get_tree().change_scene_to_file("res://Nivel_2/Nivel_2.tscn")
+>>>>>>> Stashed changes
 		if global_Var.nivel == 3:
 			global_Var.camara_avion_apagado = true
 			yield(get_tree().create_timer(1, 5),"timeout")
