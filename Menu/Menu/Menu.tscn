@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Menu/Menu/Menu.gd" type="Script" id=2]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="botones_inferiores" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Tienda" type="Button" parent="botones_inferiores"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = 426.0
+margin_right = 120.0
+margin_bottom = 546.0
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Inventario" type="Button" parent="botones_inferiores"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 432.0
+margin_top = 427.0
+margin_right = 552.0
+margin_bottom = 547.0
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Biografia" type="Button" parent="botones_inferiores"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 864.0
+margin_top = 431.0
+margin_right = 984.0
+margin_bottom = 551.0
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="jugar" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -60.0
+margin_right = 60.0
+margin_bottom = 60.0
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Salir" type="Button" parent="."]
+margin_left = 888.0
+margin_top = 14.0
+margin_right = 1008.0
+margin_bottom = 134.0
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 18.0
+margin_top = 16.0
+margin_right = 138.0
+margin_bottom = 136.0
+icon = ExtResource( 1 )
+expand_icon = true
+
+[connection signal="pressed" from="botones_inferiores/Tienda" to="." method="_on_Tienda_pressed"]
+[connection signal="pressed" from="botones_inferiores/Inventario" to="." method="_on_Inventario_pressed"]
+[connection signal="pressed" from="botones_inferiores/Biografia" to="." method="_on_Biografia_pressed"]
+[connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
