@@ -27,7 +27,6 @@ func deteccion():
 		if global_position.x < jugador.global_position.x - 6:
 			movimiento.x += cantidad
 			$AnimatedSprite.flip_h = false
-
 func deteccion_seguir():
 	
 	if jugador_abajo != null:
