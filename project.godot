@@ -15,6 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="V_R_K_(CAIDA)"
+run/main_scene="res://Menu/Menu/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
