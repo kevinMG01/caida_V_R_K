@@ -13,7 +13,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -24,11 +24,3 @@ position = Vector2( -6, -39 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
 animation = "move_paracaida"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-limit_left = 0
-limit_right = 1250
-limit_bottom = 3500
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true

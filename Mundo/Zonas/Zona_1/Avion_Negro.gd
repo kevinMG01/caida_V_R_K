@@ -28,7 +28,6 @@ func move():
 		cantidad -= 1
 		if cantidad <= 300:
 			global_Var.camara_avion_apagado = false
-			$Camera2D.current = false
 			if cantidad == 0:
 				self.queue_free()
 	pass

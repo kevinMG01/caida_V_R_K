@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_1.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Mundo/Avion_fondo_derecha/Avion_fondo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 1 fondo.jpg" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -48,9 +49,23 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Avion_Negro" parent="avion" instance=ExtResource( 1 )]
+position = Vector2( -210, 333 )
 
 [node name="player" type="Position2D" parent="avion/Avion_Negro" groups=["spawn"]]
-position = Vector2( -186, -17 )
+position = Vector2( -144, 7 )
 
 [node name="Enemigo" parent="." instance=ExtResource( 2 )]
 position = Vector2( 123, 1911 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -210, 334 )
+current = true
+limit_left = 0
+limit_right = 1200
+limit_bottom = 3500
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+
+[node name="avion_derecha" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1004, 546 )
