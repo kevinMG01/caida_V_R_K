@@ -24,12 +24,12 @@ func _on_Tienda_pressed():
 
 
 func _on_Inventario_pressed():
-	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
+	get_tree().change_scene("")
 	pass 
 
 
 func _on_Biografia_pressed():
-	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
+	get_tree().change_scene("res://Menu/Controles/Biografia.tscn")
 	
 	pass 
 
