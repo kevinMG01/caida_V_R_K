@@ -1,12 +1,43 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Menu/Boton de Play.png" type="Texture" id=1]
 [ext_resource path="res://Menu/Menu/Menu.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Menu/Boton de tienda menu.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Menu/Boton de inventario menu.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Menu/Moneda.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Menu/Boton de Biografia.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Menu/Mapa Principal  fondo.jpg" type="Texture" id=7]
+[ext_resource path="res://Sprites/Menu/Boton de Salir.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Menu/Lugar para las monedas sprite 1.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+
+[node name="MapaPrincipalFondo" type="Sprite" parent="."]
+position = Vector2( 513, 301 )
+texture = ExtResource( 7 )
 
 [node name="botones_inferiores" type="Control" parent="."]
 margin_right = 40.0
@@ -15,10 +46,13 @@ margin_bottom = 40.0
 [node name="Tienda" type="Button" parent="botones_inferiores"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = 426.0
-margin_right = 120.0
-margin_bottom = 546.0
-icon = ExtResource( 1 )
+margin_left = 2.0
+margin_top = 343.0
+margin_right = 256.0
+margin_bottom = 511.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/normal = SubResource( 1 )
+icon = ExtResource( 3 )
 expand_icon = true
 
 [node name="Inventario" type="Button" parent="botones_inferiores"]
@@ -26,11 +60,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 432.0
-margin_top = 427.0
-margin_right = 552.0
-margin_bottom = 547.0
-icon = ExtResource( 1 )
+margin_left = 324.0
+margin_top = 355.0
+margin_right = 750.0
+margin_bottom = 505.0
+custom_styles/hover = SubResource( 8 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 4 )
 expand_icon = true
 
 [node name="Biografia" type="Button" parent="botones_inferiores"]
@@ -38,11 +74,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 864.0
-margin_top = 431.0
-margin_right = 984.0
-margin_bottom = 551.0
-icon = ExtResource( 1 )
+margin_left = 786.0
+margin_top = 385.0
+margin_right = 930.0
+margin_bottom = 535.0
+custom_styles/hover = SubResource( 9 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 6 )
 expand_icon = true
 
 [node name="jugar" type="Button" parent="."]
@@ -50,28 +88,34 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -60.0
-margin_top = -60.0
-margin_right = 60.0
-margin_bottom = 60.0
+margin_left = -192.0
+margin_top = -176.0
+margin_right = 210.0
+margin_bottom = 4.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/normal = SubResource( 4 )
 icon = ExtResource( 1 )
 expand_icon = true
 
 [node name="Salir" type="Button" parent="."]
-margin_left = 888.0
+margin_left = 810.0
 margin_top = 14.0
 margin_right = 1008.0
-margin_bottom = 134.0
-icon = ExtResource( 1 )
+margin_bottom = 170.0
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
+icon = ExtResource( 8 )
 expand_icon = true
 
-[node name="Button3" type="Button" parent="."]
-margin_left = 18.0
-margin_top = 16.0
-margin_right = 138.0
-margin_bottom = 136.0
-icon = ExtResource( 1 )
-expand_icon = true
+[node name="LugarParaLasMonedasSprite1" type="Sprite" parent="."]
+position = Vector2( 325, 81 )
+scale = Vector2( 0.776471, 1.05128 )
+texture = ExtResource( 9 )
+
+[node name="Moneda" type="Sprite" parent="LugarParaLasMonedasSprite1"]
+position = Vector2( -123.333, 7.14085 )
+scale = Vector2( 0.645833, 0.378169 )
+texture = ExtResource( 5 )
 
 [connection signal="pressed" from="botones_inferiores/Tienda" to="." method="_on_Tienda_pressed"]
 [connection signal="pressed" from="botones_inferiores/Inventario" to="." method="_on_Inventario_pressed"]

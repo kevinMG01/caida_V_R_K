@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nube.png-c0988ad6f41b9b522a6fc4329d3d22d8.stex"
+path="res://.import/Boton de tienda menu.png-a57971530e6b6a3045164e78cf0defbc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/nube.png"
-dest_files=[ "res://.import/nube.png-c0988ad6f41b9b522a6fc4329d3d22d8.stex" ]
+source_file="res://Sprites/Menu/Boton de tienda menu.png"
+dest_files=[ "res://.import/Boton de tienda menu.png-a57971530e6b6a3045164e78cf0defbc.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

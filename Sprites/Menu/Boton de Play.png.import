@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/salir_2.png-512397231d8491c35ced5734b9b97430.stex"
+path="res://.import/Boton de Play.png-6185cd9d8b2514cd0a9970300589a736.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/salir_2.png"
-dest_files=[ "res://.import/salir_2.png-512397231d8491c35ced5734b9b97430.stex" ]
+source_file="res://Sprites/Menu/Boton de Play.png"
+dest_files=[ "res://.import/Boton de Play.png-6185cd9d8b2514cd0a9970300589a736.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

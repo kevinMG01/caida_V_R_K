@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo_menu.jpeg-eba9dc8bfaf678a240de4a7ecae612b3.stex"
+path="res://.import/Lugar para las monedas sprite 1.png-cebff16b65fce47fd3d262556078264c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/fondo_menu.jpeg"
-dest_files=[ "res://.import/fondo_menu.jpeg-eba9dc8bfaf678a240de4a7ecae612b3.stex" ]
+source_file="res://Sprites/Menu/Lugar para las monedas sprite 1.png"
+dest_files=[ "res://.import/Lugar para las monedas sprite 1.png-cebff16b65fce47fd3d262556078264c.stex" ]
 
 [params]
 

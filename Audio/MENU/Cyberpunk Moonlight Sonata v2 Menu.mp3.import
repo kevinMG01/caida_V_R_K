@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cyberpunk Moonlight Sonata v2 Menu.mp3-6aac74a81e08b9c10b0ea4f853963c94.mp3str"
+
+[deps]
+
+source_file="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3"
+dest_files=[ "res://.import/Cyberpunk Moonlight Sonata v2 Menu.mp3-6aac74a81e08b9c10b0ea4f853963c94.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
