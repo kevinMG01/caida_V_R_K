@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Sprites/Menu/Boton de Play.png" type="Texture" id=1]
 [ext_resource path="res://Menu/Menu/Menu.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sprites/Menu/Mapa Principal  fondo.jpg" type="Texture" id=7]
 [ext_resource path="res://Sprites/Menu/Boton de Salir.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Menu/Lugar para las monedas sprite 1.png" type="Texture" id=9]
+[ext_resource path="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3" type="AudioStream" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
@@ -116,6 +117,10 @@ texture = ExtResource( 9 )
 position = Vector2( -123.333, 7.14085 )
 scale = Vector2( 0.645833, 0.378169 )
 texture = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
 
 [connection signal="pressed" from="botones_inferiores/Tienda" to="." method="_on_Tienda_pressed"]
 [connection signal="pressed" from="botones_inferiores/Inventario" to="." method="_on_Inventario_pressed"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
+[ext_resource path="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Mundo/Seleccion_Zona/seleccion_Zona.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Mapa de niveles de la zona 1.jpg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Banderas de la zona 1 sprite 1.png" type="Texture" id=4]
@@ -296,6 +297,10 @@ anims/zona_2 = SubResource( 17 )
 anims/zona_3 = SubResource( 18 )
 anims/zona_4 = SubResource( 19 )
 anims/zona_5 = SubResource( 20 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
 
 [connection signal="scroll_ended" from="ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
 [connection signal="scroll_started" from="ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]

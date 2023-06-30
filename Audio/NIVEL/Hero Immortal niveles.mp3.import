@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hero Immortal niveles.mp3-03c3874d34201ac49d8f478823597042.mp3str"
+
+[deps]
+
+source_file="res://Audio/NIVEL/Hero Immortal niveles.mp3"
+dest_files=[ "res://.import/Hero Immortal niveles.mp3-03c3874d34201ac49d8f478823597042.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
