@@ -9,17 +9,21 @@ var gravedad = 70
 var masa = 2
 var salto = 100
 
-var tiene_paracaida = true
-var esta_en_suelo = false
+var tiene_paracaida = true 
+var esta_suelo = false
+
+
+func _ready():
+	$AnimatedSprite.playing = true
 	
 func _physics_process(delta):
 	move_con_paracaidas()
 	power_up()
 	movimiento = move_and_slide(movimiento, Vector2(0, -1))
 	
-	if esta_en_suelo == false:
+	if esta_suelo == false:
 		movimiento.y = gravedad * masa
-	elif esta_en_suelo == true:
+	elif esta_suelo == true:
 		movimiento.y = movimiento.y + gravedad * delta
 	#movimiento = movimiento.normalized()* cantidad
 	
@@ -31,34 +35,53 @@ func move_con_paracaidas():
 	if !is_on_floor():
 		if Input.is_action_just_pressed("ui_down"):
 			 tiene_paracaida = !tiene_paracaida
+			
 	if is_on_floor():
-		esta_en_suelo = true
-		tiene_paracaida = true
-		if Input.is_action_just_pressed("ui_up"):
-			movimiento.y = -salto
-		pass
+		esta_suelo = true
+	
+	if esta_suelo == false:
+		if tiene_paracaida == true:
+			cantidad = 150
+			gravedad = 70
+			movimiento.x = 0
+			$AnimatedSprite.animation = "Move_paracaida"
+			if Input.is_action_pressed("ui_left"):
+				movimiento.x -= cantidad
+				$AnimatedSprite.flip_h = true
+			elif Input.is_action_pressed("ui_right"):
+				movimiento.x += cantidad
+				$AnimatedSprite.flip_h = false
 
-	if tiene_paracaida == true:
+		elif tiene_paracaida == false:
+			cantidad = 70
+			gravedad = 150
+			movimiento.x = 0
+			$AnimatedSprite.animation = "Move_paracaida"
+			if Input.is_action_pressed("ui_left"):
+				movimiento.x -= cantidad
+				$AnimatedSprite.flip_h = true
+			elif Input.is_action_pressed("ui_right"):
+				movimiento.x += cantidad
+				$AnimatedSprite.flip_h = false
+	elif esta_suelo == true:
 		cantidad = 150
 		gravedad = 70
 		movimiento.x = 0
+		$AnimatedSprite.animation = "Move_suelo"
+		if Input.is_action_just_pressed("ui_up"):
+			movimiento.y = -salto
+			
 		if Input.is_action_pressed("ui_left"):
 			movimiento.x -= cantidad
 			$AnimatedSprite.flip_h = true
-		elif Input.is_action_pressed("ui_right"):
-			movimiento.x += cantidad
-			$AnimatedSprite.flip_h = false
-
-	elif tiene_paracaida == false:
-		cantidad = 70
-		gravedad = 150
-		movimiento.x = 0
-		if Input.is_action_pressed("ui_left"):
-			movimiento.x -= cantidad
-			$AnimatedSprite.flip_h = true
+			
 		if Input.is_action_pressed("ui_right"):
 			movimiento.x += cantidad
 			$AnimatedSprite.flip_h = false
+			
+		if movimiento.x == 0:
+			$AnimatedSprite.animation = "Idle_suelo"
+		pass
 
 
 

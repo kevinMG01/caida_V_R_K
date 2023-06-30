@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/playe-idle.png-b583a5f5158c1e29b9f515275a3c0ebb.stex"
+path="res://.import/Paracaidista caminando 1.png-385399faa5a3754d31227346a988acfb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/playe-idle.png"
-dest_files=[ "res://.import/playe-idle.png-b583a5f5158c1e29b9f515275a3c0ebb.stex" ]
+source_file="res://Sprites/Player/Paracaidista caminando 1.png"
+dest_files=[ "res://.import/Paracaidista caminando 1.png-385399faa5a3754d31227346a988acfb.stex" ]
 
 [params]
 

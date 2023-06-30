@@ -70,7 +70,7 @@ drag_margin_v_enabled = true
 smoothing_enabled = true
 
 [node name="avion_derecha" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1232, 944 )
+position = Vector2( 180, 995 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
