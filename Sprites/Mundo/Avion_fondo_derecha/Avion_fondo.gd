@@ -15,8 +15,6 @@ var comenzar_area = false
 
 func _ready():
 	comensar = true
-	
-	
 	pass 
 
 

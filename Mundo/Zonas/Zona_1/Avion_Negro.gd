@@ -26,7 +26,7 @@ func move():
 	if comensar == true:
 		movimiento.x += velocity
 		cantidad -= 1
-		if cantidad <= 300:
+		if cantidad <= 150:
 			global_Var.camara_avion_apagado = false
 			if cantidad == 0:
 				self.queue_free()
