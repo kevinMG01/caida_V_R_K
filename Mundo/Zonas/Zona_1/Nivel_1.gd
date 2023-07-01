@@ -10,6 +10,7 @@ func _ready():
 func _physics_process(delta):
 	spawn_player()
 	camara_nivel_1()
+	
 	pass
 	
 
