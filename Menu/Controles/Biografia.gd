@@ -33,7 +33,20 @@ func _process(delta):
 		animation_tree["parameters/blend_position"] = int(round(scroll))
 		scroller.scroll_horizontal = rect_size.x * int(round(scroll))
 		set_process(false)
-	#nose porque no da el "print()" seguro hay un error. fijarse mas tarde
-	if scroller.scroll_horizontal == rect_size.x * 3:
-		print("hola muundo")
+
 	pass
+
+
+func _on_globo_pressed():
+	scroller.scroll_horizontal = rect_size.x * 0
+	pass # Replace with function body.
+
+
+func _on_ave_pressed():
+	scroller.scroll_horizontal = rect_size.x * 1
+	pass # Replace with function body.
+
+
+func _on_dron_pressed():
+	scroller.scroll_horizontal = rect_size.x * 2
+	pass # Replace with function body.

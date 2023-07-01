@@ -90,38 +90,61 @@ size_flags_vertical = 3
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
+[node name="Globo" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_right = 90.0
 margin_bottom = 90.0
 rect_min_size = Vector2( 90, 90 )
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
+[node name="globo" type="Button" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 83.0
+
+[node name="Ave" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_top = 94.0
 margin_right = 90.0
 margin_bottom = 184.0
 rect_min_size = Vector2( 90, 90 )
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="PanelContainer3" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
+[node name="ave" type="Button" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 83.0
+
+[node name="Dron" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_top = 188.0
 margin_right = 90.0
 margin_bottom = 278.0
 rect_min_size = Vector2( 0, 90 )
+mouse_filter = 2
+
+[node name="dron" type="Button" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Dron"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 83.0
+margin_bottom = 83.0
 
 [node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_top = 282.0
 margin_right = 90.0
 margin_bottom = 372.0
 rect_min_size = Vector2( 0, 90 )
+mouse_filter = 2
 
 [node name="PanelContainer5" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_top = 376.0
 margin_right = 90.0
 margin_bottom = 466.0
 rect_min_size = Vector2( 0, 90 )
+mouse_filter = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
 margin_left = 204.0
@@ -188,3 +211,7 @@ anims/2 = SubResource( 8 )
 anims/3 = SubResource( 9 )
 anims/4 = SubResource( 10 )
 anims/5 = SubResource( 11 )
+
+[connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo/globo" to="." method="_on_globo_pressed"]
+[connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave/ave" to="." method="_on_ave_pressed"]
+[connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Dron/dron" to="." method="_on_dron_pressed"]
