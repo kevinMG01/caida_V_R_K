@@ -148,11 +148,11 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="Zona_1_N_1" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
-margin_left = 122.0
-margin_top = 220.0
-margin_right = 202.0
-margin_bottom = 310.0
-rect_rotation = -31.8054
+margin_left = 129.0
+margin_top = 221.0
+margin_right = 209.0
+margin_bottom = 311.0
+rect_rotation = -27.2348
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
@@ -173,10 +173,12 @@ position = Vector2( 41, 43 )
 texture = ExtResource( 10 )
 
 [node name="Zona_1_N_3" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
-margin_left = 429.0
-margin_top = 227.0
-margin_right = 509.0
-margin_bottom = 317.0
+margin_left = 411.0
+margin_top = 253.0
+margin_right = 491.0
+margin_bottom = 343.0
+rect_rotation = -15.4793
+rect_scale = Vector2( 1.19426, 0.997432 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
@@ -185,11 +187,12 @@ position = Vector2( 37, 39 )
 texture = ExtResource( 7 )
 
 [node name="Zona_1_N_4" type="TextureButton" parent="ScrollContainer/HBoxContainer/Zona_1/buton"]
-margin_left = 727.0
-margin_top = 209.0
-margin_right = 811.0
-margin_bottom = 304.0
-rect_rotation = 61.0764
+margin_left = 713.0
+margin_top = 214.0
+margin_right = 797.0
+margin_bottom = 309.0
+rect_rotation = 66.1843
+rect_scale = Vector2( 1.12164, 1 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 

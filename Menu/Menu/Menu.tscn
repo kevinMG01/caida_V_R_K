@@ -47,10 +47,10 @@ margin_bottom = 40.0
 [node name="Tienda" type="Button" parent="botones_inferiores"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 343.0
-margin_right = 256.0
-margin_bottom = 511.0
+margin_left = 1.0
+margin_top = 340.0
+margin_right = 274.0
+margin_bottom = 508.0
 custom_styles/hover = SubResource( 7 )
 custom_styles/normal = SubResource( 1 )
 icon = ExtResource( 3 )
