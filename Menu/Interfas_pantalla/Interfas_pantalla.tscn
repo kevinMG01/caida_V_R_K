@@ -9,9 +9,9 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="pausa" type="PanelContainer" parent="."]
-margin_left = 178.0
+margin_left = 150.0
 margin_top = 105.0
-margin_right = 878.0
+margin_right = 850.0
 margin_bottom = 505.0
 
 [node name="control_pausa" type="Control" parent="pausa"]
