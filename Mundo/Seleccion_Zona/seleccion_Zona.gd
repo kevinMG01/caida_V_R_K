@@ -52,6 +52,7 @@ func _on_ScrollContainer_scroll_started():
 	set_process(true)
 	pass
 
+
 #Boton_scroll
 func _on_Atras_pressed():
 	scroller.scroll_horizontal -= rect_size.x * 1

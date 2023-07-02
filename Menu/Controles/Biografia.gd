@@ -34,7 +34,17 @@ func _process(delta):
 		scroller.scroll_horizontal = rect_size.x * int(round(scroll))
 		set_process(false)
 
+
+func _on_ScrollContainer_scroll_ended():
+	is_scrolling = false
+	pass 
+
+
+func _on_ScrollContainer_scroll_started():
+	is_scrolling = true
+	set_process(true)
 	pass
+
 
 
 func _on_globo_pressed():
@@ -50,3 +60,6 @@ func _on_ave_pressed():
 func _on_dron_pressed():
 	scroller.scroll_horizontal = rect_size.x * 2
 	pass # Replace with function body.
+
+
+

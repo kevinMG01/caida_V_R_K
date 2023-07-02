@@ -1,8 +1,11 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 
-[sub_resource type="Theme" id=17]
+[sub_resource type="StyleBoxEmpty" id=17]
+
+[sub_resource type="Theme" id=18]
+HScrollBar/styles/scroll = SubResource( 17 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.870588, 0.121569, 0.121569, 1 )
@@ -151,18 +154,19 @@ margin_left = 204.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
-theme = SubResource( 17 )
+theme = SubResource( 18 )
+scroll_vertical_enabled = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ScrollContainer"]
 margin_right = 4100.0
-margin_bottom = 588.0
+margin_bottom = 600.0
 mouse_filter = 2
 size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="1" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_right = 820.0
-margin_bottom = 588.0
+margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
@@ -170,7 +174,7 @@ custom_styles/panel = SubResource( 1 )
 [node name="2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 820.0
 margin_right = 1640.0
-margin_bottom = 588.0
+margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 2 )
@@ -178,7 +182,7 @@ custom_styles/panel = SubResource( 2 )
 [node name="3" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1640.0
 margin_right = 2460.0
-margin_bottom = 588.0
+margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 3 )
@@ -186,7 +190,7 @@ custom_styles/panel = SubResource( 3 )
 [node name="4" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 2460.0
 margin_right = 3280.0
-margin_bottom = 588.0
+margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 4 )
@@ -194,7 +198,7 @@ custom_styles/panel = SubResource( 4 )
 [node name="5" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 3280.0
 margin_right = 4100.0
-margin_bottom = 588.0
+margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 5 )
@@ -203,7 +207,7 @@ custom_styles/panel = SubResource( 5 )
 tree_root = SubResource( 6 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/blend_position = -0.0259774
+parameters/blend_position = 4.99357
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/1 = SubResource( 7 )
@@ -215,3 +219,5 @@ anims/5 = SubResource( 11 )
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo/globo" to="." method="_on_globo_pressed"]
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave/ave" to="." method="_on_ave_pressed"]
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Dron/dron" to="." method="_on_dron_pressed"]
+[connection signal="scroll_ended" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
+[connection signal="scroll_started" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
