@@ -124,13 +124,13 @@ icon = ExtResource( 8 )
 expand_icon = true
 
 [node name="LugarParaLasMonedasSprite1" type="Sprite" parent="."]
-position = Vector2( 325, 81 )
-scale = Vector2( 0.776471, 1.05128 )
+position = Vector2( 304.5, 81 )
+scale = Vector2( 0.897059, 1.05128 )
 texture = ExtResource( 9 )
 
 [node name="Moneda" type="Sprite" parent="LugarParaLasMonedasSprite1"]
-position = Vector2( -123.333, 7.14085 )
-scale = Vector2( 0.645833, 0.378169 )
+position = Vector2( -144.242, 2.85365 )
+scale = Vector2( 0.351322, 0.257858 )
 texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
