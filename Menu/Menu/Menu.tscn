@@ -57,10 +57,10 @@ margin_bottom = 40.0
 [node name="Tienda" type="Button" parent="botones_inferiores"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 343.0
-margin_right = 256.0
-margin_bottom = 511.0
+margin_left = 1.0
+margin_top = 340.0
+margin_right = 274.0
+margin_bottom = 508.0
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 1 )
@@ -124,13 +124,13 @@ icon = ExtResource( 8 )
 expand_icon = true
 
 [node name="LugarParaLasMonedasSprite1" type="Sprite" parent="."]
-position = Vector2( 325, 81 )
-scale = Vector2( 0.776471, 1.05128 )
+position = Vector2( 304.5, 81 )
+scale = Vector2( 0.897059, 1.05128 )
 texture = ExtResource( 9 )
 
 [node name="Moneda" type="Sprite" parent="LugarParaLasMonedasSprite1"]
-position = Vector2( -123.333, 7.14085 )
-scale = Vector2( 0.645833, 0.378169 )
+position = Vector2( -144.242, 2.85365 )
+scale = Vector2( 0.351322, 0.257858 )
 texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
