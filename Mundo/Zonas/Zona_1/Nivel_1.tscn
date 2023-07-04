@@ -60,7 +60,7 @@ position = Vector2( -144, 7 )
 position = Vector2( 123, 1911 )
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["camara"]]
-position = Vector2( 523, 309 )
+position = Vector2( 534, 320 )
 current = true
 limit_left = 0
 limit_right = 1250
@@ -69,17 +69,19 @@ limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
+editor_draw_drag_margin = true
 
 [node name="avion_derecha" parent="." instance=ExtResource( 4 )]
 position = Vector2( 180, 995 )
+
+[node name="Interfas_pantalla" parent="." instance=ExtResource( 6 )]
+visible = false
+margin_left = 6.0
+margin_top = 3.0
+margin_right = 6.0
+margin_bottom = 3.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = 14.857
 autoplay = true
-
-[node name="Interfas_pantalla" parent="." instance=ExtResource( 6 )]
-margin_left = 6.0
-margin_top = 3.0
-margin_right = 6.0
-margin_bottom = 3.0
