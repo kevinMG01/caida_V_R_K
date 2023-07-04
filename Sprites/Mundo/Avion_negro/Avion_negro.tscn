@@ -1,20 +1,42 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Avion_Negro.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Mundo/Avion_negro/avion-negro.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta cerrada.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta medio abierta.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta abierta.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 33, 21.5 )
+extents = Vector2( 157, 62 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "caida",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "move",
+"speed": 2.0
+} ]
 
 [node name="Avion_Negro" type="KinematicBody2D" groups=["avion"]]
 position = Vector2( 2, -1 )
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1, 2 )
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -1 )
+position = Vector2( -2, 2 )
 shape = SubResource( 4 )
 disabled = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3, 4 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 5 )
+animation = "Idle"

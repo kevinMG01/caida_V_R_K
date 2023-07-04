@@ -13,6 +13,7 @@ var caminar = false
 var comenzar_area = false
 
 func _ready():
+	$AnimatedSprite.animation = "Idle"
 	comensar = true
 	pass 
 
@@ -27,6 +28,8 @@ func move():
 		movimiento.x += velocity
 		cantidad -= 1
 		if cantidad <= 150:
+			$AnimatedSprite.playing = true
+			$AnimatedSprite.animation = "move"
 			global_Var.camara_avion_apagado = false
 			if cantidad == 0:
 				self.queue_free()
