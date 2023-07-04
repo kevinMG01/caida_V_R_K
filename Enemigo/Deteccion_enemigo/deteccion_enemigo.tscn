@@ -6,7 +6,5 @@
 [node name="deteccion_enemigo" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="DeteccionEnemigo-removebg-preview" type="Sprite" parent="."]
-position = Vector2( -40, 2 )
-scale = Vector2( 0.3, 0.5 )
+[node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
