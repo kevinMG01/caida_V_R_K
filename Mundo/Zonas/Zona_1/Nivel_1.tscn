@@ -54,7 +54,7 @@ margin_bottom = 40.0
 position = Vector2( -449, 243 )
 
 [node name="player" type="Position2D" parent="avion/Avion_Negro" groups=["spawn"]]
-position = Vector2( -370, -52 )
+position = Vector2( -333, -52 )
 
 [node name="Enemigo" parent="." instance=ExtResource( 2 )]
 position = Vector2( 123, 1911 )
