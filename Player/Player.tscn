@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/Player/Paracaidista quieto.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Player/Paracaidista.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Player/Paracaidista caminando 1.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Player/Paracaidista caminando 2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 4 copia.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 5 copia.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Player/new/Mientras esta saltando.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -20,9 +26,14 @@ animations = [ {
 "name": "Move_paracaida",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "Move_suelo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Up",
 "speed": 5.0
 } ]
 
@@ -36,4 +47,4 @@ shape = SubResource( 1 )
 position = Vector2( -1, -37 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
-animation = "Idle_suelo"
+animation = "Move_paracaida"

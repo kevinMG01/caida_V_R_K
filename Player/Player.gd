@@ -38,6 +38,9 @@ func move_con_paracaidas():
 			
 	if is_on_floor():
 		esta_suelo = true
+		
+		if Input.is_action_just_pressed("ui_up"):
+			movimiento.y = -salto
 	
 	if esta_suelo == false:
 		if tiene_paracaida == true:
@@ -68,8 +71,6 @@ func move_con_paracaidas():
 		gravedad = 70
 		movimiento.x = 0
 		$AnimatedSprite.animation = "Move_suelo"
-		if Input.is_action_just_pressed("ui_up"):
-			movimiento.y = -salto
 			
 		if Input.is_action_pressed("ui_left"):
 			movimiento.x -= cantidad
@@ -80,7 +81,9 @@ func move_con_paracaidas():
 			$AnimatedSprite.flip_h = false
 			
 		if movimiento.x == 0:
-			$AnimatedSprite.animation = "Idle_suelo"
+				$AnimatedSprite.animation = "Idle_suelo"
+		if !is_on_floor():
+			$AnimatedSprite.animation = "Up"
 		pass
 
 

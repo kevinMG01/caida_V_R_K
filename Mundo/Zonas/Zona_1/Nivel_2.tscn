@@ -6,6 +6,7 @@
 [ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 2 fondo.jpg" type="Texture" id=6]
 [ext_resource path="res://suelo_fin_nivel/suelo_fin_nivel.tscn" type="PackedScene" id=7]
 
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.625, 2713.5 )
 
