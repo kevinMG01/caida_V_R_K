@@ -32,7 +32,10 @@ func camara_nivel_1():
 		$Camera2D.global_position = get_tree().get_nodes_in_group("avion")[0].global_position
 	elif global_Var.camara_avion_apagado == false:
 		$Camera2D.global_position = get_tree().get_nodes_in_group("player")[0].global_position
+	
 		
+		
+
 func insertar_interfa_pantalla():
 	
 	pass

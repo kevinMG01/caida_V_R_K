@@ -30,9 +30,11 @@ func move():
 		if cantidad <= 150:
 			$AnimatedSprite.playing = true
 			$AnimatedSprite.animation = "move"
-			global_Var.camara_avion_apagado = false
-			if cantidad == 0:
-				self.queue_free()
-		if cantidad <= 130:
+			yield(get_tree().create_timer(1.0),"timeout")
 			$AnimatedSprite.animation = "caida"
+			yield(get_tree().create_timer(1.0),"timeout")
+			global_Var.camara_avion_apagado = false
+			yield(get_tree().create_timer(7.0),"timeout")
+			if cantidad <= 0:
+				self.queue_free()
 	pass

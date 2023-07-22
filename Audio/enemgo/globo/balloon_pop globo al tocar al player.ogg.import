@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/balloon_pop globo al tocar al player.ogg-46d02aef43dae1731a08c962a7e5e12a.oggstr"
+
+[deps]
+
+source_file="res://Audio/enemgo/globo/balloon_pop globo al tocar al player.ogg"
+dest_files=[ "res://.import/balloon_pop globo al tocar al player.ogg-46d02aef43dae1731a08c962a7e5e12a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

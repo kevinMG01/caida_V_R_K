@@ -16,7 +16,17 @@ var esta_suelo = false
 func _ready():
 	$AnimatedSprite.playing = true
 	
+	
 func _physics_process(delta):
+#	$AnimatedSprite.scale
+#	yield(get_tree().create_timer(0.9),"timeout")
+#	$AnimatedSprite.scale = 0.04
+#	yield(get_tree().create_timer(0.9),"timeout")
+#	$AnimatedSprite.scale = 0.08
+#	yield(get_tree().create_timer(0.9),"timeout")
+#	$AnimatedSprite.scale = 0.13
+#	yield(get_tree().create_timer(0.9),"timeout")
+#	$AnimatedSprite.scale = 0.2
 	move_con_paracaidas()
 	power_up()
 	movimiento = move_and_slide(movimiento, Vector2(0, -1))
@@ -90,7 +100,7 @@ func move_con_paracaidas():
 
 
 func power_up():
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("1"):
 		if global_Var.power_up > 0:
 			cantidad = 300
 			global_Var.power_up -= 1

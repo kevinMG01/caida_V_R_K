@@ -36,7 +36,7 @@ shape = SubResource( 4 )
 disabled = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 3, 4 )
+position = Vector2( 3, 19 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 5 )
 animation = "Idle"
