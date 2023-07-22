@@ -109,7 +109,5 @@ func power_up():
 	pass
 
 
-func _on_colicion_muerte_body_entered(body):
-#	if body.get_name() == "Enemigo":
-#		body.queue_free()
-	pass
+#if body.is_in_group("enemigo"):
+#		self.queue_free()
