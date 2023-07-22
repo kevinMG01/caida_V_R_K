@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/meta.jpeg-aee3c02dbd7cc82e647a60c3c45b9c90.stex"
+path="res://.import/Meta 2.jpg-c49903f7e4a4bb50d1a1ca8e3caf53e1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Mundo/meta.jpeg"
-dest_files=[ "res://.import/meta.jpeg-aee3c02dbd7cc82e647a60c3c45b9c90.stex" ]
+source_file="res://Sprites/Mundo/Meta 2.jpg"
+dest_files=[ "res://.import/Meta 2.jpg-c49903f7e4a4bb50d1a1ca8e3caf53e1.stex" ]
 
 [params]
 
