@@ -33,4 +33,6 @@ func move():
 			global_Var.camara_avion_apagado = false
 			if cantidad == 0:
 				self.queue_free()
+		if cantidad <= 130:
+			$AnimatedSprite.animation = "caida"
 	pass
