@@ -25,7 +25,7 @@ position = Vector2( 624, 1750 )
 texture = ExtResource( 8 )
 
 [node name="meta" parent="." instance=ExtResource( 7 )]
-position = Vector2( -10, 2712 )
+position = Vector2( -7, 3259 )
 
 [node name="pared" type="Node2D" parent="."]
 
