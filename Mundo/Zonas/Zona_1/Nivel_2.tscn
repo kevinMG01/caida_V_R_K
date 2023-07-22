@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 2 fondo.jpg" type="Texture" id=1]
-[ext_resource path="res://Nivel_2.gd" type="Script" id=2]
+[ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_2.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemigo/Enemigo_Ave/Ave.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -46,11 +47,29 @@ shape = SubResource( 3 )
 [node name="Enemigo" parent="Enemogos" instance=ExtResource( 4 )]
 position = Vector2( 49, 954 )
 
+[node name="Enemigo3" parent="Enemogos" instance=ExtResource( 4 )]
+position = Vector2( 565, 2134 )
+
+[node name="Enemigo4" parent="Enemogos" instance=ExtResource( 4 )]
+position = Vector2( 941, 2798 )
+
+[node name="Enemigo5" parent="Enemogos" instance=ExtResource( 4 )]
+position = Vector2( 55, 3391 )
+
+[node name="Enemigo6" parent="Enemogos" instance=ExtResource( 4 )]
+position = Vector2( 1200, 4450 )
+
+[node name="Enemigo7" parent="Enemogos" instance=ExtResource( 4 )]
+position = Vector2( 37, 4951 )
+
+[node name="Enemigo8" parent="Enemogos" instance=ExtResource( 4 )]
+position = Vector2( 242, 3919 )
+
 [node name="Avion_Negro" parent="." instance=ExtResource( 3 )]
-position = Vector2( -525, 281 )
+position = Vector2( -377, 265 )
 
 [node name="Position2D" type="Position2D" parent="Avion_Negro" groups=["spawn"]]
-position = Vector2( -299, -37 )
+position = Vector2( -363, -21 )
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["camara"]]
 position = Vector2( 688, 504 )
@@ -61,4 +80,8 @@ limit_right = 1247
 limit_bottom = 6300
 limit_smoothed = true
 smoothing_enabled = true
+drag_margin_bottom = 0.0
 editor_draw_drag_margin = true
+
+[node name="Ave" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1145, 1472 )

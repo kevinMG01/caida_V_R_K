@@ -13,6 +13,8 @@ var tiene_paracaida = true
 var esta_suelo = false
 
 
+var colicion_enemigo = false
+
 func _ready():
 	$AnimatedSprite.playing = true
 	
@@ -27,14 +29,15 @@ func _physics_process(delta):
 #	$AnimatedSprite.scale = 0.13
 #	yield(get_tree().create_timer(0.9),"timeout")
 #	$AnimatedSprite.scale = 0.2
-	move_con_paracaidas()
-	power_up()
-	movimiento = move_and_slide(movimiento, Vector2(0, -1))
-	
-	if esta_suelo == false:
-		movimiento.y = gravedad * masa
-	elif esta_suelo == true:
-		movimiento.y = movimiento.y + gravedad * delta
+	if colicion_enemigo == false:
+		move_con_paracaidas()
+		power_up()
+		movimiento = move_and_slide(movimiento, Vector2(0, -1))
+		
+		if esta_suelo == false:
+			movimiento.y = gravedad * masa
+		elif esta_suelo == true:
+			movimiento.y = movimiento.y + gravedad * delta
 	#movimiento = movimiento.normalized()* cantidad
 	
 	pass
@@ -111,3 +114,10 @@ func power_up():
 
 #if body.is_in_group("enemigo"):
 #		self.queue_free()
+
+
+func _on_detectar_enemigos_body_entered(body):
+	if body.is_in_group("enemigo"):
+		colicion_enemigo = true
+		pass
+	pass # Replace with function body.

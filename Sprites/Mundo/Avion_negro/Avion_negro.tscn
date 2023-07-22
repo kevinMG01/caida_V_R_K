@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Mundo/Zonas/Zona_1/Avion_Negro.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta cerrada.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta medio abierta.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta abierta.png" type="Texture" id=4]

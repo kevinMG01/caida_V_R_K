@@ -34,11 +34,10 @@ func _on_Area2D_body_exited(body):
 	self.queue_free()
 
 
-func _on_muerte_payer_body_entered(body):
+func _on_muerte_payer_body_entered(body):  # ya no es muerte de player sino que es la muerte del globo
 	if body.get_name() == "Player":
 		$AnimatedSprite.animation = "explotar"
 		$AudioStreamPlayer2D.play()
-		yield(get_tree().create_timer(0,5),"timeout")
-	#	body.queue_free()
-		get_tree().change_scene("") #res://Menu/Menu/Menu.tscn
-	pass # Replace with function body.
+		yield(get_tree().create_timer(1),"timeout")
+		self.queue_free()
+	pass 
