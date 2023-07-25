@@ -1,6 +1,10 @@
 extends Control
 
 
+func _ready():
+	$botones_inferiores/Biografia/biografia_menu.play()
+	$botones_inferiores/Tienda/tienda_menu.play()
+	$Salir/salir_menu.play()
 
 
 func _on_jugar_pressed():

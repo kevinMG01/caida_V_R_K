@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bordes menu 2.png-6dd989ed5d256fc8b7c5fb4a0f36c4cd.stex"
+path="res://.import/Boton de inventario menu.png-5e68454468b2508e150e1f60b7ec82e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/nuevo/Bordes menu 2.png"
-dest_files=[ "res://.import/Bordes menu 2.png-6dd989ed5d256fc8b7c5fb4a0f36c4cd.stex" ]
+source_file="res://Sprites/Menu/nuevo/Boton de inventario menu.png"
+dest_files=[ "res://.import/Boton de inventario menu.png-5e68454468b2508e150e1f60b7ec82e3.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

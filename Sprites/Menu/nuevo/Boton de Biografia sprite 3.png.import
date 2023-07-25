@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Salir 2.png-df6c8d17b4c2227f32dd5eee1d2ed20d.stex"
+path="res://.import/Boton de Biografia sprite 3.png-cb95ff2c714f561b07a419516016c4f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/nuevo/Salir 2.png"
-dest_files=[ "res://.import/Salir 2.png-df6c8d17b4c2227f32dd5eee1d2ed20d.stex" ]
+source_file="res://Sprites/Menu/nuevo/Boton de Biografia sprite 3.png"
+dest_files=[ "res://.import/Boton de Biografia sprite 3.png-cb95ff2c714f561b07a419516016c4f5.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Subrayado de salir 1.png-f8c2c29866763651508a582515f4050e.stex"
+path="res://.import/Boton de tienda menu sprite 1.png-041f2caff652130923901644af545d19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/nuevo/Subrayado de salir 1.png"
-dest_files=[ "res://.import/Subrayado de salir 1.png-f8c2c29866763651508a582515f4050e.stex" ]
+source_file="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 1.png"
+dest_files=[ "res://.import/Boton de tienda menu sprite 1.png-041f2caff652130923901644af545d19.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

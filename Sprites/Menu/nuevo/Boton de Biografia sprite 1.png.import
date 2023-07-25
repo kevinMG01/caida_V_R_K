@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jugar 1.png-f4760663dfa870d3bc9a7a8eff6999ce.stex"
+path="res://.import/Boton de Biografia sprite 1.png-26748874bfa73a98ffef61095e24cc64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/nuevo/Jugar 1.png"
-dest_files=[ "res://.import/Jugar 1.png-f4760663dfa870d3bc9a7a8eff6999ce.stex" ]
+source_file="res://Sprites/Menu/nuevo/Boton de Biografia sprite 1.png"
+dest_files=[ "res://.import/Boton de Biografia sprite 1.png-26748874bfa73a98ffef61095e24cc64.stex" ]
 
 [params]
 

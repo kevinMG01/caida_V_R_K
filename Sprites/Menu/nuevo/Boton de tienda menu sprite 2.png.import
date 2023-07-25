@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Salir 1.png-63f034222b5f12bcf814b97c5818c6e8.stex"
+path="res://.import/Boton de tienda menu sprite 2.png-e84d087d7e75e7b265d7a0a4a24e21f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Menu/nuevo/Salir 1.png"
-dest_files=[ "res://.import/Salir 1.png-63f034222b5f12bcf814b97c5818c6e8.stex" ]
+source_file="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 2.png"
+dest_files=[ "res://.import/Boton de tienda menu sprite 2.png-e84d087d7e75e7b265d7a0a4a24e21f3.stex" ]
 
 [params]
 
