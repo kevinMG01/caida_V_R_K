@@ -1,6 +1,8 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Enemigos/ave-removebg-preview.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=17]
 
@@ -22,31 +24,31 @@ bg_color = Color( 0.913725, 0.698039, 0.101961, 1 )
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.0117647, 0.0705882, 0.482353, 1 )
 
-[sub_resource type="AnimationNodeAnimation" id=12]
+[sub_resource type="AnimationNodeAnimation" id=20]
 animation = "1"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=21]
 animation = "2"
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=22]
 animation = "3"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=23]
 animation = "4"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=24]
 animation = "5"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id=6]
-blend_point_0/node = SubResource( 12 )
+[sub_resource type="AnimationNodeBlendSpace1D" id=19]
+blend_point_0/node = SubResource( 20 )
 blend_point_0/pos = 0.0
-blend_point_1/node = SubResource( 13 )
+blend_point_1/node = SubResource( 21 )
 blend_point_1/pos = 1.0
-blend_point_2/node = SubResource( 14 )
+blend_point_2/node = SubResource( 22 )
 blend_point_2/pos = 2.0
-blend_point_3/node = SubResource( 15 )
+blend_point_3/node = SubResource( 23 )
 blend_point_3/pos = 3.0
-blend_point_4/node = SubResource( 16 )
+blend_point_4/node = SubResource( 24 )
 blend_point_4/pos = 4.0
 max_space = 6.0
 snap = 1.0
@@ -107,6 +109,11 @@ margin_top = 7.0
 margin_right = 83.0
 margin_bottom = 83.0
 
+[node name="SpriteDelGlobo1" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo"]
+position = Vector2( 44, 47 )
+scale = Vector2( 0.17, 0.09 )
+texture = ExtResource( 2 )
+
 [node name="Ave" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_top = 94.0
 margin_right = 90.0
@@ -121,6 +128,11 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 83.0
 margin_bottom = 83.0
+
+[node name="ave2" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave"]
+position = Vector2( 40, 42.0001 )
+scale = Vector2( 0.13, 0.13 )
+texture = ExtResource( 3 )
 
 [node name="Dron" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_top = 188.0
@@ -148,6 +160,23 @@ margin_right = 90.0
 margin_bottom = 466.0
 rect_min_size = Vector2( 0, 90 )
 mouse_filter = 2
+
+[node name="retroseder" type="VBoxContainer" parent="HBoxContainer/selecion_personajes/Control"]
+margin_left = 41.0
+margin_top = 473.0
+margin_right = 151.0
+margin_bottom = 583.0
+
+[node name="regresar_menu" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/retroseder"]
+margin_right = 110.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 0, 110 )
+
+[node name="volver_menu" type="Button" parent="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 103.0
+margin_bottom = 103.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
 margin_left = 204.0
@@ -204,10 +233,10 @@ mouse_filter = 2
 custom_styles/panel = SubResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 6 )
+tree_root = SubResource( 19 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/blend_position = 4.99357
+parameters/blend_position = -0.004
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/1 = SubResource( 7 )
@@ -219,5 +248,6 @@ anims/5 = SubResource( 11 )
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo/globo" to="." method="_on_globo_pressed"]
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave/ave" to="." method="_on_ave_pressed"]
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Dron/dron" to="." method="_on_dron_pressed"]
+[connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu/volver_menu" to="." method="_on_volver_menu_pressed"]
 [connection signal="scroll_ended" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
 [connection signal="scroll_started" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]

@@ -21,19 +21,19 @@ func _ready():
 
 func _process(delta):
 	#indice var scroll = iiiiiiiiiiiiiiii. nos da como in indise
-	var scroll= scroller.scroll_horizontal/rect_size.x
+	#var scroll= scroller.scroll_horizontal/rect_size.x
 	
-	if is_scrolling:
-		animation_tree["parameters/blend_position"] = scroll 
+	#if is_scrolling:
+	#	animation_tree["parameters/blend_position"] = scroll 
 		
-	elif abs(int(round(scroll))-scroll) > 0.01:
-		animation_tree["parameters/blend_position"] = lerp(animation_tree["parameters/blend_position"],int(round(scroll)),0.1)
-		scroller.scroll_horizontal = lerp(scroller.scroll_horizontal,rect_size.x * int(round(scroll)), 0.2)
-	else:
-		animation_tree["parameters/blend_position"] = int(round(scroll))
-		scroller.scroll_horizontal = rect_size.x * int(round(scroll))
-		set_process(false)
-
+#	elif abs(int(round(scroll))-scroll) > 0.01:
+#		animation_tree["parameters/blend_position"] = lerp(animation_tree["parameters/blend_position"],int(round(scroll)),0.1)
+#		scroller.scroll_horizontal = lerp(scroller.scroll_horizontal,rect_size.x * int(round(scroll)), 0.2)
+#	else:
+#		animation_tree["parameters/blend_position"] = int(round(scroll))
+#		scroller.scroll_horizontal = rect_size.x * int(round(scroll))
+#		set_process(false)
+	pass
 
 func _on_ScrollContainer_scroll_ended():
 	is_scrolling = false
@@ -53,13 +53,18 @@ func _on_globo_pressed():
 
 
 func _on_ave_pressed():
-	scroller.scroll_horizontal = rect_size.x * 1
+	scroller.scroll_horizontal = rect_size.x * 0.801
 	pass # Replace with function body.
 
 
 func _on_dron_pressed():
-	scroller.scroll_horizontal = rect_size.x * 2
+	scroller.scroll_horizontal = rect_size.x * 1.602
 	pass # Replace with function body.
 
 
 
+
+
+func _on_volver_menu_pressed():
+	get_tree().change_scene("res://Menu/Menu/Menu.tscn")
+	pass # Replace with function body.

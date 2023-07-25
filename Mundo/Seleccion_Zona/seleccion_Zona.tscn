@@ -292,7 +292,7 @@ flip_h = true
 tree_root = SubResource( 15 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/blend_position = 3.68497
+parameters/blend_position = -0.00372577
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/zona_1 = SubResource( 16 )
