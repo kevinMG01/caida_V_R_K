@@ -1,19 +1,35 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	$animacion_meta.playing = true
+	$ir_zona_seleccion.visible = false
+	$primera_ves.visible = true
 	pass 
+
+func _process(delta):
+	if $ir_zona_seleccion.visible == true:
+		print("ir zona seleccion")
+	if $primera_ves.visible== true:
+		print("primera ves")
+	pass
 
 
 
 func _on_ir_zona_seleccion_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene("res://Mundo/Seleccion_Zona/seleccion_Zona.tscn")
-	pass # Replace with function body.
+	pass 
+
+
+
+func _on_primera_ves_body_entered(body):
+	if body.get_name() == "Player":
+		global_Var.niveles_desbloqueados += 1
+		get_tree().change_scene("res://Mundo/Seleccion_Zona/seleccion_Zona.tscn")
+	pass
+
+

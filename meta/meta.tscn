@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/Mundo/Meta 3.jpg" type="Texture" id=1]
 [ext_resource path="res://Sprites/Mundo/Meta 2.jpg" type="Texture" id=2]
@@ -14,7 +14,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 32, 38.75 )
+extents = Vector2( 32, 20.25 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 30, 18 )
 
 [node name="meta" type="Node2D"]
 script = ExtResource( 4 )
@@ -26,9 +29,17 @@ frames = SubResource( 1 )
 animation = "Idle"
 
 [node name="ir_zona_seleccion" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ir_zona_seleccion"]
-position = Vector2( 721, 170.75 )
+position = Vector2( 721, 189.25 )
 shape = SubResource( 2 )
 
+[node name="primera_ves" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="primera_ves"]
+position = Vector2( 721, 189 )
+shape = SubResource( 3 )
+
 [connection signal="body_entered" from="ir_zona_seleccion" to="." method="_on_ir_zona_seleccion_body_entered"]
+[connection signal="body_entered" from="primera_ves" to="." method="_on_primera_ves_body_entered"]

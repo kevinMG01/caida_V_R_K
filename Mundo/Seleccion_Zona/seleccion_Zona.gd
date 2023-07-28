@@ -38,6 +38,8 @@ func _process(delta):
 	#nose porque no da el "print()" seguro hay un error. fijarse mas tarde
 	if scroller.scroll_horizontal == rect_size.x * 3:
 		print("hola muundo")
+	
+	niveles_bloqueados()
 	pass
 
 
@@ -63,10 +65,26 @@ func _on_Adelante_pressed():
 	pass 
 
 
+
+func niveles_bloqueados():
+	$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_1.visible = true
+	$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_2.visible = false
+	$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_3.visible = false
+	$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_4.visible = false
+	$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_5.visible = false
+	if global_Var.niveles_desbloqueados >= 2:
+		$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_2.visible = true
+	if global_Var.niveles_desbloqueados >= 3:
+		$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_3.visible = true
+	if global_Var.niveles_desbloqueados >= 4:
+		$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_4.visible = true
+	if global_Var.niveles_desbloqueados >= 5:
+		$ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_5.visible = true
+
+
+
+
 #Botones de niveles
-
-
-
 func _on_Zona_1_N_1_pressed():
 	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
 	pass

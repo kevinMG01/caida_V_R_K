@@ -10,6 +10,11 @@ var nivel = 1
 
 var power_up = 1
 
+#//////////////////////////////
+var niveles_desbloqueados = 1
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
 func _ready():
 	pass 
 
