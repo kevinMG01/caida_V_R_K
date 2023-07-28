@@ -11,7 +11,7 @@ func _physics_process(delta):
 #	$Interfas_pantalla.rect_global_position = get_tree().get_nodes_in_group("camara")[0].global_position
 	spawn_player()
 	camara_nivel_1()
-	
+	bloquear_meta()
 	pass
 	
 
@@ -32,3 +32,10 @@ func camara_nivel_1():
 		$Camera2D.global_position = get_tree().get_nodes_in_group("avion")[0].global_position
 	elif global_Var.camara_avion_apagado == false:
 		$Camera2D.global_position = get_tree().get_nodes_in_group("player")[0].global_position
+		
+
+func bloquear_meta():
+	if global_Var.niveles_desbloqueados >= 4:
+		$meta/ir_zona_seleccion.visible = true
+		$meta/primera_ves.visible = false
+
