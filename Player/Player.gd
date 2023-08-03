@@ -20,7 +20,7 @@ func _ready():
 	
 	
 func _physics_process(delta):
-#	$AnimatedSprite.scale
+##	$AnimatedSprite.scale 
 #	yield(get_tree().create_timer(0.9),"timeout")
 #	$AnimatedSprite.scale = 0.04
 #	yield(get_tree().create_timer(0.9),"timeout")

@@ -2,7 +2,7 @@ extends Node2D
 
 
 
-
+var primera_ves = true
 
 func _ready():
 	$animacion_meta.playing = true
@@ -11,10 +11,6 @@ func _ready():
 	pass 
 
 func _process(delta):
-	if $ir_zona_seleccion.visible == true:
-		print("ir zona seleccion")
-	if $primera_ves.visible== true:
-		print("primera ves")
 	pass
 
 
@@ -30,6 +26,7 @@ func _on_primera_ves_body_entered(body):
 	if body.get_name() == "Player":
 		global_Var.niveles_desbloqueados += 1
 		get_tree().change_scene("res://Mundo/Seleccion_Zona/seleccion_Zona.tscn")
+
 	pass
 
 

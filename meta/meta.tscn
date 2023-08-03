@@ -17,7 +17,7 @@ animations = [ {
 extents = Vector2( 32, 20.25 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 30, 18 )
+extents = Vector2( 29.5, 17.5 )
 
 [node name="meta" type="Node2D"]
 script = ExtResource( 4 )
@@ -38,7 +38,7 @@ shape = SubResource( 2 )
 [node name="primera_ves" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="primera_ves"]
-position = Vector2( 721, 189 )
+position = Vector2( 720.5, 188.5 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="ir_zona_seleccion" to="." method="_on_ir_zona_seleccion_body_entered"]
