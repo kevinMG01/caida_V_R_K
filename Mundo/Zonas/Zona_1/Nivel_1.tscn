@@ -25,7 +25,7 @@ position = Vector2( 624, 1750 )
 texture = ExtResource( 8 )
 
 [node name="meta" parent="." instance=ExtResource( 7 )]
-position = Vector2( -7, 3259 )
+position = Vector2( 122, 2851 )
 
 [node name="pared" type="Node2D" parent="."]
 
@@ -61,7 +61,7 @@ position = Vector2( -391, 258 )
 position = Vector2( -370, -52 )
 
 [node name="Enemigo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 123, 1911 )
+position = Vector2( 215, 1911 )
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["camara"]]
 position = Vector2( 534, 320 )
@@ -73,6 +73,7 @@ limit_bottom = 3500
 limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+smoothing_enabled = true
 drag_margin_bottom = 0.0
 editor_draw_drag_margin = true
 

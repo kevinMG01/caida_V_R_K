@@ -6,12 +6,13 @@ var player_1 = preload("res://Player/Player.tscn")
 
 func _ready():
 	global_Var.camara_avion_apagado = true
-	bloquear_meta()
+	#bloquear_meta()
 
 func _physics_process(delta):
 	$Interfas_pantalla.rect_global_position = get_tree().get_nodes_in_group("camara")[0].global_position
 	spawn_player()
 	camara_nivel_1()
+	bloquear_meta()
 	pass
 	
 

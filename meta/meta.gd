@@ -2,15 +2,27 @@ extends Node2D
 
 
 
-var primera_ves = true
+
 
 func _ready():
 	$animacion_meta.playing = true
+	$animacion_meta2.playing = true
+	$Animat_2.playing = true
+	$Animat_3.playing = true
 	$ir_zona_seleccion.visible = false
 	$primera_ves.visible = true
 	pass 
 
+
 func _process(delta):
+	if $ir_zona_seleccion.visible == false:
+		$ir_zona_seleccion.global_position = get_tree().get_nodes_in_group("afuera")[0].global_position
+	else:
+		$ir_zona_seleccion.global_position = get_tree().get_nodes_in_group("adentro")[0].global_position
+	if $primera_ves.visible == true:
+		$primera_ves.global_position = get_tree().get_nodes_in_group("adentro")[0].global_position
+	else:
+		$primera_ves.global_position = get_tree().get_nodes_in_group("afuera")[0].global_position
 	pass
 
 
