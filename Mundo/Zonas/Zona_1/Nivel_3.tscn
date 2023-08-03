@@ -22,6 +22,9 @@ script = ExtResource( 1 )
 position = Vector2( 621, 4835 )
 texture = ExtResource( 3 )
 
+[node name="meta" parent="." instance=ExtResource( 7 )]
+position = Vector2( 71, 8993 )
+
 [node name="enemigo_globo" type="Node2D" parent="."]
 
 [node name="Enemigo" parent="enemigo_globo" instance=ExtResource( 5 )]
@@ -108,6 +111,3 @@ position = Vector2( -313, 286 )
 
 [node name="player" type="Position2D" parent="Avion_Negro" groups=["spawn"]]
 position = Vector2( -371, -16 )
-
-[node name="meta" parent="." instance=ExtResource( 7 )]
-position = Vector2( 71, 8993 )
