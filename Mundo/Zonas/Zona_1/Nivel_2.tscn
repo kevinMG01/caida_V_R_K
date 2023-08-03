@@ -39,7 +39,7 @@ shape = SubResource( 2 )
 [node name="suelo" type="StaticBody2D" parent="pared"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared/suelo"]
-position = Vector2( 620, 6344 )
+position = Vector2( 620, 6376 )
 scale = Vector2( 90, 10 )
 shape = SubResource( 3 )
 
@@ -88,4 +88,4 @@ editor_draw_drag_margin = true
 position = Vector2( 1145, 1472 )
 
 [node name="meta" parent="." instance=ExtResource( 6 )]
-position = Vector2( -24, 6034 )
+position = Vector2( 52, 5668 )

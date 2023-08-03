@@ -81,7 +81,6 @@ editor_draw_drag_margin = true
 position = Vector2( 180, 995 )
 
 [node name="Interfas_pantalla" parent="." instance=ExtResource( 6 )]
-visible = false
 margin_left = 6.0
 margin_top = 3.0
 margin_right = 6.0
