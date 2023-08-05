@@ -1,16 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/Player/Paracaidista quieto.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Player/Paracaidista.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 3.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 1.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 2.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 4.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 4 copia.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 5 copia.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Player/new/Paracaidista caminando 5.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Player/new/Mientras esta saltando.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Player/Paracaidista sprite 2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/Paracaidista sprite 4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/Mientras esta saltando.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14, 37.5 )
@@ -27,12 +22,12 @@ animations = [ {
 "name": "Move_paracaida",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "Move_suelo",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "Up",
 "speed": 5.0
@@ -49,10 +44,11 @@ position = Vector2( 0, -27.5 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( -1, -37 )
+position = Vector2( -4, -85 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
-animation = "Move_paracaida"
+animation = "Move_suelo"
+frame = 1
 
 [node name="detectar enemigos" type="Area2D" parent="."]
 

@@ -91,10 +91,10 @@ margin_top = 3.0
 margin_right = 6.0
 margin_bottom = 3.0
 
+[node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
+position = Vector2( 534, 321 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = 14.857
 autoplay = true
-
-[node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
-position = Vector2( 535, 320 )

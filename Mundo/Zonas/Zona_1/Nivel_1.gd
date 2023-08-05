@@ -5,7 +5,6 @@ func _ready():
 	global_Var.camara_avion_apagado = true
 
 func _physics_process(delta):
-#	$Interfas_pantalla.rect_global_position = get_tree().get_nodes_in_group("camara")[0].global_position
 	bloquear_meta()
 	player()
 	pass

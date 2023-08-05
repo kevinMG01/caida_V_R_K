@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Paracaidista caminando 5 copia.png-d4340160a7b73fa6565d4413f24ca511.stex"
+path="res://.import/Paracaidista sprite 3.png-35b1c63effbc1654e6d5e2aae2311a4e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/new/Paracaidista caminando 5 copia.png"
-dest_files=[ "res://.import/Paracaidista caminando 5 copia.png-d4340160a7b73fa6565d4413f24ca511.stex" ]
+source_file="res://Sprites/Player/Paracaidista sprite 3.png"
+dest_files=[ "res://.import/Paracaidista sprite 3.png-35b1c63effbc1654e6d5e2aae2311a4e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
