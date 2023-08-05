@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=6]
 [ext_resource path="res://meta/meta.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 1 fondo.jpg" type="Texture" id=8]
+[ext_resource path="res://Mundo/Zonas/Zona_1/Contro_pausa_N_1.gd" type="Script" id=9]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 19, 9.99677 )
@@ -50,20 +52,11 @@ position = Vector2( 589, 3484 )
 scale = Vector2( 70, 1 )
 shape = SubResource( 3 )
 
-[node name="avion" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="Contro_pausa_N_1" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 9 )
 
-[node name="Avion_Negro" parent="avion" instance=ExtResource( 1 )]
-position = Vector2( -391, 258 )
-
-[node name="player" type="Position2D" parent="avion/Avion_Negro" groups=["spawn"]]
-position = Vector2( -370, -52 )
-
-[node name="Enemigo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 215, 1911 )
-
-[node name="Camera2D" type="Camera2D" parent="." groups=["camara"]]
+[node name="Camera_nivel_1" type="Camera2D" parent="Contro_pausa_N_1" groups=["camara"]]
 pause_mode = 2
 position = Vector2( 534, 320 )
 current = true
@@ -81,6 +74,17 @@ editor_draw_drag_margin = true
 [node name="avion_derecha" parent="." instance=ExtResource( 4 )]
 position = Vector2( 180, 995 )
 
+[node name="avion" type="Node2D" parent="."]
+
+[node name="Avion_Negro" parent="avion" instance=ExtResource( 1 )]
+position = Vector2( -391, 258 )
+
+[node name="Player" parent="avion" instance=ExtResource( 10 )]
+position = Vector2( 613, 223 )
+
+[node name="Enemigo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 215, 1911 )
+
 [node name="Interfas_pantalla" parent="." instance=ExtResource( 6 )]
 margin_left = 6.0
 margin_top = 3.0
@@ -93,4 +97,4 @@ volume_db = 14.857
 autoplay = true
 
 [node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
-position = Vector2( 501, 849 )
+position = Vector2( 535, 320 )

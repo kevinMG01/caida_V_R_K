@@ -15,20 +15,15 @@ var esta_suelo = false
 
 var colicion_enemigo = false
 
+#///////////////
+var normalizar = false
+#\\\\\\\\\\\\\\\\
 func _ready():
 	$AnimatedSprite.playing = true
-	
+	colicion_enemigo = true
 	
 func _physics_process(delta):
-##	$AnimatedSprite.scale 
-#	yield(get_tree().create_timer(0.9),"timeout")
-#	$AnimatedSprite.scale = 0.04
-#	yield(get_tree().create_timer(0.9),"timeout")
-#	$AnimatedSprite.scale = 0.08
-#	yield(get_tree().create_timer(0.9),"timeout")
-#	$AnimatedSprite.scale = 0.13
-#	yield(get_tree().create_timer(0.9),"timeout")
-#	$AnimatedSprite.scale = 0.2
+	comienzo()
 	if colicion_enemigo == false:
 		move_con_paracaidas()
 		power_up()
@@ -42,7 +37,13 @@ func _physics_process(delta):
 	
 	pass
 
-
+func comienzo():
+	if normalizar == false:
+		if global_Var.camara_avion_apagado == true:
+			colicion_enemigo = true
+		if global_Var.camara_avion_apagado == false:
+			colicion_enemigo = false
+			normalizar = true
 
 func move_con_paracaidas():
 	if !is_on_floor():
@@ -119,5 +120,6 @@ func power_up():
 func _on_detectar_enemigos_body_entered(body):
 	if body.is_in_group("enemigo"):
 		colicion_enemigo = true
+		global_Var.pausa = true
 		pass
 	pass # Replace with function body.
