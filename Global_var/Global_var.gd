@@ -14,7 +14,10 @@ var power_up = 1
 var niveles_desbloqueados = 1
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-
+#/////////////////////////////
+#menu de pausa
+var pausa = false
+#\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 func _ready():
 	pass 
 

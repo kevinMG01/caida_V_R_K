@@ -9,7 +9,7 @@ func _ready():
 	#bloquear_meta()
 
 func _physics_process(delta):
-	$Interfas_pantalla.rect_global_position = get_tree().get_nodes_in_group("camara")[0].global_position
+#	$Interfas_pantalla.rect_global_position = get_tree().get_nodes_in_group("camara")[0].global_position
 	spawn_player()
 	camara_nivel_1()
 	bloquear_meta()
@@ -33,7 +33,10 @@ func camara_nivel_1():
 	if global_Var.camara_avion_apagado == true:
 		$Camera2D.global_position = get_tree().get_nodes_in_group("avion")[0].global_position
 	elif global_Var.camara_avion_apagado == false:
-		$Camera2D.global_position = get_tree().get_nodes_in_group("player")[0].global_position
+		if $Interfas_pantalla/pausa.visible == false:
+			$Camera2D.global_position = get_tree().get_nodes_in_group("player")[0].global_position
+		elif $Interfas_pantalla/pausa.visible == true:
+			$Camera2D.global_position = get_tree().get_nodes_in_group("pausa")[0].global_position
 	pass
 
 

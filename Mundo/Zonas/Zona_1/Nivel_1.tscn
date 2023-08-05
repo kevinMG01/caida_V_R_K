@@ -13,7 +13,7 @@
 extents = Vector2( 19, 9.99677 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 34.5, 10.1065 )
+extents = Vector2( 41, 9.76777 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -39,7 +39,7 @@ shape = SubResource( 1 )
 [node name="de" type="StaticBody2D" parent="pared"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared/de"]
-position = Vector2( 1259.5, 1895.5 )
+position = Vector2( 1255, 1948 )
 scale = Vector2( 1, 155 )
 shape = SubResource( 2 )
 
@@ -64,6 +64,7 @@ position = Vector2( -370, -52 )
 position = Vector2( 215, 1911 )
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["camara"]]
+pause_mode = 2
 position = Vector2( 534, 320 )
 current = true
 limit_left = 0
@@ -90,3 +91,6 @@ margin_bottom = 3.0
 stream = ExtResource( 5 )
 volume_db = 14.857
 autoplay = true
+
+[node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
+position = Vector2( 501, 849 )
