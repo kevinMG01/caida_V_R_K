@@ -21,6 +21,7 @@ var normalizar = false
 func _ready():
 	$AnimatedSprite.playing = true
 	colicion_enemigo = true
+	get_tree().paused = false
 	
 func _physics_process(delta):
 	comienzo()
@@ -121,5 +122,6 @@ func _on_detectar_enemigos_body_entered(body):
 	if body.is_in_group("enemigo"):
 		colicion_enemigo = true
 		global_Var.pausa = true
+		get_tree().paused = true
 		pass
 	pass # Replace with function body.

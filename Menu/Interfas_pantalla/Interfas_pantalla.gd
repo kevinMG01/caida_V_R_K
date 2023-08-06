@@ -20,3 +20,4 @@ func _input(event: InputEvent):
 		global_Var.pausa = false
 
 
+
