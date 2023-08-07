@@ -4,8 +4,8 @@
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Player/Paracaidista.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Player/Paracaidista sprite 2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/Mientras esta saltando (1).png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Player/Paracaidista sprite 4.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Player/Mientras esta saltando.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14, 37.5 )
@@ -27,7 +27,7 @@ animations = [ {
 "name": "Move_suelo",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "Up",
 "speed": 5.0

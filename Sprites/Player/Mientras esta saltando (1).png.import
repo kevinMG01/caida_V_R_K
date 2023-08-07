@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mientras esta saltando.png-d909f6b803910f99b1cc5064b30c0cd8.stex"
+path="res://.import/Mientras esta saltando (1).png-59eae7181eee3d3ace22af4e872738d1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Mientras esta saltando.png"
-dest_files=[ "res://.import/Mientras esta saltando.png-d909f6b803910f99b1cc5064b30c0cd8.stex" ]
+source_file="res://Sprites/Player/Mientras esta saltando (1).png"
+dest_files=[ "res://.import/Mientras esta saltando (1).png-59eae7181eee3d3ace22af4e872738d1.stex" ]
 
 [params]
 

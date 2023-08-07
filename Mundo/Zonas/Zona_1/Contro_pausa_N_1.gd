@@ -17,7 +17,7 @@ func camara_nivel_1():
 			yield(get_tree().create_timer(0.2),"timeout")
 			$Camera_nivel_1.smoothing_speed = 5
 		if global_Var.pausa == true:
-			$Camera_nivel_1.smoothing_speed = 60
+			$Camera_nivel_1.smoothing_speed = 40
 			$Camera_nivel_1.drag_margin_h_enabled = false
 			$Camera_nivel_1.drag_margin_v_enabled = false
 			$Camera_nivel_1.global_position = get_tree().get_nodes_in_group("pausa")[0].global_position
@@ -30,7 +30,7 @@ func camara_nivel_1():
 			yield(get_tree().create_timer(0.2),"timeout")
 			$Camera_nivel_1.smoothing_speed = 5
 		if global_Var.pausa == true:
-			$Camera_nivel_1.smoothing_speed = 60
+			$Camera_nivel_1.smoothing_speed = 40
 			$Camera_nivel_1.drag_margin_h_enabled = false
 			$Camera_nivel_1.drag_margin_v_enabled = false
 			$Camera_nivel_1.global_position = get_tree().get_nodes_in_group("pausa")[0].global_position

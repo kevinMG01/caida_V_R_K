@@ -85,14 +85,14 @@ position = Vector2( 613, 223 )
 [node name="Enemigo" parent="." instance=ExtResource( 2 )]
 position = Vector2( 215, 1911 )
 
+[node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
+position = Vector2( 534, 321 )
+
 [node name="Interfas_pantalla" parent="." instance=ExtResource( 6 )]
 margin_left = 6.0
 margin_top = 3.0
 margin_right = 6.0
 margin_bottom = 3.0
-
-[node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
-position = Vector2( 534, 321 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
