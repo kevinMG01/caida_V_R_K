@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/globo-removebg-preview.png-769b0d6c798208d3b7470a1cc15d8667.stex"
+path="res://.import/Boton de volver al menu en biografia.png-0ced318fe469818b307b68729511bf8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemigos/globo-removebg-preview.png"
-dest_files=[ "res://.import/globo-removebg-preview.png-769b0d6c798208d3b7470a1cc15d8667.stex" ]
+source_file="res://Sprites/Menu/libro/Boton de volver al menu en biografia.png"
+dest_files=[ "res://.import/Boton de volver al menu en biografia.png-0ced318fe469818b307b68729511bf8c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

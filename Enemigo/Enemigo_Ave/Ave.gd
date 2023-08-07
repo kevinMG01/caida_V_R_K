@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var cantidad = 165
+var cantidad = 130
 var movimiento = Vector2()
 
 
@@ -36,10 +36,10 @@ func deteccion_libre():
 			movimiento.x += cantidad
 			$ave.flip_h = false
 		if global_position.y > jugador_libre.global_position.y + 6:
-			movimiento.y -= cantidad
+			movimiento.y -= 90
 		
 		if global_position.y < jugador_libre.global_position.y - 6:
-			movimiento.y += cantidad
+			movimiento.y += 90
 		
 
 

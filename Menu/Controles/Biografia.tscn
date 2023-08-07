@@ -1,8 +1,32 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Enemigos/ave-removebg-preview.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Menu/pausa/Boton del menu de reintentar 4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Menu/libro/Menu de Biografia ejemplo.jpg" type="Texture" id=6]
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.043684, 0.221419, 0.228227, 1 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.0156863, 0.0509804, 0.196078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.117647, 0.172549, 0.396078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.0156863, 0.0509804, 0.196078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.117647, 0.172549, 0.396078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.0156863, 0.0509804, 0.196078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.117647, 0.172549, 0.396078, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=17]
 
@@ -10,19 +34,19 @@
 HScrollBar/styles/scroll = SubResource( 17 )
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.870588, 0.121569, 0.121569, 1 )
+bg_color = Color( 0.376471, 0.117647, 0.396078, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.133333, 0.607843, 0.803922, 1 )
+bg_color = Color( 0.0431373, 0.443137, 0.333333, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.270588, 0.709804, 0.113725, 1 )
+bg_color = Color( 0.529412, 0.0627451, 0.0627451, 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.913725, 0.698039, 0.101961, 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.0117647, 0.0705882, 0.482353, 1 )
+bg_color = Color( 0.482353, 0.254902, 0.0117647, 1 )
 
 [sub_resource type="AnimationNodeAnimation" id=20]
 animation = "1"
@@ -82,18 +106,18 @@ mouse_filter = 2
 margin_right = 200.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 200, 0 )
+custom_styles/panel = SubResource( 25 )
 
 [node name="Control" type="Control" parent="HBoxContainer/selecion_personajes"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 193.0
-margin_bottom = 593.0
+margin_right = 200.0
+margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/selecion_personajes/Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 51.0
+margin_right = 141.0
+margin_bottom = 466.0
 
 [node name="Globo" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_right = 90.0
@@ -108,6 +132,8 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 83.0
 margin_bottom = 83.0
+custom_styles/hover = SubResource( 29 )
+custom_styles/normal = SubResource( 26 )
 
 [node name="SpriteDelGlobo1" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo"]
 position = Vector2( 44, 47 )
@@ -128,6 +154,8 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 83.0
 margin_bottom = 83.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/normal = SubResource( 27 )
 
 [node name="ave2" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave"]
 position = Vector2( 40, 42.0001 )
@@ -142,6 +170,7 @@ rect_min_size = Vector2( 0, 90 )
 mouse_filter = 2
 
 [node name="dron" type="Button" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Dron"]
+visible = false
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 83.0
@@ -177,6 +206,13 @@ margin_left = 7.0
 margin_top = 7.0
 margin_right = 103.0
 margin_bottom = 103.0
+custom_styles/hover = SubResource( 31 )
+custom_styles/normal = SubResource( 28 )
+
+[node name="BotonDelMenuDeReintentar4" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu"]
+position = Vector2( 54.5, 56 )
+scale = Vector2( 0.859091, 0.933333 )
+texture = ExtResource( 4 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
 margin_left = 204.0
@@ -200,6 +236,43 @@ rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 
+[node name="Control" type="Control" parent="HBoxContainer/ScrollContainer/HBoxContainer/1"]
+margin_right = 820.0
+margin_bottom = 600.0
+
+[node name="MenuDeBiografiaEjemplo" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+position = Vector2( 409, 301 )
+scale = Vector2( 0.80957, 1 )
+texture = ExtResource( 6 )
+
+[node name="11234" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+position = Vector2( 262, 237 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="globo" type="Label" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+margin_left = 443.0
+margin_top = 27.0
+margin_right = 743.0
+margin_bottom = 279.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "             GLOBO					
+    El globo es el primer
+	obstáculo delparacaidista,
+	la cual tiene la misión de
+encontrar al paracaidista
+para terminar el reto. 
+
+ La movilidad es limitada,
+no cuenta con un
+desplazamiento vertical
+como otros obstáculos y
+ solo se desplaza en 
+horizontal.
+
+"
+
 [node name="2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 820.0
 margin_right = 1640.0
@@ -207,6 +280,42 @@ margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 2 )
+
+[node name="Control" type="Control" parent="HBoxContainer/ScrollContainer/HBoxContainer/2"]
+margin_right = 820.0
+margin_bottom = 600.0
+
+[node name="MenuDeBiografiaEjemplo" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+position = Vector2( 406, 299 )
+scale = Vector2( 0.806641, 1 )
+texture = ExtResource( 6 )
+
+[node name="Ave-removebg-preview" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+position = Vector2( 258, 240 )
+scale = Vector2( 0.573944, 0.788724 )
+texture = ExtResource( 3 )
+
+[node name="pajaro" type="Label" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+margin_left = 438.0
+margin_top = 24.0
+margin_right = 809.0
+margin_bottom = 259.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "                AVE
+  El ave es otro obstáculo
+que dificulta al
+paracaidista a completar
+el reto, su misión es
+encontrar al paracaidista
+y terminar el reto.
+
+Cuenta con una movilidad
+tanto vertical como
+horizontal, la cual le ayuda
+a perseguir al paracaidista
+con más vigor.
+"
 
 [node name="3" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1640.0
