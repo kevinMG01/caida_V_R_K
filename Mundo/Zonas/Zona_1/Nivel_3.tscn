@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_3.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Mundo/Zonas/Zona_1/Control_pausa_N_3.gd" type="Script" id=8]
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Audio/NIVEL/Hero Immortal niveles.mp3" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -130,3 +131,8 @@ margin_left = 109.0
 margin_top = 1710.0
 margin_right = 1133.0
 margin_bottom = 2310.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -25.0
+autoplay = true

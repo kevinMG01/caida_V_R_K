@@ -25,4 +25,18 @@ func _input(event: InputEvent):
 		global_Var.pausa = false
 
 
+func _on_Reintentar_1_pressed():
+	get_tree().change_scene("")
+	pass
 
+func _on_Tienda_1_pressed():
+	get_tree().change_scene("")
+	pass
+
+func _on_Inventario_1_pressed():
+	get_tree().change_scene("")
+	pass 
+
+func _on_Salir_menu_pressed():
+	get_tree().change_scene("res://Menu/Menu/Menu.tscn")
+	pass 

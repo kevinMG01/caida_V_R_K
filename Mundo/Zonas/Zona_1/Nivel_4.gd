@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	global_Var.camara_avion_apagado = true
 
+
 func _physics_process(delta):
 	player()
 	bloquear_meta()
