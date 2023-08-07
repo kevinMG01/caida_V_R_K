@@ -12,7 +12,7 @@ func camara_nivel_2():
 			$Camera2D.drag_margin_h_enabled = true
 			$Camera2D.drag_margin_v_enabled = true
 			$Camera2D.global_position = get_tree().get_nodes_in_group("avion")[0].global_position
-			yield(get_tree().create_timer(0.2),"timeout")
+			yield(get_tree().create_timer(0.3),"timeout")
 			$Camera2D.smoothing_speed = 5
 		if global_Var.pausa == true:
 			$Camera2D.drag_margin_h_enabled = false
@@ -24,7 +24,7 @@ func camara_nivel_2():
 			$Camera2D.drag_margin_h_enabled = true
 			$Camera2D.drag_margin_v_enabled = true
 			$Camera2D.global_position = get_tree().get_nodes_in_group("player")[0].global_position
-			yield(get_tree().create_timer(0.2),"timeout")
+			yield(get_tree().create_timer(0.3),"timeout")
 			$Camera2D.smoothing_speed = 5
 		if global_Var.pausa == true:
 			$Camera2D.smoothing_speed = 60

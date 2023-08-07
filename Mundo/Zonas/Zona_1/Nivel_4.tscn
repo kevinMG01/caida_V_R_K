@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_4.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
 [ext_resource path="res://meta/meta.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Mundo/Zonas/Zona_1/Control_pausa_N_4.gd" type="Script" id=4]
+[ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,6 +18,8 @@ script = ExtResource( 1 )
 
 [node name="meta" parent="." instance=ExtResource( 3 )]
 position = Vector2( 83, 10704 )
+
+[node name="fondos" type="Node2D" parent="."]
 
 [node name="pared" type="Node2D" parent="."]
 
@@ -43,11 +48,20 @@ shape = SubResource( 3 )
 
 [node name="globo" type="Node2D" parent="."]
 
-[node name="fondos" type="Node2D" parent="."]
+[node name="avion" type="Node2D" parent="."]
 
-[node name="Node2D6" type="Node2D" parent="."]
+[node name="Avion_Negro" parent="avion" instance=ExtResource( 2 )]
+position = Vector2( -273, 300 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Player" parent="avion" instance=ExtResource( 6 )]
+position = Vector2( 736, 321 )
+
+[node name="Control_pausa_N_4" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="Control_pausa_N_4"]
+pause_mode = 2
 position = Vector2( 529, 311 )
 current = true
 limit_left = 0
@@ -58,8 +72,11 @@ limit_smoothed = true
 smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="Avion_Negro" parent="." instance=ExtResource( 2 )]
-position = Vector2( -273, 300 )
+[node name="Position_pausa" type="Position2D" parent="." groups=["pausa"]]
+position = Vector2( 646, 927 )
 
-[node name="player" type="Position2D" parent="Avion_Negro" groups=["spawn"]]
-position = Vector2( -361, -23 )
+[node name="Interfas_pantalla" parent="." instance=ExtResource( 5 )]
+margin_left = 120.0
+margin_top = 612.0
+margin_right = 1144.0
+margin_bottom = 1212.0

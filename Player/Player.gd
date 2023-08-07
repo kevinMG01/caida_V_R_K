@@ -123,5 +123,6 @@ func _on_detectar_enemigos_body_entered(body):
 		colicion_enemigo = true
 		global_Var.pausa = true
 		get_tree().paused = true
+		global_Var.deteccion_enemigo = true
 		pass
 	pass # Replace with function body.

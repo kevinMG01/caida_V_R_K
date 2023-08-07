@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_3.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://meta/meta.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Control_pausa_N_3.gd" type="Script" id=8]
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -93,13 +94,13 @@ shape = SubResource( 3 )
 [node name="avion_derecha" parent="pared" instance=ExtResource( 6 )]
 position = Vector2( 48, 537 )
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="avion" type="Node2D" parent="."]
 
-[node name="Avion_Negro" parent="." instance=ExtResource( 2 )]
+[node name="Avion_Negro" parent="avion" instance=ExtResource( 2 )]
 position = Vector2( -313, 286 )
 
-[node name="player" type="Position2D" parent="Avion_Negro" groups=["spawn"]]
-position = Vector2( -371, -16 )
+[node name="Player" parent="avion" instance=ExtResource( 10 )]
+position = Vector2( 691, 286 )
 
 [node name="Position_pausa" type="Position2D" parent="." groups=["pausa"]]
 position = Vector2( 589, 2029 )

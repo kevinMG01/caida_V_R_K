@@ -1,7 +1,6 @@
 extends Node2D
 
 
-
 func _physics_process(delta):
 	camara_nivel_3()
 
@@ -31,5 +30,3 @@ func camara_nivel_3():
 			$Camera2D.drag_margin_h_enabled = false
 			$Camera2D.drag_margin_v_enabled = false
 			$Camera2D.global_position = get_tree().get_nodes_in_group("pausa")[0].global_position
-			
-

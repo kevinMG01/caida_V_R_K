@@ -6,7 +6,7 @@ var camara_avion_apagado = true
 
 var deteccion_enemigo = false
 
-var nivel = 1
+var nivel = 1 # mmmmmmmmmm
 
 var power_up = 1
 
