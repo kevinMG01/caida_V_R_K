@@ -3,10 +3,12 @@ extends Node2D
 
 func _ready():
 	global_Var.camara_avion_apagado = true
+	global_Var.nivel = 1
 
 func _physics_process(delta):
 	bloquear_meta()
 	player()
+	
 	pass
 
 func player():

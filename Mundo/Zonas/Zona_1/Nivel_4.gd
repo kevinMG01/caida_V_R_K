@@ -3,6 +3,7 @@ extends Node2D
 
 func _ready():
 	global_Var.camara_avion_apagado = true
+	global_Var.nivel = 4
 
 
 func _physics_process(delta):

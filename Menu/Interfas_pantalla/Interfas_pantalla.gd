@@ -26,7 +26,17 @@ func _input(event: InputEvent):
 
 
 func _on_Reintentar_1_pressed():
-	get_tree().change_scene("")
+	get_tree().paused = false
+	if global_Var.nivel == 1:
+		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
+	if global_Var.nivel == 2:
+		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_2.tscn")
+	if global_Var.nivel == 3:
+		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_3.tscn")
+	if global_Var.nivel == 4:
+		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_4.tscn")
+	if global_Var.nivel == 5:
+		get_tree().change_scene("")
 	pass
 
 func _on_Tienda_1_pressed():
@@ -38,5 +48,6 @@ func _on_Inventario_1_pressed():
 	pass 
 
 func _on_Salir_menu_pressed():
+	get_tree().paused = false
 	get_tree().change_scene("res://Menu/Menu/Menu.tscn")
 	pass 

@@ -3,7 +3,7 @@
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Enemigos/ave-removebg-preview.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Menu/pausa/Boton del menu de reintentar 4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Menu/pausa/Boton del tienda.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 2.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Menu/libro/Menu de Biografia ejemplo.jpg" type="Texture" id=6]
 
@@ -209,9 +209,9 @@ margin_bottom = 103.0
 custom_styles/hover = SubResource( 31 )
 custom_styles/normal = SubResource( 28 )
 
-[node name="BotonDelMenuDeReintentar4" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu"]
-position = Vector2( 54.5, 56 )
-scale = Vector2( 0.859091, 0.933333 )
+[node name="BotonDelTienda" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu"]
+position = Vector2( 56, 54.25 )
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 4 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]

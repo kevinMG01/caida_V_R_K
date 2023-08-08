@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Menu/pausa/menu de reintentar.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Sprites/Menu/pausa/Boton del menu de reintentar 3.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Menu/pausa/Boton del menu de reintentar 4.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Menu/pausa/Boton del menu de reintentar 2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Menu/pausa/Boton del tienda.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxEmpty" id=18]
 
@@ -156,8 +157,14 @@ custom_styles/pressed = SubResource( 15 )
 custom_styles/normal = SubResource( 16 )
 
 [node name="salir" type="Sprite" parent="pausa/control_pausa/VBoxContainer2/salir"]
+visible = false
 position = Vector2( 121, 36 )
 texture = ExtResource( 5 )
+
+[node name="BotonDelTienda" type="Sprite" parent="pausa/control_pausa/VBoxContainer2/salir"]
+position = Vector2( 129, 34.25 )
+scale = Vector2( 1.35088, 0.735955 )
+texture = ExtResource( 7 )
 
 [connection signal="pressed" from="pausa/control_pausa/VBoxContainer/Reintentar/Reintentar_1" to="." method="_on_Reintentar_1_pressed"]
 [connection signal="pressed" from="pausa/control_pausa/VBoxContainer/Tienda/Tienda_1" to="." method="_on_Tienda_1_pressed"]
