@@ -9,6 +9,7 @@ var jugador = null
 var jugador_libre = null
 
 func _ready():
+	$AnimatedSprite.playing = true
 	pass
 	
 
@@ -22,19 +23,19 @@ func deteccion_laterales():
 	if jugador != null:
 		if global_position.x > jugador.global_position.x + 6:
 			movimiento.x -= cantidad
-			$ave.flip_h = true
+			$AnimatedSprite.flip_h = true
 		if global_position.x < jugador.global_position.x - 6:
 			movimiento.x += cantidad
-			$ave.flip_h = false
+			$AnimatedSprite.flip_h = false
 
 func deteccion_libre():
 	if jugador_libre != null:
 		if global_position.x > jugador_libre.global_position.x + 6:
 			movimiento.x -= cantidad
-			$ave.flip_h = true
+			$AnimatedSprite.flip_h = true
 		if global_position.x < jugador_libre.global_position.x - 6:
 			movimiento.x += cantidad
-			$ave.flip_h = false
+			$AnimatedSprite.flip_h = false
 		if global_position.y > jugador_libre.global_position.y + 6:
 			movimiento.y -= 90
 		
