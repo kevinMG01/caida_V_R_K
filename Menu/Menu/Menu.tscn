@@ -170,8 +170,8 @@ scale = Vector2( 0.897059, 1.05128 )
 texture = ExtResource( 9 )
 
 [node name="Moneda" type="Sprite" parent="LugarParaLasMonedasSprite1"]
-position = Vector2( -124.295, 5.70732 )
-scale = Vector2( 0.351322, 0.257858 )
+position = Vector2( -145.475, 3.80487 )
+scale = Vector2( 0.231399, 0.192344 )
 texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
