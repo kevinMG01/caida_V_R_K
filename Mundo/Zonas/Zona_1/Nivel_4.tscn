@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_4.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Audio/NIVEL/Hero Immortal niveles.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Sprites/Mundo/Nivel 4 fondo.jpg" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mundo/Nivel 4 nubes tapa vision.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mundo/Nivel 5 nubes tapa vision.png" type="Texture" id=10]
+[ext_resource path="res://Enemigo/Enemigo_Ave/Ave.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -16,21 +21,24 @@
 
 [node name="Nivel_4" type="Node2D"]
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+
+[node name="Nivel4Fondo" type="Sprite" parent="."]
+position = Vector2( 624, 5672 )
+texture = ExtResource( 8 )
+
+[node name="Nivel4NubesTapaVision" type="Sprite" parent="Nivel4Fondo"]
+position = Vector2( 1, 29 )
+texture = ExtResource( 9 )
 
 [node name="meta" parent="." instance=ExtResource( 3 )]
 position = Vector2( 83, 10704 )
-
-[node name="fondos" type="Node2D" parent="."]
 
 [node name="pared" type="Node2D" parent="."]
 
 [node name="I" type="StaticBody2D" parent="pared"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared/I"]
-position = Vector2( -84, 5885 )
+position = Vector2( -72, 5885 )
 scale = Vector2( 9, 550 )
 shape = SubResource( 1 )
 
@@ -49,8 +57,31 @@ scale = Vector2( 90, 6 )
 shape = SubResource( 3 )
 
 [node name="ave" type="Node2D" parent="."]
+position = Vector2( -91, 252 )
+
+[node name="Ave" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 146, 589 )
+
+[node name="Ave2" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 1173, 1773 )
+
+[node name="Ave3" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 285, 2390 )
+
+[node name="Ave4" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 378, 2908 )
 
 [node name="globo" type="Node2D" parent="."]
+position = Vector2( 7, 0 )
+
+[node name="Enemigo" parent="globo" instance=ExtResource( 12 )]
+position = Vector2( 1162, 736 )
+
+[node name="Enemigo2" parent="globo" instance=ExtResource( 12 )]
+position = Vector2( 357, 1383 )
+
+[node name="Enemigo3" parent="globo" instance=ExtResource( 12 )]
+position = Vector2( 1109, 3901 )
 
 [node name="avion" type="Node2D" parent="."]
 
@@ -79,13 +110,17 @@ editor_draw_limits = true
 [node name="Position_pausa" type="Position2D" parent="." groups=["pausa"]]
 position = Vector2( 646, 927 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -25.0
+autoplay = true
+
+[node name="Nivel5NubesTapaVision" type="Sprite" parent="."]
+position = Vector2( 624, 3552 )
+texture = ExtResource( 10 )
+
 [node name="Interfas_pantalla" parent="." instance=ExtResource( 5 )]
 margin_left = 120.0
 margin_top = 612.0
 margin_right = 1144.0
 margin_bottom = 1212.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
-volume_db = -25.0
-autoplay = true

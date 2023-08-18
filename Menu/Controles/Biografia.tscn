@@ -1,32 +1,13 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Enemigos/ave-removebg-preview.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Menu/pausa/Boton del tienda.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 2.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Menu/libro/Menu de Biografia ejemplo.jpg" type="Texture" id=6]
+[ext_resource path="res://Sprites/Enemigos/ave/Pajaro enemigo sprite 1.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxFlat" id=25]
 bg_color = Color( 0.043684, 0.221419, 0.228227, 1 )
-
-[sub_resource type="StyleBoxFlat" id=29]
-bg_color = Color( 0.0156863, 0.0509804, 0.196078, 1 )
-
-[sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.117647, 0.172549, 0.396078, 1 )
-
-[sub_resource type="StyleBoxFlat" id=30]
-bg_color = Color( 0.0156863, 0.0509804, 0.196078, 1 )
-
-[sub_resource type="StyleBoxFlat" id=27]
-bg_color = Color( 0.117647, 0.172549, 0.396078, 1 )
-
-[sub_resource type="StyleBoxFlat" id=31]
-bg_color = Color( 0.0156863, 0.0509804, 0.196078, 1 )
-
-[sub_resource type="StyleBoxFlat" id=28]
-bg_color = Color( 0.117647, 0.172549, 0.396078, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=17]
 
@@ -36,8 +17,34 @@ HScrollBar/styles/scroll = SubResource( 17 )
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.376471, 0.117647, 0.396078, 1 )
 
+[sub_resource type="StyleBoxEmpty" id=36]
+
+[sub_resource type="StyleBoxEmpty" id=37]
+
+[sub_resource type="StyleBoxEmpty" id=38]
+
+[sub_resource type="StyleBoxEmpty" id=39]
+
+[sub_resource type="StyleBoxEmpty" id=40]
+
+[sub_resource type="StyleBoxEmpty" id=41]
+
+[sub_resource type="StyleBoxEmpty" id=42]
+
+[sub_resource type="StyleBoxEmpty" id=43]
+
+[sub_resource type="StyleBoxEmpty" id=44]
+
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.0431373, 0.443137, 0.333333, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=32]
+
+[sub_resource type="StyleBoxEmpty" id=33]
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="StyleBoxEmpty" id=35]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.529412, 0.0627451, 0.0627451, 1 )
@@ -103,6 +110,7 @@ anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="selecion_personajes" type="PanelContainer" parent="HBoxContainer"]
+visible = false
 margin_right = 200.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 200, 0 )
@@ -119,53 +127,9 @@ margin_left = 51.0
 margin_right = 141.0
 margin_bottom = 466.0
 
-[node name="Globo" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
+[node name="Dron" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
 margin_right = 90.0
 margin_bottom = 90.0
-rect_min_size = Vector2( 90, 90 )
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="globo" type="Button" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 83.0
-margin_bottom = 83.0
-custom_styles/hover = SubResource( 29 )
-custom_styles/normal = SubResource( 26 )
-
-[node name="SpriteDelGlobo1" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo"]
-position = Vector2( 44, 47 )
-scale = Vector2( 0.17, 0.09 )
-texture = ExtResource( 2 )
-
-[node name="Ave" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
-margin_top = 94.0
-margin_right = 90.0
-margin_bottom = 184.0
-rect_min_size = Vector2( 90, 90 )
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ave" type="Button" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 83.0
-margin_bottom = 83.0
-custom_styles/hover = SubResource( 30 )
-custom_styles/normal = SubResource( 27 )
-
-[node name="ave2" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave"]
-position = Vector2( 40, 42.0001 )
-scale = Vector2( 0.13, 0.13 )
-texture = ExtResource( 3 )
-
-[node name="Dron" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
-margin_top = 188.0
-margin_right = 90.0
-margin_bottom = 278.0
 rect_min_size = Vector2( 0, 90 )
 mouse_filter = 2
 
@@ -177,16 +141,16 @@ margin_right = 83.0
 margin_bottom = 83.0
 
 [node name="PanelContainer4" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
-margin_top = 282.0
+margin_top = 94.0
 margin_right = 90.0
-margin_bottom = 372.0
+margin_bottom = 184.0
 rect_min_size = Vector2( 0, 90 )
 mouse_filter = 2
 
 [node name="PanelContainer5" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/VBoxContainer"]
-margin_top = 376.0
+margin_top = 188.0
 margin_right = 90.0
-margin_bottom = 466.0
+margin_bottom = 278.0
 rect_min_size = Vector2( 0, 90 )
 mouse_filter = 2
 
@@ -196,26 +160,7 @@ margin_top = 473.0
 margin_right = 151.0
 margin_bottom = 583.0
 
-[node name="regresar_menu" type="PanelContainer" parent="HBoxContainer/selecion_personajes/Control/retroseder"]
-margin_right = 110.0
-margin_bottom = 110.0
-rect_min_size = Vector2( 0, 110 )
-
-[node name="volver_menu" type="Button" parent="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 103.0
-margin_bottom = 103.0
-custom_styles/hover = SubResource( 31 )
-custom_styles/normal = SubResource( 28 )
-
-[node name="BotonDelTienda" type="Sprite" parent="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu"]
-position = Vector2( 56, 54.25 )
-scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 4 )
-
 [node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
-margin_left = 204.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
@@ -223,26 +168,26 @@ theme = SubResource( 18 )
 scroll_vertical_enabled = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ScrollContainer"]
-margin_right = 4100.0
+margin_right = 4508.0
 margin_bottom = 600.0
 mouse_filter = 2
 size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="1" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
-margin_right = 820.0
+margin_right = 1024.0
 margin_bottom = 600.0
-rect_min_size = Vector2( 820, 0 )
+rect_min_size = Vector2( 1024, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 
 [node name="Control" type="Control" parent="HBoxContainer/ScrollContainer/HBoxContainer/1"]
-margin_right = 820.0
+margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="MenuDeBiografiaEjemplo" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
-position = Vector2( 409, 301 )
-scale = Vector2( 0.80957, 1 )
+position = Vector2( 513.25, 300 )
+scale = Vector2( 1.00342, 1 )
 texture = ExtResource( 6 )
 
 [node name="11234" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
@@ -251,9 +196,9 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
 [node name="globo" type="Label" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
-margin_left = 443.0
+margin_left = 588.0
 margin_top = 27.0
-margin_right = 743.0
+margin_right = 888.0
 margin_bottom = 279.0
 rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -273,32 +218,70 @@ horizontal.
 
 "
 
-[node name="2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 820.0
-margin_right = 1640.0
+[node name="Ave" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+margin_left = 29.0
+margin_top = 86.0
+margin_right = 109.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 80, 40 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 36 )
+
+[node name="ave" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/Ave"]
+margin_right = 80.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 37 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 39 )
+custom_styles/normal = SubResource( 40 )
+
+[node name="PajaroEnemigoSprite1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/Ave"]
+position = Vector2( 38.3125, 19.9375 )
+scale = Vector2( 0.0767188, 0.0576563 )
+texture = ExtResource( 7 )
+
+[node name="SpriteDelGlobo1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+position = Vector2( 73.25, 58.5 )
+scale = Vector2( 0.121429, 0.0490431 )
+texture = ExtResource( 2 )
+
+[node name="regresar_menu2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+margin_left = 573.0
+margin_top = 550.0
+margin_right = 653.0
 margin_bottom = 600.0
-rect_min_size = Vector2( 820, 0 )
+custom_styles/panel = SubResource( 41 )
+
+[node name="volver_menu" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/regresar_menu2"]
+margin_right = 80.0
+margin_bottom = 50.0
+custom_styles/hover = SubResource( 42 )
+custom_styles/pressed = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+
+[node name="2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
+margin_left = 1024.0
+margin_right = 2048.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 1024, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 2 )
 
 [node name="Control" type="Control" parent="HBoxContainer/ScrollContainer/HBoxContainer/2"]
-margin_right = 820.0
+margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="MenuDeBiografiaEjemplo" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
-position = Vector2( 406, 299 )
-scale = Vector2( 0.806641, 1 )
+position = Vector2( 512, 301 )
+scale = Vector2( 1.00781, 1.00667 )
 texture = ExtResource( 6 )
 
-[node name="Ave-removebg-preview" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
-position = Vector2( 258, 240 )
-scale = Vector2( 0.573944, 0.788724 )
-texture = ExtResource( 3 )
-
 [node name="pajaro" type="Label" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
-margin_left = 438.0
+margin_left = 592.0
 margin_top = 24.0
-margin_right = 809.0
+margin_right = 963.0
 margin_bottom = 259.0
 rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -317,25 +300,77 @@ a perseguir al paracaidista
 con más vigor.
 "
 
+[node name="PajaroEnemigoSprite1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+position = Vector2( 337, 248 )
+scale = Vector2( 0.534063, 0.597813 )
+texture = ExtResource( 7 )
+
+[node name="PajaroEnemigoSprite2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+position = Vector2( -958.125, 106.625 )
+scale = Vector2( 0.0821875, 0.0634375 )
+texture = ExtResource( 7 )
+
+[node name="Globo" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+margin_left = 37.0
+margin_top = 36.0
+margin_right = 97.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 60, 40 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 32 )
+
+[node name="globo" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/Globo"]
+margin_right = 60.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 33 )
+custom_styles/pressed = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+
+[node name="SpriteDelGlobo1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/Globo"]
+position = Vector2( 37.4125, 21.405 )
+scale = Vector2( 0.124133, 0.0416388 )
+texture = ExtResource( 2 )
+
+[node name="PajaroEnemigoSprite3" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+position = Vector2( 64.3125, 106.063 )
+scale = Vector2( 0.0867188, 0.0648438 )
+texture = ExtResource( 7 )
+
+[node name="regresar_menu" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+margin_left = 569.0
+margin_top = 548.0
+margin_right = 649.0
+margin_bottom = 598.0
+custom_styles/panel = SubResource( 41 )
+
+[node name="volver_menu" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/regresar_menu"]
+margin_right = 80.0
+margin_bottom = 50.0
+custom_styles/hover = SubResource( 42 )
+custom_styles/pressed = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+
 [node name="3" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 1640.0
-margin_right = 2460.0
+margin_left = 2048.0
+margin_right = 2868.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 3 )
 
 [node name="4" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 2460.0
-margin_right = 3280.0
+margin_left = 2868.0
+margin_right = 3688.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 4 )
 
 [node name="5" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 3280.0
-margin_right = 4100.0
+margin_left = 3688.0
+margin_right = 4508.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
@@ -354,9 +389,10 @@ anims/3 = SubResource( 9 )
 anims/4 = SubResource( 10 )
 anims/5 = SubResource( 11 )
 
-[connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Globo/globo" to="." method="_on_globo_pressed"]
-[connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Ave/ave" to="." method="_on_ave_pressed"]
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Dron/dron" to="." method="_on_dron_pressed"]
-[connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/retroseder/regresar_menu/volver_menu" to="." method="_on_volver_menu_pressed"]
 [connection signal="scroll_ended" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
 [connection signal="scroll_started" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/Ave/ave" to="." method="_on_ave_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/regresar_menu2/volver_menu" to="." method="_on_volver_menu_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/Globo/globo" to="." method="_on_globo_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/regresar_menu/volver_menu" to="." method="_on_volver_menu_pressed"]

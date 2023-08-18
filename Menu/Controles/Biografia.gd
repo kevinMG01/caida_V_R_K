@@ -53,7 +53,7 @@ func _on_globo_pressed():
 
 
 func _on_ave_pressed():
-	scroller.scroll_horizontal = rect_size.x * 0.801
+	scroller.scroll_horizontal = rect_size.x * 1 #0.801
 	pass # Replace with function body.
 
 
