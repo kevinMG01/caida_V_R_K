@@ -95,7 +95,6 @@ custom_styles/normal = SubResource( 1 )
 expand_icon = true
 
 [node name="tienda_menu" type="AnimatedSprite" parent="botones_inferiores/Tienda"]
-visible = false
 position = Vector2( 122, 76 )
 frames = SubResource( 17 )
 animation = "play_tienda"

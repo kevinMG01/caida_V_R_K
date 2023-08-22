@@ -105,9 +105,9 @@ func move_con_paracaidas():
 
 
 func power_up():
-	if Input.is_action_just_pressed("1"):
+	if Input.is_action_just_pressed("Dash"):
 		if global_Var.power_up > 0:
-			cantidad = 300
+			cantidad = 1400
 			global_Var.power_up -= 1
 			yield(get_tree().create_timer(1,5),"timeout")
 			cantidad = 150
