@@ -1,12 +1,17 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Menu/libro/new_libro/Mapa de Biografia sin los botones.jpg" type="Texture" id=3]
-[ext_resource path="res://Sprites/Menu/libro/new_libro/Menu de Biografia ejemplo con paginas.jpg" type="Texture" id=4]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 3 izquierda.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 2.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Enemigos/Dron/Dron sprite 1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Enemigos/ave/Pajaro enemigo sprite 1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 2 derecha.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 3 derecha.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 1 izquierda.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 1 derecha.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 2 izquierda.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxFlat" id=25]
 bg_color = Color( 0.043684, 0.221419, 0.228227, 1 )
@@ -64,6 +69,14 @@ bg_color = Color( 0.913725, 0.698039, 0.101961, 1 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.482353, 0.254902, 0.0117647, 1 )
+
+[sub_resource type="SpriteFrames" id=49]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
 
 [sub_resource type="AnimationNodeAnimation" id=20]
 animation = "1"
@@ -522,10 +535,12 @@ rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 5 )
 
-[node name="pasar_pagina" type="Sprite" parent="."]
+[node name="pasar_pagina" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 512, 300 )
-texture = ExtResource( 4 )
+position = Vector2( 508, 290 )
+frames = SubResource( 49 )
+animation = "Idle"
+frame = 2
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 19 )

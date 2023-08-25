@@ -51,7 +51,9 @@ func _on_ScrollContainer_scroll_started():
 
 func _on_globo_pressed():
 	$pasar_pagina.visible = true
-	yield(get_tree().create_timer(0.2),"timeout")
+	$pasar_pagina.playing = true
+	yield(get_tree().create_timer(0.8),"timeout")
+	$pasar_pagina.playing = false
 	$pasar_pagina.visible = false
 	scroller.scroll_horizontal = rect_size.x * 0
 	pass # Replace with function body.
@@ -59,7 +61,9 @@ func _on_globo_pressed():
 
 func _on_ave_pressed():
 	$pasar_pagina.visible = true
-	yield(get_tree().create_timer(0.2),"timeout")
+	$pasar_pagina.playing = true
+	yield(get_tree().create_timer(0.8),"timeout")
+	$pasar_pagina.playing = false
 	$pasar_pagina.visible = false
 	scroller.scroll_horizontal = rect_size.x * 1 #0.801
 	pass # Replace with function body.
@@ -67,7 +71,9 @@ func _on_ave_pressed():
 
 func _on_dron_pressed():
 	$pasar_pagina.visible = true
-	yield(get_tree().create_timer(0.2),"timeout")
+	$pasar_pagina.playing = true
+	yield(get_tree().create_timer(0.8),"timeout")
+	$pasar_pagina.playing = false
 	$pasar_pagina.visible = false
 	scroller.scroll_horizontal = rect_size.x * 2
 	pass # Replace with function body.
