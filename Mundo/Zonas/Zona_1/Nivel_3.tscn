@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_3.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Audio/NIVEL/Hero Immortal niveles.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Menu/muerte/reintentar_2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprites/Mundo/Nivel 4 nubes tapa vision.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -127,11 +128,16 @@ drag_margin_bottom = 0.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
+[node name="Nivel4NubesTapaVision" type="Sprite" parent="."]
+position = Vector2( 636.5, 1491 )
+scale = Vector2( 1.0632, 1 )
+texture = ExtResource( 13 )
+
 [node name="Interfas_pantalla" parent="." instance=ExtResource( 9 )]
-margin_left = 109.0
-margin_top = 1710.0
-margin_right = 1133.0
-margin_bottom = 2310.0
+margin_left = 94.0
+margin_top = 1698.0
+margin_right = 1118.0
+margin_bottom = 2298.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
@@ -139,7 +145,8 @@ volume_db = -25.0
 autoplay = true
 
 [node name="reintentar_2" parent="." instance=ExtResource( 12 )]
-margin_left = 119.0
-margin_top = 1683.0
-margin_right = 119.0
-margin_bottom = 1683.0
+visible = false
+margin_left = 65.0
+margin_top = 1719.0
+margin_right = 65.0
+margin_bottom = 1719.0

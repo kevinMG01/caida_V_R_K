@@ -64,13 +64,13 @@ position = Vector2( -91, 252 )
 position = Vector2( 146, 589 )
 
 [node name="Ave2" parent="ave" instance=ExtResource( 11 )]
-position = Vector2( 1173, 1773 )
+position = Vector2( 1150, 1687 )
 
 [node name="Ave3" parent="ave" instance=ExtResource( 11 )]
-position = Vector2( 285, 2390 )
+position = Vector2( 704, 2390 )
 
 [node name="Ave4" parent="ave" instance=ExtResource( 11 )]
-position = Vector2( 378, 2908 )
+position = Vector2( 179, 2908 )
 
 [node name="globo" type="Node2D" parent="."]
 position = Vector2( 7, 0 )
@@ -79,7 +79,7 @@ position = Vector2( 7, 0 )
 position = Vector2( 1162, 736 )
 
 [node name="Enemigo2" parent="globo" instance=ExtResource( 12 )]
-position = Vector2( 357, 1383 )
+position = Vector2( 524, 1383 )
 
 [node name="Enemigo3" parent="globo" instance=ExtResource( 12 )]
 position = Vector2( 1109, 3901 )
@@ -121,14 +121,14 @@ position = Vector2( 624, 3552 )
 texture = ExtResource( 10 )
 
 [node name="Interfas_pantalla" parent="." instance=ExtResource( 5 )]
-margin_left = 120.0
-margin_top = 612.0
-margin_right = 1144.0
-margin_bottom = 1212.0
+margin_left = 154.0
+margin_top = 587.0
+margin_right = 1178.0
+margin_bottom = 1187.0
 
 [node name="reintentar_2" parent="." instance=ExtResource( 13 )]
 visible = false
-margin_left = 163.0
-margin_top = 585.0
-margin_right = 163.0
-margin_bottom = 585.0
+margin_left = 134.0
+margin_top = 621.0
+margin_right = 134.0
+margin_bottom = 621.0
