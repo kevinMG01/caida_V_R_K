@@ -1,9 +1,11 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Mapa de Biografia sin los botones.jpg" type="Texture" id=3]
+[ext_resource path="res://Sprites/Menu/libro/new_libro/Menu de Biografia ejemplo con paginas.jpg" type="Texture" id=4]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 2.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Menu/libro/Menu de Biografia ejemplo.jpg" type="Texture" id=6]
+[ext_resource path="res://Sprites/Enemigos/Dron/Dron sprite 1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Enemigos/ave/Pajaro enemigo sprite 1.png" type="Texture" id=7]
 
 [sub_resource type="StyleBoxFlat" id=25]
@@ -34,6 +36,14 @@ bg_color = Color( 0.376471, 0.117647, 0.396078, 1 )
 [sub_resource type="StyleBoxEmpty" id=43]
 
 [sub_resource type="StyleBoxEmpty" id=44]
+
+[sub_resource type="StyleBoxEmpty" id=45]
+
+[sub_resource type="StyleBoxEmpty" id=46]
+
+[sub_resource type="StyleBoxEmpty" id=47]
+
+[sub_resource type="StyleBoxEmpty" id=48]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.0431373, 0.443137, 0.333333, 1 )
@@ -168,7 +178,7 @@ theme = SubResource( 18 )
 scroll_vertical_enabled = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ScrollContainer"]
-margin_right = 4508.0
+margin_right = 4712.0
 margin_bottom = 600.0
 mouse_filter = 2
 size_flags_vertical = 3
@@ -185,13 +195,12 @@ custom_styles/panel = SubResource( 1 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="MenuDeBiografiaEjemplo" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
-position = Vector2( 513.25, 300 )
-scale = Vector2( 1.00342, 1 )
-texture = ExtResource( 6 )
+[node name="MapaDeBiografiaSinLosBotones" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+position = Vector2( 511, 300 )
+texture = ExtResource( 3 )
 
 [node name="11234" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
-position = Vector2( 262, 237 )
+position = Vector2( 343, 237 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
@@ -261,6 +270,26 @@ custom_styles/hover = SubResource( 42 )
 custom_styles/pressed = SubResource( 43 )
 custom_styles/normal = SubResource( 44 )
 
+[node name="dron" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
+margin_left = 36.0
+margin_top = 133.0
+margin_right = 116.0
+margin_bottom = 173.0
+rect_min_size = Vector2( 80, 40 )
+custom_styles/panel = SubResource( 45 )
+
+[node name="dron" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/dron"]
+margin_right = 80.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 46 )
+custom_styles/pressed = SubResource( 47 )
+custom_styles/normal = SubResource( 48 )
+
+[node name="DronSprite2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/dron"]
+position = Vector2( 38.0001, 18 )
+scale = Vector2( 0.0500594, 0.0462555 )
+texture = ExtResource( 6 )
+
 [node name="2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1024.0
 margin_right = 2048.0
@@ -273,10 +302,9 @@ custom_styles/panel = SubResource( 2 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="MenuDeBiografiaEjemplo" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
-position = Vector2( 512, 301 )
-scale = Vector2( 1.00781, 1.00667 )
-texture = ExtResource( 6 )
+[node name="MapaDeBiografiaSinLosBotones2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+position = Vector2( 511, 300 )
+texture = ExtResource( 3 )
 
 [node name="pajaro" type="Label" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
 margin_left = 592.0
@@ -352,29 +380,152 @@ custom_styles/hover = SubResource( 42 )
 custom_styles/pressed = SubResource( 43 )
 custom_styles/normal = SubResource( 44 )
 
-[node name="3" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
+[node name="dron2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+margin_left = 36.0
+margin_top = 133.0
+margin_right = 116.0
+margin_bottom = 173.0
+rect_min_size = Vector2( 80, 40 )
+custom_styles/panel = SubResource( 45 )
+
+[node name="dron" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/dron2"]
+margin_right = 80.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 46 )
+custom_styles/pressed = SubResource( 47 )
+custom_styles/normal = SubResource( 48 )
+
+[node name="DronSprite2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/dron2"]
+position = Vector2( 38.0001, 18 )
+scale = Vector2( 0.0500594, 0.0462555 )
+texture = ExtResource( 6 )
+
+[node name="dron" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 2048.0
-margin_right = 2868.0
+margin_right = 3072.0
 margin_bottom = 600.0
-rect_min_size = Vector2( 820, 0 )
+rect_min_size = Vector2( 1024, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 3 )
 
+[node name="Control" type="Control" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="MapaDeBiografiaSinLosBotones3" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 3 )
+
+[node name="DronSprite2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+position = Vector2( 337.375, 198 )
+scale = Vector2( 0.233363, 0.4163 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+margin_left = 573.0
+margin_top = 61.0
+margin_right = 762.0
+margin_bottom = 228.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "                Dron
+
+
+El Dron es un obstáculo
+ peculiar, el cual, aparece
+ constantemente a la vez que
+ invoca unos petardos para
+ que no puedas completar el
+ desafío.
+"
+
+[node name="Globo" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+margin_left = 37.0
+margin_top = 36.0
+margin_right = 97.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 60, 40 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 32 )
+
+[node name="globo" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/Globo"]
+margin_right = 60.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 33 )
+custom_styles/pressed = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+
+[node name="SpriteDelGlobo1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/Globo"]
+position = Vector2( 37.4125, 21.405 )
+scale = Vector2( 0.124133, 0.0416388 )
+texture = ExtResource( 2 )
+
+[node name="Ave" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+margin_left = 29.0
+margin_top = 86.0
+margin_right = 109.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 80, 40 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 36 )
+
+[node name="ave" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/Ave"]
+margin_right = 80.0
+margin_bottom = 40.0
+custom_styles/hover = SubResource( 37 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 39 )
+custom_styles/normal = SubResource( 40 )
+
+[node name="PajaroEnemigoSprite1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/Ave"]
+position = Vector2( 38.3125, 19.9375 )
+scale = Vector2( 0.0767188, 0.0576563 )
+texture = ExtResource( 7 )
+
+[node name="regresar_menu" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+margin_left = 573.0
+margin_top = 550.0
+margin_right = 653.0
+margin_bottom = 600.0
+custom_styles/panel = SubResource( 41 )
+
+[node name="volver_menu" type="Button" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/regresar_menu"]
+margin_right = 80.0
+margin_bottom = 50.0
+custom_styles/hover = SubResource( 42 )
+custom_styles/pressed = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+
+[node name="DronSprite1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+position = Vector2( 78.875, 150 )
+scale = Vector2( 0.0500594, 0.0462555 )
+texture = ExtResource( 6 )
+
 [node name="4" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 2868.0
-margin_right = 3688.0
+margin_left = 3072.0
+margin_right = 3892.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 4 )
 
 [node name="5" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
-margin_left = 3688.0
-margin_right = 4508.0
+margin_left = 3892.0
+margin_right = 4712.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 820, 0 )
 mouse_filter = 2
 custom_styles/panel = SubResource( 5 )
+
+[node name="pasar_pagina" type="Sprite" parent="."]
+visible = false
+position = Vector2( 512, 300 )
+texture = ExtResource( 4 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 19 )
@@ -394,5 +545,10 @@ anims/5 = SubResource( 11 )
 [connection signal="scroll_started" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
 [connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/Ave/ave" to="." method="_on_ave_pressed"]
 [connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/regresar_menu2/volver_menu" to="." method="_on_volver_menu_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/dron/dron" to="." method="_on_dron_pressed"]
 [connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/Globo/globo" to="." method="_on_globo_pressed"]
 [connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/regresar_menu/volver_menu" to="." method="_on_volver_menu_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/2/Control/dron2/dron" to="." method="_on_dron_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/Globo/globo" to="." method="_on_globo_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/Ave/ave" to="." method="_on_ave_pressed"]
+[connection signal="pressed" from="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control/regresar_menu/volver_menu" to="." method="_on_volver_menu_pressed"]

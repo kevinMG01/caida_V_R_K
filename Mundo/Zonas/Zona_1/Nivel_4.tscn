@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_4.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Sprites/Mundo/Nivel 5 nubes tapa vision.png" type="Texture" id=10]
 [ext_resource path="res://Enemigo/Enemigo_Ave/Ave.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Menu/muerte/reintentar_2.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -124,3 +125,10 @@ margin_left = 120.0
 margin_top = 612.0
 margin_right = 1144.0
 margin_bottom = 1212.0
+
+[node name="reintentar_2" parent="." instance=ExtResource( 13 )]
+visible = false
+margin_left = 163.0
+margin_top = 585.0
+margin_right = 163.0
+margin_bottom = 585.0

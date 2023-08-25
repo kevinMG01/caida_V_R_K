@@ -11,6 +11,7 @@ func _ready():
 	$Animat_3.playing = true
 	$ir_zona_seleccion.visible = false
 	$primera_ves.visible = true
+	
 	pass 
 
 

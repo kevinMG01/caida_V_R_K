@@ -57,11 +57,11 @@ func _on_ScrollContainer_scroll_started():
 
 #Boton_scroll
 func _on_Atras_pressed():
-	scroller.scroll_horizontal -= rect_size.x * 1
+#	scroller.scroll_horizontal -= rect_size.x * 1
 	pass 
 
 func _on_Adelante_pressed():
-	scroller.scroll_horizontal += rect_size.x * 1
+#	scroller.scroll_horizontal += rect_size.x * 1
 	pass 
 
 

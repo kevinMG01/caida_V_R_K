@@ -37,6 +37,7 @@ func _on_Reintentar_1_pressed():
 		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_4.tscn")
 	if global_Var.nivel == 5:
 		get_tree().change_scene("")
+	global_Var.deteccion_enemigo = false
 	pass
 
 func _on_Tienda_1_pressed():
@@ -50,4 +51,5 @@ func _on_Inventario_1_pressed():
 func _on_Salir_menu_pressed():
 	get_tree().paused = false
 	get_tree().change_scene("res://Menu/Menu/Menu.tscn")
+	global_Var.deteccion_enemigo = false
 	pass 
