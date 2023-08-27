@@ -28,3 +28,7 @@ func move():
 		if global_position.y < jugador.global_position.y - 6:
 			movimiento.y += velocity
 	pass
+	
+func invocar():
+	
+	pass
