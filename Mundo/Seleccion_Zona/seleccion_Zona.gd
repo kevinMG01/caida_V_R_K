@@ -112,3 +112,8 @@ func _on_Zona_1_N_5_pressed():
 	
 	
 	
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://Menu/Menu/Menu.tscn")
+	pass # Replace with function body.

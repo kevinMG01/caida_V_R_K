@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BOSS.png-8404a858275d8fd44af3fa6001d4c457.stex"
+path="res://.import/Boton de Exit sprite 1.png-ba8f470ba9dfe770adbb7c33ea7c8380.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mundo/Zonas/Zona_1/Nivel_5/BOSS.png"
-dest_files=[ "res://.import/BOSS.png-8404a858275d8fd44af3fa6001d4c457.stex" ]
+source_file="res://Menu/Menu/Boton de Exit sprite 1.png"
+dest_files=[ "res://.import/Boton de Exit sprite 1.png-ba8f470ba9dfe770adbb7c33ea7c8380.stex" ]
 
 [params]
 

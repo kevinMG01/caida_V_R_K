@@ -48,8 +48,9 @@ func comienzo():
 
 func move_con_paracaidas():
 	if !is_on_floor():
-		if Input.is_action_just_pressed("ui_down"):
-			 tiene_paracaida = !tiene_paracaida
+		if global_Var.nivel < 5:
+			if Input.is_action_just_pressed("ui_down"):
+				 tiene_paracaida = !tiene_paracaida
 			
 	if is_on_floor():
 		esta_suelo = true

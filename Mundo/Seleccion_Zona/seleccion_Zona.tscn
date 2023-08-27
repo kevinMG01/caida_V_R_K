@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Mundo/Seleccion_Zona/seleccion_Zona.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 1.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 3.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Menu/pausa/Boton del tienda.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
@@ -111,6 +112,12 @@ resource_name = "zona_4"
 
 [sub_resource type="Animation" id=20]
 resource_name = "zona_5"
+
+[sub_resource type="StyleBoxEmpty" id=30]
+
+[sub_resource type="StyleBoxEmpty" id=31]
+
+[sub_resource type="StyleBoxEmpty" id=32]
 
 [node name="seleccion_Zona" type="Control"]
 anchor_right = 1.0
@@ -306,6 +313,16 @@ stream = ExtResource( 1 )
 volume_db = -25.0
 autoplay = true
 
+[node name="Button" type="Button" parent="."]
+margin_left = 828.0
+margin_top = 63.0
+margin_right = 954.0
+margin_bottom = 158.0
+custom_styles/hover = SubResource( 30 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/normal = SubResource( 32 )
+icon = ExtResource( 14 )
+
 [connection signal="scroll_ended" from="ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]
 [connection signal="scroll_started" from="ScrollContainer" to="." method="_on_ScrollContainer_scroll_started"]
 [connection signal="pressed" from="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_1" to="." method="_on_Zona_1_N_1_pressed"]
@@ -315,3 +332,4 @@ autoplay = true
 [connection signal="pressed" from="ScrollContainer/HBoxContainer/Zona_1/buton/Zona_1_N_5" to="." method="_on_Zona_1_N_5_pressed"]
 [connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
 [connection signal="pressed" from="Adelante" to="." method="_on_Adelante_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

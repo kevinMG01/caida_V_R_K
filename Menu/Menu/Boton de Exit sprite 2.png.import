@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/REGALOS.png-d33e139ecc3456a31faafcb342eac839.stex"
+path="res://.import/Boton de Exit sprite 2.png-9136a8a0611af1af74be6700b3cc7a4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mundo/Zonas/Zona_1/Nivel_5/REGALOS.png"
-dest_files=[ "res://.import/REGALOS.png-d33e139ecc3456a31faafcb342eac839.stex" ]
+source_file="res://Menu/Menu/Boton de Exit sprite 2.png"
+dest_files=[ "res://.import/Boton de Exit sprite 2.png-9136a8a0611af1af74be6700b3cc7a4f.stex" ]
 
 [params]
 

@@ -7,13 +7,13 @@
 [ext_resource path="res://Sprites/Menu/Moneda.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de Biografia sprite 2.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Menu/nuevo/Boton de Salir sprite 1.png" type="Texture" id=8]
+[ext_resource path="res://Menu/Menu/Boton de Exit sprite 1.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Menu/Lugar para las monedas sprite 1.png" type="Texture" id=9]
 [ext_resource path="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3" type="AudioStream" id=10]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de Biografia sprite 1.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de Biografia sprite 3.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Menu/nuevo/Boton de Salir sprite 2.png" type="Texture" id=14]
+[ext_resource path="res://Menu/Menu/Boton de Exit sprite 2.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Menu/Boton de tienda menu abandonada.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Menu/Boton de inventario menu cerrado.png" type="Texture" id=16]
 
@@ -165,7 +165,6 @@ expand_icon = true
 position = Vector2( 86, 86 )
 frames = SubResource( 18 )
 animation = "play_salir"
-frame = 1
 
 [node name="LugarParaLasMonedasSprite1" type="Sprite" parent="."]
 position = Vector2( 304.5, 81 )
