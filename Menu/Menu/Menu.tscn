@@ -5,17 +5,17 @@
 [ext_resource path="res://Sprites/Menu/nuevo/Mapa Principal  fondo.jpg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de inventario menu.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Menu/Moneda.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Menu/nuevo/Boton de Biografia sprite 2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 1.png" type="Texture" id=7]
 [ext_resource path="res://Menu/Menu/Boton de Exit sprite 1.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Menu/Lugar para las monedas sprite 1.png" type="Texture" id=9]
 [ext_resource path="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3" type="AudioStream" id=10]
-[ext_resource path="res://Sprites/Menu/nuevo/Boton de Biografia sprite 1.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Menu/nuevo/Boton de Biografia sprite 3.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 3.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 2.png" type="Texture" id=13]
 [ext_resource path="res://Menu/Menu/Boton de Exit sprite 2.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Menu/Boton de tienda menu abandonada.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Menu/Boton de inventario menu cerrado.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Menu/new_ingles/Boton de inventory menu cerrado.png" type="Texture" id=16]
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
@@ -45,7 +45,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=16]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 6 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "play_biografia",
 "speed": 5.0
@@ -185,8 +185,8 @@ autoplay = true
 position = Vector2( 159, 482 )
 texture = ExtResource( 15 )
 
-[node name="BotonDeInventarioMenuCerrado" type="Sprite" parent="."]
-position = Vector2( 558, 441 )
+[node name="BotonDeInventoryMenuCerrado" type="Sprite" parent="."]
+position = Vector2( 557, 445 )
 texture = ExtResource( 16 )
 
 [connection signal="pressed" from="botones_inferiores/Tienda" to="." method="_on_Tienda_pressed"]

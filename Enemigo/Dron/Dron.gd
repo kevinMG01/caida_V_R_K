@@ -15,6 +15,7 @@ func _physics_process(delta):
 	movimiento = move_and_slide(movimiento)
 	pass
 
+
 func move():
 	if jugador != null:
 		if global_position.x > jugador.global_position.x + 6:
@@ -24,9 +25,9 @@ func move():
 			movimiento.x += velocity
 			$AnimatedSprite.flip_h = false
 		if global_position.y > jugador.global_position.y + 6:
-			movimiento.y -= velocity
+			movimiento.y -= 60
 		if global_position.y < jugador.global_position.y - 6:
-			movimiento.y += velocity
+			movimiento.y += 60
 	pass
 	
 func invocar():

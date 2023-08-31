@@ -1,8 +1,8 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Menu/libro/new_libro/Mapa de Biografia sin los botones.jpg" type="Texture" id=3]
+[ext_resource path="res://Sprites/Menu/new_ingles/Boton del Dron Biografia.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 3 izquierda.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 2.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Enemigos/Dron/Dron sprite 1.png" type="Texture" id=6]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 1 izquierda.png" type="Texture" id=10]
 [ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 1 derecha.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 2 izquierda.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Menu/new_ingles/Boton del Ave Biografia.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Menu/new_ingles/Mapa de Biografia sin los botones.jpg" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=25]
 bg_color = Color( 0.043684, 0.221419, 0.228227, 1 )
@@ -209,8 +211,8 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="MapaDeBiografiaSinLosBotones" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
-position = Vector2( 511, 300 )
-texture = ExtResource( 3 )
+position = Vector2( 513, 301 )
+texture = ExtResource( 14 )
 
 [node name="11234" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
 position = Vector2( 343, 237 )
@@ -260,9 +262,15 @@ custom_styles/focus = SubResource( 39 )
 custom_styles/normal = SubResource( 40 )
 
 [node name="PajaroEnemigoSprite1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/Ave"]
+visible = false
 position = Vector2( 38.3125, 19.9375 )
 scale = Vector2( 0.0767188, 0.0576563 )
 texture = ExtResource( 7 )
+
+[node name="BotonDelAveBiografia" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/Ave"]
+position = Vector2( 35, 23 )
+scale = Vector2( 0.68, 0.46 )
+texture = ExtResource( 13 )
 
 [node name="SpriteDelGlobo1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control"]
 position = Vector2( 73.25, 58.5 )
@@ -298,10 +306,10 @@ custom_styles/hover = SubResource( 46 )
 custom_styles/pressed = SubResource( 47 )
 custom_styles/normal = SubResource( 48 )
 
-[node name="DronSprite2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/dron"]
-position = Vector2( 38.0001, 18 )
-scale = Vector2( 0.0500594, 0.0462555 )
-texture = ExtResource( 6 )
+[node name="BotonDelDronBiografia" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/1/Control/dron"]
+position = Vector2( 38, 17 )
+scale = Vector2( 0.68, 0.6 )
+texture = ExtResource( 3 )
 
 [node name="2" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1024.0
@@ -315,9 +323,9 @@ custom_styles/panel = SubResource( 2 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="MapaDeBiografiaSinLosBotones2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
-position = Vector2( 511, 300 )
-texture = ExtResource( 3 )
+[node name="MapaDeBiografiaSinLosBotones" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
+position = Vector2( 512, 300 )
+texture = ExtResource( 14 )
 
 [node name="pajaro" type="Label" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
 margin_left = 592.0
@@ -344,11 +352,6 @@ con más vigor.
 [node name="PajaroEnemigoSprite1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
 position = Vector2( 337, 248 )
 scale = Vector2( 0.534063, 0.597813 )
-texture = ExtResource( 7 )
-
-[node name="PajaroEnemigoSprite2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
-position = Vector2( -958.125, 106.625 )
-scale = Vector2( 0.0821875, 0.0634375 )
 texture = ExtResource( 7 )
 
 [node name="Globo" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
@@ -425,9 +428,9 @@ custom_styles/panel = SubResource( 3 )
 margin_right = 1024.0
 margin_bottom = 600.0
 
-[node name="MapaDeBiografiaSinLosBotones3" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
+[node name="MapaDeBiografiaSinLosBotones" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
 position = Vector2( 512, 300 )
-texture = ExtResource( 3 )
+texture = ExtResource( 14 )
 
 [node name="DronSprite2" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
 position = Vector2( 337.375, 198 )

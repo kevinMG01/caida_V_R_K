@@ -37,6 +37,21 @@ position = Vector2( 79, 13383 )
 
 [node name="dron" type="Node2D" parent="."]
 
+[node name="Position_1" type="Position2D" parent="dron" groups=["dron_1"]]
+position = Vector2( 44, 544 )
+
+[node name="Position_2" type="Position2D" parent="dron" groups=["dron_2"]]
+position = Vector2( 1136, 3300 )
+
+[node name="Position_3" type="Position2D" parent="dron" groups=["dron_3"]]
+position = Vector2( 1168, 6932 )
+
+[node name="Position_4" type="Position2D" parent="dron" groups=["dron_4"]]
+position = Vector2( 172, 10748 )
+
+[node name="Position_5" type="Position2D" parent="dron" groups=["dron_5"]]
+position = Vector2( 1096, 12104 )
+
 [node name="avion_negro" type="Node2D" parent="."]
 
 [node name="pared" type="Node2D" parent="."]
