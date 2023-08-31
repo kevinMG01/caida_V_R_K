@@ -1,5 +1,9 @@
 extends Node2D
 
+var spawn_dron = false
+var dron = preload("res://Enemigo/Dron/Dron.tscn")
+var posicion_dron = 0
+
 func _ready():
 	global_Var.camara_avion_apagado = true
 	global_Var.nivel = 5
@@ -7,7 +11,10 @@ func _ready():
 
 func _physics_process(delta):
 	player()
+	spawn_dron()
 	bloquear_meta()
+	if posicion_dron == 5:
+		pass
 	pass
 
 func player():
@@ -27,3 +34,34 @@ func bloquear_meta():
 		$meta/ir_zona_seleccion.visible = true
 		$meta/primera_ves.visible = false
 	pass
+
+func spawn_dron():
+	if spawn_dron == true:
+		if posicion_dron == 1:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_1")[0].global_position
+			spawn_dron = false
+		if posicion_dron == 2:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_2")[0].global_position
+			spawn_dron = false
+		if posicion_dron == 3:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_3")[0].global_position
+			spawn_dron = false
+		if posicion_dron == 4:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_4")[0].global_position
+			spawn_dron = false
+
+
+
+func _on_deteccion_dron_1_body_entered(body):
+	if body.get_name() == "Player":
+		spawn_dron = true
+		posicion_dron += 1 
+	pass # Replace with function body.

@@ -59,29 +59,42 @@ func move_con_paracaidas():
 			movimiento.y = -salto
 	
 	if esta_suelo == false:
-		if tiene_paracaida == true:
-			cantidad = 150
-			gravedad = 70
-			movimiento.x = 0
-			$AnimatedSprite.animation = "Move_paracaida"
-			if Input.is_action_pressed("ui_left"):
-				movimiento.x -= cantidad
-				$AnimatedSprite.flip_h = true
-			elif Input.is_action_pressed("ui_right"):
-				movimiento.x += cantidad
-				$AnimatedSprite.flip_h = false
+		if global_Var.nivel < 5:
+			if tiene_paracaida == true:
+				cantidad = 150
+				gravedad = 70
+				movimiento.x = 0
+				$AnimatedSprite.animation = "Move_paracaida"
+				if Input.is_action_pressed("ui_left"):
+					movimiento.x -= cantidad
+					$AnimatedSprite.flip_h = true
+				elif Input.is_action_pressed("ui_right"):
+					movimiento.x += cantidad
+					$AnimatedSprite.flip_h = false
 
-		elif tiene_paracaida == false:
-			cantidad = 70
-			gravedad = 150
-			movimiento.x = 0
-			$AnimatedSprite.animation = "Move_paracaida"
-			if Input.is_action_pressed("ui_left"):
-				movimiento.x -= cantidad
-				$AnimatedSprite.flip_h = true
-			elif Input.is_action_pressed("ui_right"):
-				movimiento.x += cantidad
-				$AnimatedSprite.flip_h = false
+			elif tiene_paracaida == false:
+				cantidad = 70
+				gravedad = 150
+				movimiento.x = 0
+				$AnimatedSprite.animation = "Move_paracaida"
+				if Input.is_action_pressed("ui_left"):
+					movimiento.x -= cantidad
+					$AnimatedSprite.flip_h = true
+				elif Input.is_action_pressed("ui_right"):
+					movimiento.x += cantidad
+					$AnimatedSprite.flip_h = false
+		elif global_Var.nivel == 5:
+			if tiene_paracaida == true:
+				cantidad = 150
+				gravedad = 55
+				movimiento.x = 0
+				$AnimatedSprite.animation = "Move_paracaida"
+				if Input.is_action_pressed("ui_left"):
+					movimiento.x -= cantidad
+					$AnimatedSprite.flip_h = true
+				elif Input.is_action_pressed("ui_right"):
+					movimiento.x += cantidad
+					$AnimatedSprite.flip_h = false
 	elif esta_suelo == true:
 		cantidad = 150
 		gravedad = 70
