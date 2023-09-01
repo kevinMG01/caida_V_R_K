@@ -60,6 +60,9 @@ func spawn_dron():
 
 
 
+
+
+
 func _on_deteccion_dron_1_body_entered(body):
 	if body.get_name() == "Player":
 		spawn_dron = true

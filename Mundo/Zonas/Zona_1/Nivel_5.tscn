@@ -158,22 +158,22 @@ position = Vector2( 44, 1320 )
 [node name="Position_2" type="Position2D" parent="spawn_bombas" groups=["2"]]
 position = Vector2( 186, 1204 )
 
-[node name="Position_3" type="Position2D" parent="spawn_bombas"]
+[node name="Position_3" type="Position2D" parent="spawn_bombas" groups=["3"]]
 position = Vector2( 376, 1438 )
 
-[node name="Position_4" type="Position2D" parent="spawn_bombas"]
+[node name="Position_4" type="Position2D" parent="spawn_bombas" groups=["4"]]
 position = Vector2( 657, 1431 )
 
-[node name="Position_5" type="Position2D" parent="spawn_bombas"]
+[node name="Position_5" type="Position2D" parent="spawn_bombas" groups=["5"]]
 position = Vector2( 893, 1296 )
 
-[node name="Position_6" type="Position2D" parent="spawn_bombas"]
+[node name="Position_6" type="Position2D" parent="spawn_bombas" groups=["6"]]
 position = Vector2( 1059, 1501 )
 
-[node name="Position_7" type="Position2D" parent="spawn_bombas"]
+[node name="Position_7" type="Position2D" parent="spawn_bombas" groups=["7"]]
 position = Vector2( 1210, 1248 )
 
-[node name="Position_8" type="Position2D" parent="spawn_bombas"]
+[node name="Position_8" type="Position2D" parent="spawn_bombas" groups=["8"]]
 position = Vector2( 539, 1161 )
 
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_entered"]
