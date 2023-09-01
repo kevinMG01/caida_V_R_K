@@ -56,4 +56,45 @@ position = Vector2( 9.96875, -23 )
 scale = Vector2( 0.335153, 0.244493 )
 frames = SubResource( 4 )
 
+[node name="bomba" type="Node2D" parent="."]
+
+[node name="Position_1" type="Position2D" parent="bomba" groups=["1"]]
+position = Vector2( -1146, -114 )
+
+[node name="Position_2" type="Position2D" parent="bomba" groups=["2"]]
+position = Vector2( -1004, -253 )
+
+[node name="Position_3" type="Position2D" parent="bomba" groups=["3"]]
+position = Vector2( -804, -107 )
+
+[node name="Position_4" type="Position2D" parent="bomba" groups=["4"]]
+position = Vector2( -596, -60 )
+
+[node name="Position_5" type="Position2D" parent="bomba" groups=["5"]]
+position = Vector2( -422, -174 )
+
+[node name="Position_6" type="Position2D" parent="bomba" groups=["6"]]
+position = Vector2( -196, -54 )
+
+[node name="Position_7" type="Position2D" parent="bomba" groups=["7"]]
+position = Vector2( 54, -192 )
+
+[node name="Position_8" type="Position2D" parent="bomba" groups=["8"]]
+position = Vector2( 296, -124 )
+
+[node name="Position_9" type="Position2D" parent="bomba" groups=["9"]]
+position = Vector2( 514, -82 )
+
+[node name="Position_10" type="Position2D" parent="bomba" groups=["10"]]
+position = Vector2( 676, -212 )
+
+[node name="Position_11" type="Position2D" parent="bomba" groups=["11"]]
+position = Vector2( 882, -82 )
+
+[node name="Position_12" type="Position2D" parent="bomba" groups=["12"]]
+position = Vector2( 1100, -80 )
+
+[node name="Position_13" type="Position2D" parent="bomba" groups=["13"]]
+position = Vector2( 1330, -98 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
