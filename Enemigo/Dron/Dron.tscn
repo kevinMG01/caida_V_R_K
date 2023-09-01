@@ -59,40 +59,40 @@ frames = SubResource( 4 )
 [node name="bomba" type="Node2D" parent="."]
 
 [node name="Position_1" type="Position2D" parent="bomba" groups=["1"]]
-position = Vector2( -1146, -114 )
+position = Vector2( -892, 154 )
 
 [node name="Position_2" type="Position2D" parent="bomba" groups=["2"]]
-position = Vector2( -1004, -253 )
+position = Vector2( -726, -87 )
 
 [node name="Position_3" type="Position2D" parent="bomba" groups=["3"]]
-position = Vector2( -804, -107 )
+position = Vector2( -564, 159 )
 
 [node name="Position_4" type="Position2D" parent="bomba" groups=["4"]]
-position = Vector2( -596, -60 )
+position = Vector2( -476, -282 )
 
 [node name="Position_5" type="Position2D" parent="bomba" groups=["5"]]
-position = Vector2( -422, -174 )
+position = Vector2( -288, 216 )
 
 [node name="Position_6" type="Position2D" parent="bomba" groups=["6"]]
-position = Vector2( -196, -54 )
+position = Vector2( 2, -162 )
 
 [node name="Position_7" type="Position2D" parent="bomba" groups=["7"]]
-position = Vector2( 54, -192 )
+position = Vector2( -122, -84 )
 
 [node name="Position_8" type="Position2D" parent="bomba" groups=["8"]]
-position = Vector2( 296, -124 )
+position = Vector2( 4, -142 )
 
 [node name="Position_9" type="Position2D" parent="bomba" groups=["9"]]
-position = Vector2( 514, -82 )
+position = Vector2( 168, 104 )
 
 [node name="Position_10" type="Position2D" parent="bomba" groups=["10"]]
-position = Vector2( 676, -212 )
+position = Vector2( 342, -116 )
 
 [node name="Position_11" type="Position2D" parent="bomba" groups=["11"]]
-position = Vector2( 882, -82 )
+position = Vector2( 542, 162 )
 
 [node name="Position_12" type="Position2D" parent="bomba" groups=["12"]]
-position = Vector2( 1100, -80 )
+position = Vector2( 754, 28 )
 
 [node name="Position_13" type="Position2D" parent="bomba" groups=["13"]]
 position = Vector2( 1330, -98 )

@@ -152,29 +152,31 @@ texture = ExtResource( 10 )
 
 [node name="spawn_bombas" type="Node2D" parent="."]
 
-[node name="Position_1" type="Position2D" parent="spawn_bombas" groups=["1"]]
-position = Vector2( 44, 1320 )
+[node name="n_1" type="Node2D" parent="spawn_bombas"]
 
-[node name="Position_2" type="Position2D" parent="spawn_bombas" groups=["2"]]
-position = Vector2( 186, 1204 )
+[node name="Position_1" type="Position2D" parent="spawn_bombas/n_1" groups=["1"]]
+position = Vector2( 41, 780 )
 
-[node name="Position_3" type="Position2D" parent="spawn_bombas" groups=["3"]]
-position = Vector2( 376, 1438 )
+[node name="Position_2" type="Position2D" parent="spawn_bombas/n_1" groups=["2"]]
+position = Vector2( 171, 687 )
 
-[node name="Position_4" type="Position2D" parent="spawn_bombas" groups=["4"]]
-position = Vector2( 657, 1431 )
+[node name="Position_3" type="Position2D" parent="spawn_bombas/n_1" groups=["3"]]
+position = Vector2( 268, 841 )
 
-[node name="Position_5" type="Position2D" parent="spawn_bombas" groups=["5"]]
-position = Vector2( 893, 1296 )
+[node name="Position_4" type="Position2D" parent="spawn_bombas/n_1" groups=["4"]]
+position = Vector2( 428, 756 )
 
-[node name="Position_6" type="Position2D" parent="spawn_bombas" groups=["6"]]
-position = Vector2( 1059, 1501 )
+[node name="Position_5" type="Position2D" parent="spawn_bombas/n_1" groups=["5"]]
+position = Vector2( 576, 881 )
 
-[node name="Position_7" type="Position2D" parent="spawn_bombas" groups=["7"]]
-position = Vector2( 1210, 1248 )
+[node name="Position_6" type="Position2D" parent="spawn_bombas/n_1" groups=["6"]]
+position = Vector2( 745, 778 )
 
-[node name="Position_8" type="Position2D" parent="spawn_bombas" groups=["8"]]
-position = Vector2( 539, 1161 )
+[node name="Position_7" type="Position2D" parent="spawn_bombas/n_1" groups=["7"]]
+position = Vector2( 1199, 911 )
+
+[node name="Position_8" type="Position2D" parent="spawn_bombas/n_1" groups=["8"]]
+position = Vector2( 997, 861 )
 
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_entered"]
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_2" to="." method="_on_deteccion_dron_1_body_entered"]

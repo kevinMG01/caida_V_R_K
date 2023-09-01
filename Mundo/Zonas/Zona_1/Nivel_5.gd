@@ -4,7 +4,9 @@ var spawn_dron = false
 var dron = preload("res://Enemigo/Dron/Dron.tscn")
 var posicion_dron = 0
 
+
 func _ready():
+	randomize()
 	global_Var.camara_avion_apagado = true
 	global_Var.nivel = 5
 
@@ -13,8 +15,7 @@ func _physics_process(delta):
 	player()
 	spawn_dron()
 	bloquear_meta()
-	if posicion_dron == 5:
-		pass
+
 	pass
 
 func player():
@@ -57,6 +58,7 @@ func spawn_dron():
 			add_child(newdron)
 			newdron.global_position = get_tree().get_nodes_in_group("dron_4")[0].global_position
 			spawn_dron = false
+	
 
 
 
@@ -67,4 +69,6 @@ func _on_deteccion_dron_1_body_entered(body):
 	if body.get_name() == "Player":
 		spawn_dron = true
 		posicion_dron += 1 
+		
+		
 	pass # Replace with function body.

@@ -10,6 +10,7 @@ var nivel = 1 # mmmmmmmmmm
 
 var power_up = 2
 
+
 #//////////////////////////////
 var niveles_desbloqueados = 1
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
