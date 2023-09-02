@@ -48,7 +48,7 @@ func move():
 		$expancion.visible = true
 		$expancion.playing = true
 		spawn_bombas_masiva = true
-		yield(get_tree().create_timer(0,2),"timeout")
+		yield(get_tree().create_timer(0,1),"timeout")
 		spawn_bombas_masiva = false
 		yield(get_tree().create_timer(4,0),"timeout")
 		queue_free()

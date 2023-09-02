@@ -14,7 +14,7 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=3]
 
-[node name="bomba" type="KinematicBody2D"]
+[node name="bomba" type="KinematicBody2D" groups=["enemigo"]]
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -22,7 +22,7 @@ scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -41, -36, 0, 45, 21, 18, 34, -31, 31, -43 )
+polygon = PoolVector2Array( -41, -36, -6, 45, 6, 47, 34, -31, 31, -43 )
 
 [node name="deteccion_player" type="Area2D" parent="."]
 

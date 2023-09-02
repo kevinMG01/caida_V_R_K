@@ -72,6 +72,27 @@ position = Vector2( 704, 2390 )
 [node name="Ave4" parent="ave" instance=ExtResource( 11 )]
 position = Vector2( 179, 2908 )
 
+[node name="Ave5" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 179, 2908 )
+
+[node name="Ave6" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 504, 4277 )
+
+[node name="Ave7" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 1271, 5318 )
+
+[node name="Ave8" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 157, 5422 )
+
+[node name="Ave9" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 267, 6768 )
+
+[node name="Ave10" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 609, 7617 )
+
+[node name="Ave11" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 188, 9122 )
+
 [node name="globo" type="Node2D" parent="."]
 position = Vector2( 7, 0 )
 
@@ -83,6 +104,15 @@ position = Vector2( 524, 1383 )
 
 [node name="Enemigo3" parent="globo" instance=ExtResource( 12 )]
 position = Vector2( 1109, 3901 )
+
+[node name="Enemigo4" parent="globo" instance=ExtResource( 12 )]
+position = Vector2( 608, 6447 )
+
+[node name="Enemigo5" parent="globo" instance=ExtResource( 12 )]
+position = Vector2( 1179, 8783 )
+
+[node name="Enemigo6" parent="globo" instance=ExtResource( 12 )]
+position = Vector2( 584, 10365 )
 
 [node name="avion" type="Node2D" parent="."]
 

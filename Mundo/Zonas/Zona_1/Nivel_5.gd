@@ -6,7 +6,7 @@ var posicion_dron = 0
 
 
 func _ready():
-	randomize()
+	posicion_dron = 0 
 	global_Var.camara_avion_apagado = true
 	global_Var.nivel = 5
 
@@ -73,9 +73,45 @@ func spawn_dron():
 			add_child(newdron_2)
 			newdron_2.global_position = get_tree().get_nodes_in_group("dron_6_2")[0].global_position
 			spawn_dron = false
-
-
-
+		elif posicion_dron == 7:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_7")[0].global_position
+			spawn_dron = false
+		elif posicion_dron == 8:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_8")[0].global_position
+			spawn_dron = false
+		elif posicion_dron == 9:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_9")[0].global_position
+			spawn_dron = false
+		
+			var newdron_2 = dron.instance()
+			add_child(newdron_2)
+			newdron_2.global_position = get_tree().get_nodes_in_group("dron_9_2")[0].global_position
+			spawn_dron = false
+		elif posicion_dron == 10:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_10")[0].global_position
+			spawn_dron = false
+		elif posicion_dron == 11:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_11")[0].global_position
+			
+			var newdron_2 = dron.instance()
+			add_child(newdron_2)
+			newdron_2.global_position = get_tree().get_nodes_in_group("dron_11_2")[0].global_position
+			
+			var newdron_3 = dron.instance()
+			add_child(newdron_3)
+			newdron_3.global_position = get_tree().get_nodes_in_group("dron_11_3")[0].global_position
+			spawn_dron = false
+		
 
 
 

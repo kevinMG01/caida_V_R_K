@@ -18,7 +18,7 @@ func _on_reintentar_pressed():
 	if global_Var.nivel == 4:
 		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_4.tscn")
 	if global_Var.nivel == 5:
-		get_tree().change_scene("")
+		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_5.tscn")
 	global_Var.deteccion_enemigo = false
 	visible = false
 	pass # Replace with function body.

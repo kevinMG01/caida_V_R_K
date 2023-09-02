@@ -9,6 +9,7 @@ var gravity = 300
 var jugador_libre = null
 
 func _physics_process(delta):
+	yield(get_tree().create_timer(1,0),"timeout")
 	movimiento = move_and_slide(movimiento)
 	movimiento.y = movimiento.y + gravity * delta
 	pass
