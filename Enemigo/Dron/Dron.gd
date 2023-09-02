@@ -43,14 +43,14 @@ func move():
 		if global_position.y < jugador_libre.global_position.y - 6:
 			movimiento.y += velocity
 		yield(get_tree().create_timer(4,0),"timeout")
-		cantidad = 20
+		cantidad = 60
 		velocity = 30
 		$expancion.visible = true
 		$expancion.playing = true
 		spawn_bombas_masiva = true
 		yield(get_tree().create_timer(0,2),"timeout")
 		spawn_bombas_masiva = false
-		yield(get_tree().create_timer(8,0),"timeout")
+		yield(get_tree().create_timer(4,0),"timeout")
 		queue_free()
 	pass
 
@@ -107,6 +107,15 @@ func spawn_bomba():
 		var newbomba_13 = bomba.instance()
 		add_child(newbomba_13)
 		newbomba_13.global_position = get_tree().get_nodes_in_group("13")[0].global_position
+		
+		var newbomba_14 = bomba.instance()
+		add_child(newbomba_14)
+		newbomba_14.global_position = get_tree().get_nodes_in_group("14")[0].global_position
+		
+		var newbomba_15 = bomba.instance()
+		add_child(newbomba_15)
+		newbomba_15.global_position = get_tree().get_nodes_in_group("15")[0].global_position
+		
 		spawn_bombas_masiva = false
 
 func _on_Area2D_body_entered(body):

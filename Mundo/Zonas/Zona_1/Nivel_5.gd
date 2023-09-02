@@ -58,7 +58,21 @@ func spawn_dron():
 			add_child(newdron)
 			newdron.global_position = get_tree().get_nodes_in_group("dron_4")[0].global_position
 			spawn_dron = false
-	
+			
+		elif posicion_dron == 5:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_5")[0].global_position
+			spawn_dron = false
+		elif posicion_dron == 6:
+			var newdron = dron.instance()
+			add_child(newdron)
+			newdron.global_position = get_tree().get_nodes_in_group("dron_6")[0].global_position
+			
+			var newdron_2 = dron.instance()
+			add_child(newdron_2)
+			newdron_2.global_position = get_tree().get_nodes_in_group("dron_6_2")[0].global_position
+			spawn_dron = false
 
 
 

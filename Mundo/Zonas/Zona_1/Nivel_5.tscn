@@ -50,10 +50,16 @@ position = Vector2( 1236, 1648 )
 position = Vector2( 416, 2864 )
 
 [node name="Position_4" type="Position2D" parent="dron" groups=["dron_4"]]
-position = Vector2( 172, 10748 )
+position = Vector2( 1063, 4062 )
 
 [node name="Position_5" type="Position2D" parent="dron" groups=["dron_5"]]
-position = Vector2( 1096, 12104 )
+position = Vector2( 45, 5205 )
+
+[node name="Position_6" type="Position2D" parent="dron" groups=["dron_6"]]
+position = Vector2( 600, 6353 )
+
+[node name="Position_6_2" type="Position2D" parent="dron" groups=["dron_6_2"]]
+position = Vector2( -993, 6404 )
 
 [node name="detectores_de_spawn" type="Node2D" parent="."]
 
@@ -76,6 +82,30 @@ shape = SubResource( 4 )
 position = Vector2( -4, 2381 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detectores_de_spawn/deteccion_dron_3"]
+position = Vector2( 618, 921.5 )
+scale = Vector2( 50, 2 )
+shape = SubResource( 4 )
+
+[node name="deteccion_dron_4" type="Area2D" parent="detectores_de_spawn"]
+position = Vector2( 13, 3597 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectores_de_spawn/deteccion_dron_4"]
+position = Vector2( 618, 921.5 )
+scale = Vector2( 50, 2 )
+shape = SubResource( 4 )
+
+[node name="deteccion_dron_5" type="Area2D" parent="detectores_de_spawn"]
+position = Vector2( 24, 4794 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectores_de_spawn/deteccion_dron_5"]
+position = Vector2( 618, 921.5 )
+scale = Vector2( 50, 2 )
+shape = SubResource( 4 )
+
+[node name="deteccion_dron_6" type="Area2D" parent="detectores_de_spawn"]
+position = Vector2( 19, 6007 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectores_de_spawn/deteccion_dron_6"]
 position = Vector2( 618, 921.5 )
 scale = Vector2( 50, 2 )
 shape = SubResource( 4 )
@@ -150,35 +180,10 @@ position = Vector2( 628, 6992 )
 scale = Vector2( 1.0352, 1 )
 texture = ExtResource( 10 )
 
-[node name="spawn_bombas" type="Node2D" parent="."]
-
-[node name="n_1" type="Node2D" parent="spawn_bombas"]
-
-[node name="Position_1" type="Position2D" parent="spawn_bombas/n_1" groups=["1"]]
-position = Vector2( 41, 780 )
-
-[node name="Position_2" type="Position2D" parent="spawn_bombas/n_1" groups=["2"]]
-position = Vector2( 171, 687 )
-
-[node name="Position_3" type="Position2D" parent="spawn_bombas/n_1" groups=["3"]]
-position = Vector2( 268, 841 )
-
-[node name="Position_4" type="Position2D" parent="spawn_bombas/n_1" groups=["4"]]
-position = Vector2( 428, 756 )
-
-[node name="Position_5" type="Position2D" parent="spawn_bombas/n_1" groups=["5"]]
-position = Vector2( 576, 881 )
-
-[node name="Position_6" type="Position2D" parent="spawn_bombas/n_1" groups=["6"]]
-position = Vector2( 745, 778 )
-
-[node name="Position_7" type="Position2D" parent="spawn_bombas/n_1" groups=["7"]]
-position = Vector2( 1199, 911 )
-
-[node name="Position_8" type="Position2D" parent="spawn_bombas/n_1" groups=["8"]]
-position = Vector2( 997, 861 )
-
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_entered"]
 [connection signal="body_exited" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_exited"]
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_2" to="." method="_on_deteccion_dron_1_body_entered"]
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_3" to="." method="_on_deteccion_dron_1_body_entered"]
+[connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_4" to="." method="_on_deteccion_dron_1_body_entered"]
+[connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_5" to="." method="_on_deteccion_dron_1_body_entered"]
+[connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_6" to="." method="_on_deteccion_dron_1_body_entered"]
