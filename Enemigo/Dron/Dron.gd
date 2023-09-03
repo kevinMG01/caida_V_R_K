@@ -2,18 +2,17 @@ extends KinematicBody2D
 
 
 var movimiento = Vector2()
-var velocity = 120
+var velocity = 100
 var cantidad = 150
 
 var jugador_libre = null
 var spawn = false
 
-
-var trece_bombas = ["1", "2","3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
-var posicion_trece_bombas = 7
+var temporizador_actual = 1
+var temporizador_comparativa = 1
 var bomba = preload("res://Enemigo/Dron/bomba/bomba_dron.tscn")
-var contador_bombas = trece_bombas[posicion_trece_bombas]
-var spawn_bombas_masiva = false
+var spaw_bonba = true
+var preguntar = false
 
 func _ready():
 	$AnimatedSprite.playing = true
@@ -22,11 +21,16 @@ func _ready():
 	$expancion.playing = false
 
 func _physics_process(delta):
+	
 	movimiento = Vector2()
 	move()
-	if spawn_bombas_masiva == true:
+	if preguntar == true: 
+		yield(get_tree().create_timer(4,0),"timeout")
+		preguntar = false
+	if temporizador_actual < temporizador_comparativa:
 		spawn_bomba()
 	movimiento = move_and_slide(movimiento)
+
 	pass
 
 
@@ -43,19 +47,30 @@ func move():
 		if global_position.y < jugador_libre.global_position.y - 6:
 			movimiento.y += velocity
 		yield(get_tree().create_timer(4,0),"timeout")
-		cantidad = 60
-		velocity = 30
+#		cantidad = 90
+#		velocity = 30
 		$expancion.visible = true
 		$expancion.playing = true
-		spawn_bombas_masiva = true
-		yield(get_tree().create_timer(0,1),"timeout")
-		spawn_bombas_masiva = false
-		yield(get_tree().create_timer(4,0),"timeout")
-		queue_free()
+#		spawn_bombas_masiva = true
+#		yield(get_tree().create_timer(0,1),"timeout")
+#		spawn_bombas_masiva = false
+#		yield(get_tree().create_timer(4,0),"timeout")
+#		queue_free()
 	pass
 
+
 func spawn_bomba():
-	if spawn_bombas_masiva == true:
+	if spaw_bonba == true:
+		var newbomba = bomba.instance()
+		add_child(newbomba)
+		newbomba.global_position = get_tree().get_nodes_in_group("1")[0].global_position
+		temporizador_actual += 1
+		preguntar = true
+		spaw_bonba = false
+		
+
+func spawn_bomba_2(): # para no vorar ajajajajaj
+#	if spawn_bombas_masiva == true:
 		var newbomba = bomba.instance()
 		add_child(newbomba)
 		newbomba.global_position = get_tree().get_nodes_in_group("1")[0].global_position
@@ -116,7 +131,7 @@ func spawn_bomba():
 		add_child(newbomba_15)
 		newbomba_15.global_position = get_tree().get_nodes_in_group("15")[0].global_position
 		
-		spawn_bombas_masiva = false
+#		spawn_bombas_masiva = false
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":

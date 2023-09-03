@@ -59,7 +59,7 @@ frames = SubResource( 4 )
 [node name="bomba" type="Node2D" parent="."]
 
 [node name="Position_1" type="Position2D" parent="bomba" groups=["1"]]
-position = Vector2( -912, 119 )
+position = Vector2( -1, 147 )
 
 [node name="Position_2" type="Position2D" parent="bomba" groups=["2"]]
 position = Vector2( -732, -60 )
