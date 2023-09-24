@@ -58,49 +58,10 @@ frames = SubResource( 4 )
 
 [node name="bomba" type="Node2D" parent="."]
 
-[node name="Position_1" type="Position2D" parent="bomba" groups=["1"]]
-position = Vector2( -1, 147 )
+[node name="Position_1" type="Position2D" parent="bomba" groups=["Bomba_relentizar"]]
+position = Vector2( -895, -222 )
 
-[node name="Position_2" type="Position2D" parent="bomba" groups=["2"]]
-position = Vector2( -732, -60 )
-
-[node name="Position_3" type="Position2D" parent="bomba" groups=["3"]]
-position = Vector2( -503, 54 )
-
-[node name="Position_4" type="Position2D" parent="bomba" groups=["4"]]
-position = Vector2( -364, -282 )
-
-[node name="Position_5" type="Position2D" parent="bomba" groups=["5"]]
-position = Vector2( -283, 165 )
-
-[node name="Position_6" type="Position2D" parent="bomba" groups=["6"]]
-position = Vector2( 2, -162 )
-
-[node name="Position_7" type="Position2D" parent="bomba" groups=["7"]]
-position = Vector2( -97, -69 )
-
-[node name="Position_8" type="Position2D" parent="bomba" groups=["8"]]
-position = Vector2( 99, -65 )
-
-[node name="Position_9" type="Position2D" parent="bomba" groups=["9"]]
-position = Vector2( 266, 159 )
-
-[node name="Position_10" type="Position2D" parent="bomba" groups=["10"]]
-position = Vector2( 347, -116 )
-
-[node name="Position_11" type="Position2D" parent="bomba" groups=["11"]]
-position = Vector2( 539, 158 )
-
-[node name="Position_12" type="Position2D" parent="bomba" groups=["12"]]
-position = Vector2( 754, 28 )
-
-[node name="Position_13" type="Position2D" parent="bomba" groups=["13"]]
-position = Vector2( -1087, -14 )
-
-[node name="Position_14" type="Position2D" parent="bomba" groups=["14"]]
-position = Vector2( 1026, -8 )
-
-[node name="Position_15" type="Position2D" parent="bomba" groups=["15"]]
-position = Vector2( 878, -334 )
+[node name="Position_2" type="Position2D" parent="bomba" groups=["bomba_congelar"]]
+position = Vector2( 763, -219 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

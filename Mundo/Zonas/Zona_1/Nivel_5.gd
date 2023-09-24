@@ -4,6 +4,10 @@ var spawn_dron = false
 var dron = preload("res://Enemigo/Dron/Dron.tscn")
 var posicion_dron = 0
 
+var bomba = preload("res://Enemigo/Dron/bomba/bomba_dron.tscn")
+var bomba_nivel_activo = false
+var spaws_bomba = true
+var contador_bombas = 0
 
 func _ready():
 	posicion_dron = 0 
@@ -14,6 +18,8 @@ func _ready():
 func _physics_process(delta):
 	player()
 	spawn_dron()
+	control_spaw_bomba()
+	spawn_bombas()
 	bloquear_meta()
 
 	pass
@@ -42,78 +48,29 @@ func spawn_dron():
 			var newdron = dron.instance()
 			add_child(newdron)
 			newdron.global_position = get_tree().get_nodes_in_group("dron_1")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 2:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_2")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 3:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_3")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 4:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_4")[0].global_position
-			spawn_dron = false
-			
-		elif posicion_dron == 5:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_5")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 6:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_6")[0].global_position
-			
-			var newdron_2 = dron.instance()
-			add_child(newdron_2)
-			newdron_2.global_position = get_tree().get_nodes_in_group("dron_6_2")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 7:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_7")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 8:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_8")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 9:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_9")[0].global_position
-			spawn_dron = false
-		
-			var newdron_2 = dron.instance()
-			add_child(newdron_2)
-			newdron_2.global_position = get_tree().get_nodes_in_group("dron_9_2")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 10:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_10")[0].global_position
-			spawn_dron = false
-		elif posicion_dron == 11:
-			var newdron = dron.instance()
-			add_child(newdron)
-			newdron.global_position = get_tree().get_nodes_in_group("dron_11")[0].global_position
-			
-			var newdron_2 = dron.instance()
-			add_child(newdron_2)
-			newdron_2.global_position = get_tree().get_nodes_in_group("dron_11_2")[0].global_position
-			
-			var newdron_3 = dron.instance()
-			add_child(newdron_3)
-			newdron_3.global_position = get_tree().get_nodes_in_group("dron_11_3")[0].global_position
+			bomba_nivel_activo = true
 			spawn_dron = false
 		
 
 
+func spawn_bombas(): # para no vorar ajajajajaj
+	if bomba_nivel_activo == true:
+		yield(get_tree().create_timer(4,0),"timeout")
+		if spaws_bomba == true:
+			var newbomba = bomba.instance()
+			add_child(newbomba)
+			newbomba.global_position = get_tree().get_nodes_in_group("Bomba_relentizar")[0].global_position
+		
+			var newbomba_2 = bomba.instance()
+			add_child(newbomba_2)
+			newbomba_2.global_position = get_tree().get_nodes_in_group("bomba_congelar")[0].global_position
+			spaws_bomba = false
+			
+func control_spaw_bomba():
+	if spaws_bomba == false:
+		yield(get_tree().create_timer(4,0),"timeout")
+		spaws_bomba =  true
+	pass
 
 func _on_deteccion_dron_1_body_entered(body):
 	if body.get_name() == "Player":
@@ -127,3 +84,4 @@ func _on_deteccion_dron_1_body_entered(body):
 func _on_deteccion_dron_1_body_exited(body):
 	spawn_dron = false
 	pass # Replace with function body.
+

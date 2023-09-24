@@ -43,48 +43,6 @@ position = Vector2( 79, 13383 )
 [node name="Position_1" type="Position2D" parent="dron" groups=["dron_1"]]
 position = Vector2( -14, 477 )
 
-[node name="Position_2" type="Position2D" parent="dron" groups=["dron_2"]]
-position = Vector2( 1236, 1648 )
-
-[node name="Position_3" type="Position2D" parent="dron" groups=["dron_3"]]
-position = Vector2( 416, 2864 )
-
-[node name="Position_4" type="Position2D" parent="dron" groups=["dron_4"]]
-position = Vector2( 1063, 4062 )
-
-[node name="Position_5" type="Position2D" parent="dron" groups=["dron_5"]]
-position = Vector2( 45, 5205 )
-
-[node name="Position_6" type="Position2D" parent="dron" groups=["dron_6"]]
-position = Vector2( 515, 6460 )
-
-[node name="Position_6_2" type="Position2D" parent="dron" groups=["dron_6_2"]]
-position = Vector2( -931, 6056 )
-
-[node name="Position_7" type="Position2D" parent="dron" groups=["dron_7"]]
-position = Vector2( 1137, 7768 )
-
-[node name="Position_8" type="Position2D" parent="dron" groups=["dron_8"]]
-position = Vector2( 62, 8808 )
-
-[node name="Position_9" type="Position2D" parent="dron" groups=["dron_9"]]
-position = Vector2( 631, 10179 )
-
-[node name="Position_9_2" type="Position2D" parent="dron" groups=["dron_9_2"]]
-position = Vector2( -594, 9902 )
-
-[node name="Position_10" type="Position2D" parent="dron" groups=["dron_10"]]
-position = Vector2( 1095, 11288 )
-
-[node name="Position_11" type="Position2D" parent="dron" groups=["dron_11"]]
-position = Vector2( 628, 12337 )
-
-[node name="Position_11_2" type="Position2D" parent="dron" groups=["dron_11_2"]]
-position = Vector2( -1102, 11842 )
-
-[node name="Position_11_3" type="Position2D" parent="dron" groups=["dron_11_3"]]
-position = Vector2( 2225, 11886 )
-
 [node name="detectores_de_spawn" type="Node2D" parent="."]
 
 [node name="deteccion_dron_1" type="Area2D" parent="detectores_de_spawn"]
