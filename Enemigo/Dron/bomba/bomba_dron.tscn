@@ -1,18 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprites/Enemigos/Dron/bomba/Dron proyectil congelante.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Enemigos/Dron/bomba/Dron proyectil relentizante.png" type="Texture" id=2]
 [ext_resource path="res://Enemigo/Dron/bomba/bomba_dron.gd" type="Script" id=3]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13.13, 14.2625 )
 
 [node name="bomba" type="KinematicBody2D"]
 script = ExtResource( 3 )
@@ -22,14 +22,19 @@ scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
 polygon = PoolVector2Array( -41, -36, -6, 45, 6, 47, 34, -31, 31, -43 )
 
 [node name="deteccion_player" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deteccion_player"]
-visible = false
-position = Vector2( 0.999998, 363 )
+position = Vector2( -3.00001, 522.5 )
 scale = Vector2( 100, 40 )
 shape = SubResource( 3 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
 [connection signal="body_entered" from="deteccion_player" to="." method="_on_deteccion_player_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

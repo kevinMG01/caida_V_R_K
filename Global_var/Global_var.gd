@@ -19,6 +19,8 @@ var niveles_desbloqueados = 1
 #menu de pausa
 var pausa = false
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+var tocar_bombas = 1
 func _ready():
 	pass 
 

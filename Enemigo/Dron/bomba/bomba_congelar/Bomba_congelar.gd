@@ -28,13 +28,15 @@ func move():
 		
 		if global_position.y < jugador_libre.global_position.y - 6:
 			movimiento.y += cantidad
-	pass
+
+
 
 
 func _on_deteccion_player_body_entered(body):
 	if body.get_name() == "Player":
 		jugador_libre = body
-	pass 
+	pass # Replace with function body.
+
 
 func _on_Timer_timeout():
 	self.queue_free()

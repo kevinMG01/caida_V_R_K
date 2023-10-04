@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 var movimiento = Vector2()
 var velocity = 100
-var cantidad = 150
+var cantidad = 152
 
 var jugador_libre = null
 var spawn = false
@@ -16,14 +16,12 @@ var preguntar = false
 
 func _ready():
 	$AnimatedSprite.playing = true
-	velocity = 120
 	$expancion.visible = false
 	$expancion.playing = false
 
 func _physics_process(delta):
 	movimiento = Vector2()
 	move()
-#	yield(get_tree().create_timer(4,0),"timeout")
 	movimiento = move_and_slide(movimiento)
 
 	pass
@@ -42,15 +40,9 @@ func move():
 		if global_position.y < jugador_libre.global_position.y - 6:
 			movimiento.y += velocity
 		yield(get_tree().create_timer(4,0),"timeout")
-#		cantidad = 90
-#		velocity = 30
 		$expancion.visible = true
 		$expancion.playing = true
-#		spawn_bombas_masiva = true
-#		yield(get_tree().create_timer(0,1),"timeout")
-#		spawn_bombas_masiva = false
-#		yield(get_tree().create_timer(4,0),"timeout")
-#		queue_free()
+
 	pass
 
 

@@ -56,12 +56,4 @@ position = Vector2( 9.96875, -23 )
 scale = Vector2( 0.335153, 0.244493 )
 frames = SubResource( 4 )
 
-[node name="bomba" type="Node2D" parent="."]
-
-[node name="Position_1" type="Position2D" parent="bomba" groups=["Bomba_relentizar"]]
-position = Vector2( -895, -222 )
-
-[node name="Position_2" type="Position2D" parent="bomba" groups=["bomba_congelar"]]
-position = Vector2( 763, -219 )
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
