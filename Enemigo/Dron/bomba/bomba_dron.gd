@@ -1,10 +1,10 @@
 extends KinematicBody2D
 
 var movimiento = Vector2()
-var cantidad = 10
-var gravity = 200
+var cantidad = 20
+var gravity = 150
 
-var masa = 2
+var masa = 1
 
 var jugador_libre = null
 
