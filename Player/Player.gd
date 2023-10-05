@@ -101,23 +101,37 @@ func move_con_paracaidas():
 					$AnimatedSprite.flip_h = false
 				
 	elif esta_suelo == true:
-		cantidad = 150
-		gravedad = 70
-		movimiento.x = 0
-		$AnimatedSprite.animation = "Move_suelo"
+		if global_Var.nivel < 5:
+			cantidad = 150
+			gravedad = 70
+			movimiento.x = 0
+			$AnimatedSprite.animation = "Move_suelo"
 			
-		if Input.is_action_pressed("ui_left"):
-			movimiento.x -= cantidad
-			$AnimatedSprite.flip_h = true
+			if Input.is_action_pressed("ui_left"):
+				movimiento.x -= cantidad
+				$AnimatedSprite.flip_h = true
 			
-		if Input.is_action_pressed("ui_right"):
-			movimiento.x += cantidad
-			$AnimatedSprite.flip_h = false
+			if Input.is_action_pressed("ui_right"):
+				movimiento.x += cantidad
+				$AnimatedSprite.flip_h = false
 			
-		if movimiento.x == 0:
+			if movimiento.x == 0:
 				$AnimatedSprite.animation = "Idle_suelo"
-		if !is_on_floor():
-			$AnimatedSprite.animation = "Up"
+			if !is_on_floor():
+				$AnimatedSprite.animation = "Up"
+		elif global_Var.nivel == 5:
+			if tiene_paracaida == true:
+				cantidad = 150
+				gravedad = 55
+				movimiento.x = 0
+				tocar_bombas()
+				$AnimatedSprite.animation = "Move_paracaida"
+				if Input.is_action_pressed("ui_left"):
+					movimiento.x -= cantidad
+					$AnimatedSprite.flip_h = true
+				elif Input.is_action_pressed("ui_right"):
+					movimiento.x += cantidad
+					$AnimatedSprite.flip_h = false
 		pass
 
 

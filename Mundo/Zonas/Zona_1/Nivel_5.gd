@@ -78,13 +78,16 @@ func _on_Timer_timeout():
 	spawn_bombas()
 	pass
 
-
 func _on_relentizar_timeout(): # jajajajajajaj era congelar
 	spawn_bombas_congelar()
 	pass 
-
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Dron":
 		global_Var.detener_dron = true
 	pass 
+
+func _on_tocar_suelo_body_entered(body):
+	if body.get_name() == "Player":
+		global_Var.nivel = 4
+	pass # Replace with function body.
