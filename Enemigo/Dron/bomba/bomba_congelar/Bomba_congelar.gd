@@ -3,8 +3,8 @@ extends KinematicBody2D
 
 
 var movimiento = Vector2()
-var cantidad = 6
-var gravity = 200
+var cantidad = 7
+var gravity = 230
 
 var masa = 2
 
@@ -38,6 +38,6 @@ func _on_colicion_player_body_entered(body):
 	if body.get_name() == "Player":
 		$AnimatedSprite.playing = true
 		$AnimatedSprite.animation = "explotar"
-		yield(get_tree().create_timer(0,97),"timeout")
+		yield(get_tree().create_timer(1,0),"timeout")
 		self.queue_free()
 	pass # Replace with function body.

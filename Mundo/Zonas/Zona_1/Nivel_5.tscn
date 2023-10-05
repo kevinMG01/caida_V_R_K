@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Sprites/Mundo/Nivel 5 fondo.jpg" type="Texture" id=1]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_5.gd" type="Script" id=2]
@@ -11,6 +11,23 @@
 [ext_resource path="res://Sprites/Mundo/Nivel 4 nubes tapa vision.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Mundo/Nivel 5 nubes tapa vision.png" type="Texture" id=10]
 [ext_resource path="res://Mundo/Zonas/Zona_1/gravity_bomvas.gd" type="Script" id=11]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 4.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 9.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 2.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 3.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 5.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 10.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 8.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 7.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 1.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 8.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 4.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 5.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 6.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 7.png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 12.24, 13.25 )
@@ -40,6 +57,85 @@ texture = ExtResource( 9 )
 
 [node name="meta" parent="." instance=ExtResource( 5 )]
 position = Vector2( 79, 13383 )
+
+[node name="fondo_nubes" type="Node2D" parent="."]
+
+[node name="NubeBlanca1" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 227, 572 )
+scale = Vector2( 0.619626, 0.597852 )
+texture = ExtResource( 23 )
+
+[node name="NubeBlanca2" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 539, 238 )
+scale = Vector2( 0.739252, 0.52148 )
+texture = ExtResource( 12 )
+
+[node name="NubeBlanca3" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 848, 591 )
+scale = Vector2( 0.638318, 0.552506 )
+texture = ExtResource( 13 )
+
+[node name="NubeBlanca4" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 983, 934 )
+texture = ExtResource( 14 )
+
+[node name="NubeBlanca5" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 885, 1471 )
+scale = Vector2( 0.507477, 0.454654 )
+texture = ExtResource( 18 )
+
+[node name="NubeBlanca7" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 220, 1489 )
+scale = Vector2( 0.483178, 0.590692 )
+texture = ExtResource( 21 )
+
+[node name="NubeBlanca8" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 332, 3129 )
+scale = Vector2( 0.529907, 0.50716 )
+texture = ExtResource( 20 )
+
+[node name="NubeBlanca9" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 538, 6078 )
+texture = ExtResource( 15 )
+
+[node name="NubeBlanca10" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 243, 7846 )
+texture = ExtResource( 19 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 291, 5266 )
+texture = ExtResource( 22 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 917, 6583 )
+texture = ExtResource( 16 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 103, 8912 )
+texture = ExtResource( 17 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 988, 10939 )
+texture = ExtResource( 25 )
+
+[node name="NubeGris5" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 501, 11809 )
+texture = ExtResource( 26 )
+
+[node name="NubeGris6" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 1009.25, 4064.75 )
+scale = Vector2( 0.580374, 0.721957 )
+texture = ExtResource( 27 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 252, 4527 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="NubeGris8" type="Sprite" parent="fondo_nubes"]
+position = Vector2( 486, 2529 )
+scale = Vector2( 0.681308, 0.550119 )
+texture = ExtResource( 24 )
 
 [node name="dron" type="Node2D" parent="."]
 
@@ -148,6 +244,85 @@ wait_time = 3.0
 
 [node name="relentizar" type="Timer" parent="."]
 wait_time = 6.0
+
+[node name="fondo_nubes2" type="Node2D" parent="."]
+
+[node name="NubeBlanca1" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 713, 4225 )
+scale = Vector2( 0.619626, 0.597852 )
+texture = ExtResource( 23 )
+
+[node name="NubeBlanca2" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 599, 13301 )
+scale = Vector2( 0.739252, 0.52148 )
+texture = ExtResource( 12 )
+
+[node name="NubeBlanca3" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 952, 4804 )
+scale = Vector2( 0.638318, 0.552506 )
+texture = ExtResource( 13 )
+
+[node name="NubeBlanca4" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 975, 5561 )
+texture = ExtResource( 14 )
+
+[node name="NubeBlanca5" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 283, 939 )
+scale = Vector2( 0.507477, 0.454654 )
+texture = ExtResource( 18 )
+
+[node name="NubeBlanca7" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 985, 2125 )
+scale = Vector2( 0.483178, 0.590692 )
+texture = ExtResource( 21 )
+
+[node name="NubeBlanca8" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 545, 8010 )
+scale = Vector2( 0.529907, 0.50716 )
+texture = ExtResource( 20 )
+
+[node name="NubeBlanca9" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 847, 3453 )
+texture = ExtResource( 15 )
+
+[node name="NubeBlanca10" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 741, 7186 )
+texture = ExtResource( 19 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 420, 1957 )
+texture = ExtResource( 22 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 958, 9419 )
+texture = ExtResource( 16 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 1024, 2940 )
+texture = ExtResource( 17 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 988, 10939 )
+texture = ExtResource( 25 )
+
+[node name="NubeGris5" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 346, 3737 )
+texture = ExtResource( 26 )
+
+[node name="NubeGris6" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 417, 8370 )
+scale = Vector2( 0.580374, 0.721957 )
+texture = ExtResource( 27 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 494, 10770 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="NubeGris8" type="Sprite" parent="fondo_nubes2"]
+position = Vector2( 550, 9989 )
+scale = Vector2( 0.681308, 0.550119 )
+texture = ExtResource( 24 )
 
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_entered"]
 [connection signal="body_exited" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_exited"]

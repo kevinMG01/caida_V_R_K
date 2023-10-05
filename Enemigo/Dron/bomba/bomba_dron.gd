@@ -1,12 +1,16 @@
 extends KinematicBody2D
 
 var movimiento = Vector2()
-var cantidad = 5
+var cantidad = 6
 var gravity = 200
 
 var masa = 2
 
 var jugador_libre = null
+
+func _ready():
+	$AnimatedSprite.playing = true
+	pass
 
 func _physics_process(delta):
 	move()
@@ -36,8 +40,7 @@ func _on_Timer_timeout():
 
 func _on_colision_player_body_entered(body):
 	if body.get_name() == "Player":
-		$AnimatedSprite.playing = true
 		$AnimatedSprite.animation = "explotar"
-		yield(get_tree().create_timer(0,97),"timeout")
+		yield(get_tree().create_timer(1,0),"timeout")
 		self.queue_free()
 	pass # Replace with function body.

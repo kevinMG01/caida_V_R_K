@@ -70,18 +70,15 @@ func _on_deteccion_dron_1_body_entered(body):
 		$relentizar.start()
 	pass 
 
-
 func _on_deteccion_dron_1_body_exited(body):
 	spawn_dron = false
-	pass # Replace with function body.
-
-
+	pass 
 
 func _on_Timer_timeout():
 	spawn_bombas()
-	pass # Replace with function body.
+	pass
 
 
 func _on_relentizar_timeout(): # jajajajajajaj era congelar
 	spawn_bombas_congelar()
-	pass # Replace with function body.
+	pass 
