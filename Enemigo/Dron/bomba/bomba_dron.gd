@@ -36,5 +36,8 @@ func _on_Timer_timeout():
 
 func _on_colision_player_body_entered(body):
 	if body.get_name() == "Player":
+		$AnimatedSprite.playing = true
+		$AnimatedSprite.animation = "explotar"
+		yield(get_tree().create_timer(0,97),"timeout")
 		self.queue_free()
 	pass # Replace with function body.
