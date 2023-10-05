@@ -20,9 +20,10 @@ func _ready():
 	$expancion.playing = false
 
 func _physics_process(delta):
-	movimiento = Vector2()
-	move()
-	movimiento = move_and_slide(movimiento)
+	if global_Var.detener_dron == false:
+		movimiento = Vector2()
+		move()
+		movimiento = move_and_slide(movimiento)
 
 	pass
 

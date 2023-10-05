@@ -12,6 +12,7 @@ var bomba_congelar = preload("res://Enemigo/Dron/bomba/bomba_congelar/Bomba_cong
 var contador_bombas = 0
 
 func _ready():
+	global_Var.detener_dron = false
 	posicion_dron = 0 
 	global_Var.camara_avion_apagado = true
 	global_Var.nivel = 5
@@ -61,7 +62,6 @@ func spawn_bombas_congelar(): # para no vorar ajajajajaj
 			add_child(newbomba)
 			newbomba.global_position = get_tree().get_nodes_in_group("bomba_congelar")[0].global_position
 
-
 func _on_deteccion_dron_1_body_entered(body):
 	if body.get_name() == "Player":
 		spawn_dron = true
@@ -81,4 +81,10 @@ func _on_Timer_timeout():
 
 func _on_relentizar_timeout(): # jajajajajajaj era congelar
 	spawn_bombas_congelar()
+	pass 
+
+
+func _on_Area2D_body_entered(body):
+	if body.get_name() == "Dron":
+		global_Var.detener_dron = true
 	pass 

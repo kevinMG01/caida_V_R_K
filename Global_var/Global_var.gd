@@ -21,6 +21,9 @@ var pausa = false
 #\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 var tocar_bombas = 1
+#//////////////////////////////////
+var detener_dron = false   # para el nivel 5
+#//////////////////////////////////
 func _ready():
 	pass 
 
