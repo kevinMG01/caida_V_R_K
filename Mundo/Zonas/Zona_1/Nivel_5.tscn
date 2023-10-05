@@ -44,7 +44,7 @@ position = Vector2( 79, 13383 )
 [node name="dron" type="Node2D" parent="."]
 
 [node name="Position_1" type="Position2D" parent="dron" groups=["dron_1"]]
-position = Vector2( -14, 477 )
+position = Vector2( -14, 386 )
 
 [node name="detectores_de_spawn" type="Node2D" parent="."]
 
@@ -87,13 +87,14 @@ position = Vector2( -354, 294 )
 position = Vector2( 658, 290 )
 
 [node name="gravity_bomva" type="Node2D" parent="."]
-position = Vector2( 0, -277 )
+position = Vector2( 0, -144 )
 
 [node name="gravity_bomvas" type="KinematicBody2D" parent="gravity_bomva"]
-position = Vector2( -272, 472 )
+position = Vector2( -272, 568 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gravity_bomva/gravity_bomvas"]
+position = Vector2( -27, 0 )
 shape = SubResource( 5 )
 
 [node name="Position_2" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["bomba_congelar"]]
@@ -117,7 +118,8 @@ limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
-drag_margin_bottom = 0.77
+drag_margin_bottom = 0.61
+editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="Interfas_pantalla" parent="." instance=ExtResource( 7 )]

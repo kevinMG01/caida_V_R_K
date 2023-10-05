@@ -1,33 +1,26 @@
 extends KinematicBody2D
 
-
-
 var movimiento = Vector2()
-var cantidad = 15
+var cantidad = 10
 var gravity = 200
+
+var masa = 2
 
 var jugador_libre = null
 
 func _physics_process(delta):
 	move()
-	movimiento = move_and_slide(movimiento)
-	movimiento.y = movimiento.y + gravity * delta
+	movimiento = move_and_slide(movimiento, Vector2(0,-1))
+	movimiento.y = gravity * masa
 	pass
-
 
 func move():
 	if jugador_libre != null:
-		if global_position.x > jugador_libre.global_position.x + 6:
+		if global_position.x > jugador_libre.global_position.x:
 			movimiento.x -= cantidad
-		
-		if global_position.x < jugador_libre.global_position.x - 6:
+
+		if global_position.x < jugador_libre.global_position.x:
 			movimiento.x += cantidad
-		
-		if global_position.y > jugador_libre.global_position.y + 6:
-			movimiento.y -= cantidad
-		
-		if global_position.y < jugador_libre.global_position.y - 6:
-			movimiento.y += cantidad
 	pass
 
 

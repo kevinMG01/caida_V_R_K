@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 
 var movimiento = Vector2()
-var velocity = 100
+var velocity = 110
 var cantidad = 152
 
 var jugador_libre = null

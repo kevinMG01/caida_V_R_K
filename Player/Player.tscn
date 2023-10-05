@@ -37,7 +37,7 @@ animations = [ {
 extents = Vector2( 17, 37.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 18, 38.5 )
+extents = Vector2( 18, 34 )
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 2 )
@@ -62,8 +62,9 @@ shape = SubResource( 3 )
 [node name="deteccion_bombas" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deteccion_bombas"]
-position = Vector2( 0, -26.5 )
+position = Vector2( 0, -31 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="detectar enemigos" to="." method="_on_detectar_enemigos_body_entered"]
+[connection signal="area_entered" from="deteccion_bombas" to="." method="_on_deteccion_bombas_area_entered"]
 [connection signal="body_entered" from="deteccion_bombas" to="." method="_on_deteccion_bombas_body_entered"]

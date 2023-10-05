@@ -82,5 +82,4 @@ func _on_deteccion_dron_1_body_exited(body):
 
 func _on_Timer_timeout():
 	spawn_bombas()
-	
 	pass # Replace with function body.

@@ -136,8 +136,8 @@ func power_up():
 func tocar_bombas():
 	
 	if bomba_relentizante == true:     # congelar
-		cantidad = 30
-		gravedad = 30
+		cantidad = 75
+		gravedad = 35
 		movimiento.x = 0
 	if bomba_congelante == true:     # relentizar
 		cantidad = 0
@@ -153,24 +153,25 @@ func _on_detectar_enemigos_body_entered(body):
 		get_tree().paused = true
 		global_Var.deteccion_enemigo = true
 		pass
-#	if body.get_name() == "bomba":
-#			bomba_relentizante = true
-#			yield(get_tree().create_timer(1,0),"timeout")
-#			bomba_relentizante = false
-#	if body.get_name() == "Bomba_congelar":
-#			bomba_congelante = true
-#			yield(get_tree().create_timer(1,0),"timeout")
-#			bomba_congelante = false
 	pass 
 
 
 func _on_deteccion_bombas_body_entered(body):
-	if body.get_name() == "bomba":
-		bomba_relentizante = true
-		yield(get_tree().create_timer(1,0),"timeout")
-		bomba_relentizante = false
-	elif body.get_name() == "Bomba_congelar":
-		bomba_congelante = true
-		yield(get_tree().create_timer(1,0),"timeout")
-		bomba_congelante = false
+	
 	pass 
+
+
+func _on_deteccion_bombas_area_entered(area):
+	if area.is_in_group("bom_relentizar"):
+		bomba_relentizante = true
+		global_Var.tocar_bombas = 2
+		yield(get_tree().create_timer(1,0),"timeout")
+		global_Var.tocar_bombas = 1
+		bomba_relentizante = false
+	elif area.is_in_group("bob_conlelar"):
+		bomba_congelante = true
+		global_Var.tocar_bombas = 3
+		yield(get_tree().create_timer(1,0),"timeout")
+		global_Var.tocar_bombas = 1
+		bomba_congelante = false
+	pass
