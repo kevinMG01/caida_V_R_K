@@ -87,7 +87,7 @@ position = Vector2( -354, 294 )
 position = Vector2( 658, 290 )
 
 [node name="gravity_bomva" type="Node2D" parent="."]
-position = Vector2( 0, -144 )
+position = Vector2( 0, -253 )
 
 [node name="gravity_bomvas" type="KinematicBody2D" parent="gravity_bomva"]
 position = Vector2( -272, 568 )
@@ -98,10 +98,10 @@ position = Vector2( -27, 0 )
 shape = SubResource( 5 )
 
 [node name="Position_2" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["bomba_congelar"]]
-position = Vector2( 307, 3 )
+position = Vector2( 324, -64 )
 
 [node name="Position_1" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["Bomba_relentizar"]]
-position = Vector2( 1442, 6 )
+position = Vector2( 1441, -43 )
 
 [node name="Control_pausa_N_5" type="Node2D" parent="."]
 pause_mode = 2
@@ -144,8 +144,12 @@ scale = Vector2( 1.0352, 1 )
 texture = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 3.0
+
+[node name="relentizar" type="Timer" parent="."]
+wait_time = 6.0
 
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_entered"]
 [connection signal="body_exited" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="relentizar" to="." method="_on_relentizar_timeout"]

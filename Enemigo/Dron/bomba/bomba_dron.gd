@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var movimiento = Vector2()
-var cantidad = 10
+var cantidad = 5
 var gravity = 200
 
 var masa = 2
@@ -31,4 +31,10 @@ func _on_deteccion_player_body_entered(body):
 
 func _on_Timer_timeout():
 	self.queue_free()
+	pass # Replace with function body.
+
+
+func _on_colision_player_body_entered(body):
+	if body.get_name() == "Player":
+		self.queue_free()
 	pass # Replace with function body.

@@ -136,7 +136,7 @@ func power_up():
 func tocar_bombas():
 	
 	if bomba_relentizante == true:     # congelar
-		cantidad = 75
+		cantidad = 150
 		gravedad = 35
 		movimiento.x = 0
 	if bomba_congelante == true:     # relentizar
@@ -168,7 +168,7 @@ func _on_deteccion_bombas_area_entered(area):
 		yield(get_tree().create_timer(1,0),"timeout")
 		global_Var.tocar_bombas = 1
 		bomba_relentizante = false
-	elif area.is_in_group("bob_conlelar"):
+	elif area.is_in_group("bom_congelar"):
 		bomba_congelante = true
 		global_Var.tocar_bombas = 3
 		yield(get_tree().create_timer(1,0),"timeout")
