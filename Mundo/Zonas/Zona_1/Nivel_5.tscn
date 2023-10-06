@@ -178,11 +178,47 @@ script = ExtResource( 11 )
 position = Vector2( -27, 0 )
 shape = SubResource( 5 )
 
-[node name="Position_2" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["bomba_congelar"]]
+[node name="Position_1" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["1", "Bomba_relentizar"]]
+position = Vector2( 1441, -43 )
+
+[node name="Position_2" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["2", "bomba_congelar"]]
 position = Vector2( 324, -64 )
 
-[node name="Position_1" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["Bomba_relentizar"]]
-position = Vector2( 1441, -43 )
+[node name="Position_3" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["3"]]
+position = Vector2( 1370, -44 )
+
+[node name="Position_4" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["4"]]
+position = Vector2( 1296, -41 )
+
+[node name="Position_5" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["5"]]
+position = Vector2( 1216, -42 )
+
+[node name="Position_6" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["6"]]
+position = Vector2( 1121, -43 )
+
+[node name="Position_7" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["7"]]
+position = Vector2( 1042, -43 )
+
+[node name="Position_8" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["8"]]
+position = Vector2( 959, -43 )
+
+[node name="Position_9" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["9"]]
+position = Vector2( 867, -43 )
+
+[node name="Position_10" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["10"]]
+position = Vector2( 771, -43 )
+
+[node name="Position_11" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["11"]]
+position = Vector2( 680, -43 )
+
+[node name="Position_12" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["12"]]
+position = Vector2( 595, -42 )
+
+[node name="Position_13" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["13"]]
+position = Vector2( 506, -46 )
+
+[node name="Position_14" type="Position2D" parent="gravity_bomva/gravity_bomvas" groups=["14"]]
+position = Vector2( 402, -46 )
 
 [node name="Control_pausa_N_5" type="Node2D" parent="."]
 pause_mode = 2
@@ -225,10 +261,10 @@ scale = Vector2( 1.0352, 1 )
 texture = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="relentizar" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 3.0
 
 [node name="fondo_nubes2" type="Node2D" parent="."]
 

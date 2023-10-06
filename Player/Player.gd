@@ -32,11 +32,16 @@ func _physics_process(delta):
 		move_con_paracaidas()
 		power_up()
 		movimiento = move_and_slide(movimiento, Vector2(0, -1))
-		
-		if esta_suelo == false:
-			movimiento.y = gravedad * masa
-		elif esta_suelo == true:
-			movimiento.y = movimiento.y + gravedad * delta
+		if global_Var.nivel == 5:
+			if esta_suelo == false:
+				movimiento.y = gravedad * masa
+			elif esta_suelo == true:
+				movimiento.y = gravedad * masa
+		elif global_Var.nivel < 5:
+			if esta_suelo == false:
+				movimiento.y = gravedad * masa
+			elif esta_suelo == true:
+				movimiento.y = movimiento.y + gravedad * delta
 	#movimiento = movimiento.normalized()* cantidad
 	
 	pass
@@ -189,3 +194,12 @@ func _on_deteccion_bombas_area_entered(area):
 		global_Var.tocar_bombas = 1
 		bomba_congelante = false
 	pass
+
+
+func _on_detectar_enemigos_area_entered(area):
+	if area.is_in_group("enemigo"):
+		colicion_enemigo = true
+		global_Var.pausa = true
+		get_tree().paused = true
+		global_Var.deteccion_enemigo = true
+	pass 
