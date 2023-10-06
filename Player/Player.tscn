@@ -65,6 +65,7 @@ shape = SubResource( 3 )
 position = Vector2( 0, -31 )
 shape = SubResource( 4 )
 
+[connection signal="area_entered" from="detectar enemigos" to="." method="_on_detectar_enemigos_area_entered"]
 [connection signal="body_entered" from="detectar enemigos" to="." method="_on_detectar_enemigos_body_entered"]
 [connection signal="area_entered" from="deteccion_bombas" to="." method="_on_deteccion_bombas_area_entered"]
 [connection signal="body_entered" from="deteccion_bombas" to="." method="_on_deteccion_bombas_body_entered"]

@@ -13,7 +13,7 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	move()
+	#move()
 	movimiento = move_and_slide(movimiento, Vector2(0,-1))
 	movimiento.y = gravity * masa
 	pass
