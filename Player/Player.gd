@@ -152,15 +152,15 @@ func power_up():
 	pass
 
 
-func tocar_bombas():
+func tocar_bombas(): # como me equiboque ahora puse los efectos al reves para no tener que escrivir mas
 	
 	if bomba_relentizante == true:     # congelar
-		cantidad = 150
-		gravedad = 35
-		movimiento.x = 0
-	if bomba_congelante == true:     # relentizar
 		cantidad = 0
 		gravedad = 0
+		movimiento.x = 0
+	if bomba_congelante == true:     # relentizar
+		cantidad = 150
+		gravedad = 35
 		movimiento.x = 0
 		
 	pass

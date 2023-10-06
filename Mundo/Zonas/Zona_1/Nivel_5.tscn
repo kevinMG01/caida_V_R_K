@@ -261,10 +261,10 @@ scale = Vector2( 1.0352, 1 )
 texture = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 3.0
 
 [node name="relentizar" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="fondo_nubes2" type="Node2D" parent="."]
 

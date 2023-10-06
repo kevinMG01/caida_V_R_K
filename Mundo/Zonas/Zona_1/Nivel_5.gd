@@ -106,7 +106,7 @@ func _on_relentizar_timeout(): # jajajajajajaj era congelar
 	pass 
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == "Dron":
+	if body.get_name() == "Player":
 		global_Var.detener_dron = true
 	pass 
 
