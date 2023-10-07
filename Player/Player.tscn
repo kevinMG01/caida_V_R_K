@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/Player/Paracaidista quieto.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
@@ -42,6 +42,9 @@ extents = Vector2( 18, 34 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 17, 6 )
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 15.5, 10 )
+
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 2 )
 
@@ -73,6 +76,12 @@ shape = SubResource( 4 )
 position = Vector2( 0, 6 )
 shape = SubResource( 5 )
 
+[node name="colicion_suelo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colicion_suelo"]
+position = Vector2( 1.5, 4 )
+shape = SubResource( 6 )
+
 [connection signal="area_entered" from="detectar enemigos" to="." method="_on_detectar_enemigos_area_entered"]
 [connection signal="area_exited" from="detectar enemigos" to="." method="_on_detectar_enemigos_area_exited"]
 [connection signal="body_entered" from="detectar enemigos" to="." method="_on_detectar_enemigos_body_entered"]
@@ -80,3 +89,4 @@ shape = SubResource( 5 )
 [connection signal="body_entered" from="deteccion_bombas" to="." method="_on_deteccion_bombas_body_entered"]
 [connection signal="body_entered" from="nivel_4_coli_nuves" to="." method="_on_nivel_4_coli_nuves_body_entered"]
 [connection signal="body_exited" from="nivel_4_coli_nuves" to="." method="_on_nivel_4_coli_nuves_body_exited"]
+[connection signal="body_entered" from="colicion_suelo" to="." method="_on_colicion_suelo_body_entered"]

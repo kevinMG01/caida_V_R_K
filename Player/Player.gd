@@ -225,3 +225,14 @@ func _on_nivel_4_coli_nuves_body_exited(body):
 		global_Var.nivel = 4
 		print("sali")
 	pass # Replace with function body.
+
+
+func _on_colicion_suelo_body_entered(body):
+	if global_Var.nivel < 5:
+		if tiene_paracaida == false:
+			colicion_enemigo = true
+			global_Var.pausa = true
+			get_tree().paused = true
+			global_Var.deteccion_enemigo = true
+		
+	pass # Replace with function body.
