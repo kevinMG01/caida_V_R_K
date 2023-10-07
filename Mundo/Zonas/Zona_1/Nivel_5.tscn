@@ -41,7 +41,7 @@ extents = Vector2( 10, 10.4869 )
 [sub_resource type="RectangleShape2D" id=5]
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 19.25, 3.8 )
+extents = Vector2( 18.85, 4.21251 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 35.5, 192 )
@@ -315,19 +315,117 @@ position = Vector2( 894, 6402 )
 texture = ExtResource( 19 )
 
 [node name="plano" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 176, 624 )
+position = Vector2( 139, 117 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano"]
-position = Vector2( 398.5, 1987 )
+position = Vector2( 114.5, 1929.87 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 8 )
 
 [node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano"]
-position = Vector2( 420, 1957 )
+position = Vector2( 129, 1901 )
+texture = ExtResource( 22 )
+
+[node name="plano4" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 337, 1354 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano4"]
+position = Vector2( 116, 1914 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano4"]
+position = Vector2( 129, 1901 )
+texture = ExtResource( 22 )
+
+[node name="plano5" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 942, 1457 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano5"]
+position = Vector2( 116, 1914 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano5"]
+position = Vector2( 129, 1901 )
+texture = ExtResource( 22 )
+
+[node name="plano9" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 750, -609 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano9"]
+position = Vector2( 116, 1914 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano9"]
+position = Vector2( 129, 1901 )
+texture = ExtResource( 22 )
+
+[node name="plano6" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 291, 2731 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano6"]
+position = Vector2( 116, 1914 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano6"]
+position = Vector2( 129, 1901 )
+texture = ExtResource( 22 )
+
+[node name="plano8" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 614, 4626 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano8"]
+position = Vector2( 116, 1914 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano8"]
+position = Vector2( 129, 1901 )
+texture = ExtResource( 22 )
+
+[node name="plano7" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 493, 8463 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano7"]
+position = Vector2( 116, 1914 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano7"]
+position = Vector2( 129, 1901 )
+texture = ExtResource( 22 )
+
+[node name="plano2" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 505, 699 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano2"]
+position = Vector2( 151, 1757 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano2"]
+position = Vector2( 174, 1748 )
+scale = Vector2( 0.951402, 0.830549 )
+texture = ExtResource( 22 )
+
+[node name="plano3" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 799, 1042 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano3"]
+position = Vector2( 151, 1757 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 8 )
+
+[node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano3"]
+position = Vector2( 167, 1742 )
+scale = Vector2( 0.962617, 0.828758 )
 texture = ExtResource( 22 )
 
 [node name="casi_sirculo" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 48, 2624 )
+position = Vector2( -113, 2400 )
 
 [node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo"]
 position = Vector2( 413, 1626 )
@@ -336,14 +434,224 @@ texture = ExtResource( 16 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo"]
 polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
 
+[node name="casi_sirculo2" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 255, 2550 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo2"]
+position = Vector2( 413, 1626 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo2"]
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo3" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 225, 1951 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo3"]
+position = Vector2( 413, 1626 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo3"]
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo4" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -119, 3358 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo4"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo4"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo5" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -335, 4245 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo5"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo5"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo6" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 99, 8959 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo6"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo6"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo8" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -37, 8689 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo8"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo8"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo9" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -240, 6126 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo9"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo9"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo7" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -199, 10042 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo7"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo7"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo10" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -655, 10706 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo10"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo10"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
 [node name="sirculo" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( -352, 3776 )
+position = Vector2( -456, 3544 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo"]
 position = Vector2( 221, 592 )
 polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
 
 [node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo6" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -252, 10520 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo6"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo6"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo10" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -484, 10176 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo10"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo10"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo5" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -479, 4970 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo5"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo5"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo3" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -340, 3165 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo3"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo3"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo4" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 367, 3489 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo4"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo4"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo9" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 71, 3865 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo9"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo9"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo2" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 451, 2158 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo2"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo2"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo7" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -397, -808 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo7"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo7"]
+position = Vector2( 643, 2274 )
+texture = ExtResource( 17 )
+
+[node name="sirculo8" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 10, -486 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo8"]
+position = Vector2( 221, 592 )
+polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+
+[node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo8"]
 position = Vector2( 643, 2274 )
 texture = ExtResource( 17 )
 
@@ -358,14 +666,220 @@ polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 159
 position = Vector2( 848, 1787 )
 texture = ExtResource( 25 )
 
+[node name="planeador5" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 375, 6747 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador5"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador5"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador6" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -853, 7148 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador6"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador6"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador7" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -874, 7949 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador7"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador7"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador9" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -814, 9327 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador9"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador9"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador10" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 426, 10511 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador10"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador10"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador2" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 371, 4464 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador2"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador2"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador3" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -909, 4877 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador3"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador3"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador4" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -834, 3197 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador4"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador4"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador8" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 459, 701 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador8"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador8"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador11" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -825, 891 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador11"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador11"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador12" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -863, 1861 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador12"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador12"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
 [node name="corazon" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( -258, 10286 )
+position = Vector2( -576, 10346 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon"]
 position = Vector2( 227, -156 )
 polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
 
 [node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon"]
+position = Vector2( 775, 1538 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="corazon4" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 279, 11266 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon4"]
+position = Vector2( 227, -156 )
+polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon4"]
+position = Vector2( 775, 1538 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="corazon5" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 184, 10508 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon5"]
+position = Vector2( 227, -156 )
+polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon5"]
+position = Vector2( 775, 1538 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="corazon8" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 80, 11012 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon8"]
+position = Vector2( 227, -156 )
+polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon8"]
+position = Vector2( 775, 1538 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="corazon7" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 265, 9398 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon7"]
+position = Vector2( 104.137, -592.56 )
+scale = Vector2( 1.15238, 1.27005 )
+polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon7"]
+position = Vector2( 741.625, 1566.62 )
+scale = Vector2( 0.77243, 0.880071 )
+texture = ExtResource( 28 )
+
+[node name="corazon2" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -241, 6913 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon2"]
+position = Vector2( 227, -156 )
+polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon2"]
+position = Vector2( 775, 1538 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="corazon3" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -264, 5697 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon3"]
+position = Vector2( 227, -156 )
+polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon3"]
+position = Vector2( 775, 1538 )
+scale = Vector2( 0.647664, 0.743437 )
+texture = ExtResource( 28 )
+
+[node name="corazon6" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -499, 6616 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon6"]
+position = Vector2( 227, -156 )
+polygon = PoolVector2Array( 397, 1823, 376, 1780, 460, 1750, 437, 1653, 532, 1636, 627, 1645, 660, 1669, 707, 1668, 701, 1716, 542, 1808, 485, 1772 )
+
+[node name="NubeGris7" type="Sprite" parent="fondo_nubes2/corazon6"]
 position = Vector2( 775, 1538 )
 scale = Vector2( 0.647664, 0.743437 )
 texture = ExtResource( 28 )
@@ -379,6 +893,66 @@ position = Vector2( 601, 1440 )
 texture = ExtResource( 24 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/largo"]
+position = Vector2( 600.5, 1444 )
+shape = SubResource( 9 )
+
+[node name="largo4" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -235, 4281 )
+scale = Vector2( 2, 2 )
+
+[node name="NubeVertical" type="Sprite" parent="fondo_nubes2/largo4"]
+position = Vector2( 601, 1440 )
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/largo4"]
+position = Vector2( 600.5, 1444 )
+shape = SubResource( 9 )
+
+[node name="largo5" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -343, 5189 )
+scale = Vector2( 2, 2 )
+
+[node name="NubeVertical" type="Sprite" parent="fondo_nubes2/largo5"]
+position = Vector2( 601, 1440 )
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/largo5"]
+position = Vector2( 600.5, 1444 )
+shape = SubResource( 9 )
+
+[node name="largo3" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -743, 8232 )
+scale = Vector2( 2, 2 )
+
+[node name="NubeVertical" type="Sprite" parent="fondo_nubes2/largo3"]
+position = Vector2( 601, 1440 )
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/largo3"]
+position = Vector2( 600.5, 1444 )
+shape = SubResource( 9 )
+
+[node name="largo6" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -559, 9600 )
+scale = Vector2( 2, 2 )
+
+[node name="NubeVertical" type="Sprite" parent="fondo_nubes2/largo6"]
+position = Vector2( 601, 1440 )
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/largo6"]
+position = Vector2( 600.5, 1444 )
+shape = SubResource( 9 )
+
+[node name="largo2" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -166, -794 )
+scale = Vector2( 2, 2 )
+
+[node name="NubeVertical" type="Sprite" parent="fondo_nubes2/largo2"]
+position = Vector2( 601, 1440 )
+texture = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/largo2"]
 position = Vector2( 600.5, 1444 )
 shape = SubResource( 9 )
 
