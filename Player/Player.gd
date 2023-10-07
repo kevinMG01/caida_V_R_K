@@ -45,7 +45,7 @@ func _physics_process(delta):
 	#movimiento = movimiento.normalized()* cantidad
 	
 	pass
-
+	
 func comienzo():
 	if normalizar == false:
 		if global_Var.camara_avion_apagado == true:
@@ -58,7 +58,7 @@ func move_con_paracaidas():
 	if !is_on_floor():
 		if global_Var.nivel < 5:
 			if Input.is_action_just_pressed("ui_down"):
-				 tiene_paracaida = !tiene_paracaida
+				tiene_paracaida = !tiene_paracaida
 			
 	if is_on_floor():
 		esta_suelo = true
@@ -153,7 +153,6 @@ func power_up():
 
 
 func tocar_bombas(): # como me equiboque ahora puse los efectos al reves para no tener que escrivir mas
-	
 	if bomba_relentizante == true:     # congelar
 		cantidad = 0
 		gravedad = 0
@@ -197,9 +196,32 @@ func _on_deteccion_bombas_area_entered(area):
 
 
 func _on_detectar_enemigos_area_entered(area):
+	if area.is_in_group("obtacuo_niv_4"):
+		global_Var.nivel = 5
+		print("hola_soy yo")
 	if area.is_in_group("enemigo"):
 		colicion_enemigo = true
 		global_Var.pausa = true
 		get_tree().paused = true
 		global_Var.deteccion_enemigo = true
 	pass 
+
+
+func _on_detectar_enemigos_area_exited(area):
+	
+	pass # Replace with function body.
+
+
+func _on_nivel_4_coli_nuves_body_entered(body):
+	if body.is_in_group("obtacuo_niv_4"):
+		global_Var.nivel = 5
+		print("hola_soy yo")
+	pass # Replace with function body.
+
+
+func _on_nivel_4_coli_nuves_body_exited(body):
+	if body.is_in_group("obtacuo_niv_4"):
+		esta_suelo = false
+		global_Var.nivel = 4
+		print("sali")
+	pass # Replace with function body.

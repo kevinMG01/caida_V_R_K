@@ -164,7 +164,7 @@ margin_top = 621.0
 margin_right = 134.0
 margin_bottom = 621.0
 
-[node name="plano" type="StaticBody2D" parent="."]
+[node name="plano" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
 position = Vector2( 621, 6855 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plano"]
@@ -177,8 +177,8 @@ position = Vector2( 26, 1937 )
 scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 14 )
 
-[node name="plano2" type="StaticBody2D" parent="."]
-position = Vector2( 407, -507 )
+[node name="plano2" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
+position = Vector2( 237, -542 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plano2"]
 position = Vector2( 21, 1943.5 )
@@ -186,6 +186,6 @@ scale = Vector2( 10, 10 )
 shape = SubResource( 4 )
 
 [node name="NubeGris1" type="Sprite" parent="plano2"]
-position = Vector2( 26, 1937 )
+position = Vector2( 26, 1936 )
 scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 14 )
