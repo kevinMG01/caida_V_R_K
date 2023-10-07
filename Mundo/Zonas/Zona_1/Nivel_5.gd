@@ -115,7 +115,6 @@ func _on_tocar_suelo_body_entered(body):
 		global_Var.nivel = 4
 	pass 
 
-
 func posicion_bombas_congelar():
 	if bloquear_salida_congelar == true:
 		while posicion_actual_comgelar.size() < 2:
