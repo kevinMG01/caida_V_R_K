@@ -435,13 +435,23 @@ texture = ExtResource( 16 )
 polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
 
 [node name="casi_sirculo2" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 255, 2550 )
+position = Vector2( 571, 2099 )
 
 [node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo2"]
 position = Vector2( 413, 1626 )
 texture = ExtResource( 16 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo2"]
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo11" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 154, 2476 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo11"]
+position = Vector2( 413, 1626 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo11"]
 polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
 
 [node name="casi_sirculo3" type="StaticBody2D" parent="fondo_nubes2"]
@@ -623,7 +633,7 @@ position = Vector2( 643, 2274 )
 texture = ExtResource( 17 )
 
 [node name="sirculo2" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 451, 2158 )
+position = Vector2( 115, 1943 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo2"]
 position = Vector2( 221, 592 )
@@ -751,6 +761,17 @@ position = Vector2( 338, 132 )
 polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
 
 [node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador4"]
+position = Vector2( 848, 1787 )
+texture = ExtResource( 25 )
+
+[node name="planeador13" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( 397, 2659 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador13"]
+position = Vector2( 338, 132 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+
+[node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador13"]
 position = Vector2( 848, 1787 )
 texture = ExtResource( 25 )
 

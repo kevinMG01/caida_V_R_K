@@ -26,7 +26,7 @@ position = Vector2( 622, 3151 )
 texture = ExtResource( 1 )
 
 [node name="Nivel5NubesTapaVision" type="Sprite" parent="Nivel2Fondo"]
-position = Vector2( 5, -2354 )
+position = Vector2( 5, -378 )
 scale = Vector2( 1.0496, 1 )
 texture = ExtResource( 11 )
 
