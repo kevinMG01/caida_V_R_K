@@ -34,7 +34,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 17, 38 )
+extents = Vector2( 17, 97 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 18, 34 )
@@ -61,7 +61,7 @@ animation = "Move_paracaida"
 [node name="detectar enemigos" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detectar enemigos"]
-position = Vector2( 0, -26 )
+position = Vector2( 0, -85 )
 shape = SubResource( 3 )
 
 [node name="deteccion_bombas" type="Area2D" parent="."]

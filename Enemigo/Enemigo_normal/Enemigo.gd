@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var cantidad = 165
+var cantidad = 145
 var movimiento = Vector2()
 
 
