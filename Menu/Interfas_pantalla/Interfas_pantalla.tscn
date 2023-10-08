@@ -115,19 +115,19 @@ position = Vector2( 123, 36 )
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="pausa/control_pausa"]
-margin_left = 359.0
+margin_left = 416.0
 margin_top = 173.0
-margin_right = 609.0
+margin_right = 657.0
 margin_bottom = 317.0
 
 [node name="inventario" type="PanelContainer" parent="pausa/control_pausa/VBoxContainer2"]
-margin_right = 250.0
+margin_right = 241.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 70, 70 )
 custom_styles/panel = SubResource( 21 )
 
 [node name="Inventario_1" type="Button" parent="pausa/control_pausa/VBoxContainer2/inventario"]
-margin_right = 250.0
+margin_right = 241.0
 margin_bottom = 70.0
 custom_styles/hover = SubResource( 11 )
 custom_styles/pressed = SubResource( 12 )
@@ -139,26 +139,26 @@ texture = ExtResource( 4 )
 
 [node name="salir" type="PanelContainer" parent="pausa/control_pausa/VBoxContainer2"]
 margin_top = 74.0
-margin_right = 250.0
+margin_right = 241.0
 margin_bottom = 144.0
 rect_min_size = Vector2( 0, 70 )
 custom_styles/panel = SubResource( 22 )
 
 [node name="Salir_menu" type="Button" parent="pausa/control_pausa/VBoxContainer2/salir"]
-margin_right = 250.0
+margin_right = 241.0
 margin_bottom = 70.0
 custom_styles/hover = SubResource( 14 )
 custom_styles/pressed = SubResource( 15 )
 custom_styles/normal = SubResource( 16 )
 
 [node name="salir" type="Sprite" parent="pausa/control_pausa/VBoxContainer2/salir"]
-visible = false
 position = Vector2( 121, 36 )
 texture = ExtResource( 5 )
 
 [node name="BotonDelTienda" type="Sprite" parent="pausa/control_pausa/VBoxContainer2/salir"]
-position = Vector2( 129, 34.25 )
-scale = Vector2( 1.35088, 0.735955 )
+visible = false
+position = Vector2( 115.75, 35.5 )
+scale = Vector2( 1.00439, 0.685393 )
 texture = ExtResource( 7 )
 
 [connection signal="pressed" from="pausa/control_pausa/VBoxContainer/Reintentar/Reintentar_1" to="." method="_on_Reintentar_1_pressed"]

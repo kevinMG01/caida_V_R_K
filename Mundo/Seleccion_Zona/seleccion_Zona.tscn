@@ -314,10 +314,10 @@ volume_db = -25.0
 autoplay = true
 
 [node name="Button" type="Button" parent="."]
-margin_left = 828.0
-margin_top = 63.0
-margin_right = 954.0
-margin_bottom = 158.0
+margin_left = 23.0
+margin_top = 464.0
+margin_right = 192.0
+margin_bottom = 590.0
 custom_styles/hover = SubResource( 30 )
 custom_styles/pressed = SubResource( 31 )
 custom_styles/normal = SubResource( 32 )

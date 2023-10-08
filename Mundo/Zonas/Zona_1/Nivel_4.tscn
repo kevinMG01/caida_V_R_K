@@ -82,6 +82,9 @@ position = Vector2( 504, 4277 )
 [node name="Ave7" parent="ave" instance=ExtResource( 11 )]
 position = Vector2( 1271, 5318 )
 
+[node name="Ave12" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 1195, 5610 )
+
 [node name="Ave8" parent="ave" instance=ExtResource( 11 )]
 position = Vector2( 149, 5316 )
 
@@ -91,8 +94,11 @@ position = Vector2( 267, 6768 )
 [node name="Ave10" parent="ave" instance=ExtResource( 11 )]
 position = Vector2( 609, 7617 )
 
+[node name="Ave13" parent="ave" instance=ExtResource( 11 )]
+position = Vector2( 1220, 8078 )
+
 [node name="Ave11" parent="ave" instance=ExtResource( 11 )]
-position = Vector2( 188, 9122 )
+position = Vector2( 199, 9360 )
 
 [node name="globo" type="Node2D" parent="."]
 position = Vector2( 7, 0 )
@@ -114,6 +120,9 @@ position = Vector2( 1179, 8783 )
 
 [node name="Enemigo6" parent="globo" instance=ExtResource( 12 )]
 position = Vector2( 584, 10365 )
+
+[node name="Enemigo7" parent="globo" instance=ExtResource( 12 )]
+position = Vector2( 444, 10530 )
 
 [node name="avion" type="Node2D" parent="."]
 
@@ -165,7 +174,7 @@ margin_right = 134.0
 margin_bottom = 621.0
 
 [node name="plano" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
-position = Vector2( 621, 6855 )
+position = Vector2( 629, 6834 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plano"]
 position = Vector2( 21, 1943.5 )
@@ -178,7 +187,7 @@ scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 14 )
 
 [node name="plano2" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
-position = Vector2( 237, -542 )
+position = Vector2( 840, -553 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plano2"]
 position = Vector2( 21, 1943.5 )
@@ -186,6 +195,19 @@ scale = Vector2( 10, 10 )
 shape = SubResource( 4 )
 
 [node name="NubeGris1" type="Sprite" parent="plano2"]
+position = Vector2( 26, 1936 )
+scale = Vector2( 0.475701, 0.573986 )
+texture = ExtResource( 14 )
+
+[node name="plano3" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
+position = Vector2( 550, 3172 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plano3"]
+position = Vector2( 21, 1943.5 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 4 )
+
+[node name="NubeGris1" type="Sprite" parent="plano3"]
 position = Vector2( 26, 1936 )
 scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 14 )

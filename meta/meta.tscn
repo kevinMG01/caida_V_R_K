@@ -34,14 +34,14 @@ animations = [ {
 script = ExtResource( 4 )
 
 [node name="animacion_meta" type="AnimatedSprite" parent="."]
-position = Vector2( 397, 550 )
-scale = Vector2( 1, 0.4 )
+position = Vector2( 397, 527 )
+scale = Vector2( 1, 0.706667 )
 frames = SubResource( 1 )
 animation = "Idle"
 
 [node name="animacion_meta2" type="AnimatedSprite" parent="."]
-position = Vector2( 636, 550 )
-scale = Vector2( 1, 0.4 )
+position = Vector2( 636, 527.5 )
+scale = Vector2( 1, 0.7 )
 frames = SubResource( 1 )
 animation = "Idle"
 flip_h = true
