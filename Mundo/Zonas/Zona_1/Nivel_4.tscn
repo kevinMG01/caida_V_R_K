@@ -65,13 +65,13 @@ shape = SubResource( 3 )
 position = Vector2( -91, 252 )
 
 [node name="Ave" parent="ave" instance=ExtResource( 11 )]
-position = Vector2( 188, 1303 )
+position = Vector2( 421, 1446 )
 
 [node name="Ave3" parent="ave" instance=ExtResource( 11 )]
 position = Vector2( 1236, 2459 )
 
 [node name="Ave4" parent="ave" instance=ExtResource( 11 )]
-position = Vector2( 228, 2947 )
+position = Vector2( 439, 2981 )
 
 [node name="Ave5" parent="ave" instance=ExtResource( 11 )]
 position = Vector2( 159, 2464 )
@@ -95,7 +95,7 @@ position = Vector2( 267, 6768 )
 position = Vector2( 609, 7617 )
 
 [node name="Ave13" parent="ave" instance=ExtResource( 11 )]
-position = Vector2( 1220, 8078 )
+position = Vector2( 827, 8142 )
 
 [node name="Ave11" parent="ave" instance=ExtResource( 11 )]
 position = Vector2( 199, 9360 )
@@ -104,7 +104,7 @@ position = Vector2( 199, 9360 )
 position = Vector2( 7, 0 )
 
 [node name="Enemigo" parent="globo" instance=ExtResource( 12 )]
-position = Vector2( 1162, 736 )
+position = Vector2( 860, 728 )
 
 [node name="Enemigo2" parent="globo" instance=ExtResource( 12 )]
 position = Vector2( 83, 1383 )
