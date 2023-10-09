@@ -87,6 +87,10 @@ func spawn_bombas_congelar(): # para no vorar ajajajajaj
 			var newbomba2 = bomba_congelar.instance()
 			add_child(newbomba2)
 			newbomba2.global_position = get_tree().get_nodes_in_group(posicion_actual_comgelar[1])[0].global_position
+			
+			var newbomba3 = bomba_congelar.instance()
+			add_child(newbomba3)
+			newbomba3.global_position = get_tree().get_nodes_in_group(posicion_actual_comgelar[2])[0].global_position
 
 func _on_deteccion_dron_1_body_entered(body):
 	if body.get_name() == "Player":
@@ -123,7 +127,7 @@ func _on_tocar_suelo_body_entered(body):
 
 func posicion_bombas_congelar():
 	if bloquear_salida_congelar == true:
-		while posicion_actual_comgelar.size() < 2:
+		while posicion_actual_comgelar.size() < 3:
 			var sacar_numero = int(rand_range(0, 14))  
 
 			var numero = posicion_bombas[sacar_numero]
