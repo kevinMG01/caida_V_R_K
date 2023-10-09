@@ -354,7 +354,7 @@ position = Vector2( 129, 1901 )
 texture = ExtResource( 22 )
 
 [node name="plano9" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 750, -609 )
+position = Vector2( 594, -685 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano9"]
 position = Vector2( 116, 1914 )
@@ -366,7 +366,7 @@ position = Vector2( 129, 1901 )
 texture = ExtResource( 22 )
 
 [node name="plano6" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 291, 2731 )
+position = Vector2( 175, 2540 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano6"]
 position = Vector2( 116, 1914 )
@@ -415,7 +415,7 @@ scale = Vector2( 0.951402, 0.830549 )
 texture = ExtResource( 22 )
 
 [node name="plano3" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 799, 1042 )
+position = Vector2( 154, 1304 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano3"]
 position = Vector2( 151, 1757 )
@@ -581,7 +581,7 @@ position = Vector2( 643, 2274 )
 texture = ExtResource( 17 )
 
 [node name="sirculo10" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( -484, 10176 )
+position = Vector2( 227, 10267 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo10"]
 position = Vector2( 221, 592 )
@@ -625,7 +625,7 @@ position = Vector2( 643, 2274 )
 texture = ExtResource( 17 )
 
 [node name="sirculo9" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 71, 3865 )
+position = Vector2( -352, 4228 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo9"]
 position = Vector2( 221, 592 )
@@ -757,7 +757,7 @@ position = Vector2( 848, 1787 )
 texture = ExtResource( 25 )
 
 [node name="planeador4" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( -834, 3197 )
+position = Vector2( -839, 2985 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador4"]
 position = Vector2( 338, 132 )
@@ -848,7 +848,7 @@ scale = Vector2( 0.647664, 0.743437 )
 texture = ExtResource( 28 )
 
 [node name="corazon8" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( 80, 11012 )
+position = Vector2( -560, 10956 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/corazon8"]
 position = Vector2( 227, -156 )
