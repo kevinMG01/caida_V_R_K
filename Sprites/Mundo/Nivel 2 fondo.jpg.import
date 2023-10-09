@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/botones del menu de niveles.png-f074184d4e23acd940be7ade3c0c9130.stex"
+path="res://.import/Nivel 2 fondo.jpg-c96d7839a493966fde737c1a56a54fe7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mundo/Seleccion_Zona/botones del menu de niveles.png"
-dest_files=[ "res://.import/botones del menu de niveles.png-f074184d4e23acd940be7ade3c0c9130.stex" ]
+source_file="res://Sprites/Mundo/Nivel 2 fondo.jpg"
+dest_files=[ "res://.import/Nivel 2 fondo.jpg-c96d7839a493966fde737c1a56a54fe7.stex" ]
 
 [params]
 

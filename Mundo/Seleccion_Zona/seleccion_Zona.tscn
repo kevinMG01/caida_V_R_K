@@ -13,7 +13,7 @@
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 1.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 3.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Fondo_Niveles/sprite/Boton salir sprite 2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Menu/pausa/Boton del tienda.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Fondo_Niveles/sprite/botones del menu de niveles.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
