@@ -8,7 +8,7 @@
 [ext_resource path="res://Sprites/Player/Paracaidista sprite 4.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12.5, 34.5 )
+extents = Vector2( 3.5, 11.5 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -46,7 +46,7 @@ extents = Vector2( 15.5, 10 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.5, -23.5 )
+position = Vector2( 8.5, -0.5 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
