@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://reintentar_2.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Menu/pausa/Imagen de como se debe ver la pantalla de reintentar.jpg" type="Texture" id=2]
+[ext_resource path="res://Audio/new/menu de muerte.mp3" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -58,6 +59,9 @@ margin_bottom = 485.0
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 9 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="pressed" from="reintentar" to="." method="_on_reintentar_pressed"]
 [connection signal="pressed" from="inventario" to="." method="_on_inventario_pressed"]

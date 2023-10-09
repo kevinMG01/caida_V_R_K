@@ -4,7 +4,7 @@
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_1.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/Mundo/Avion_fondo_derecha/Avion_fondo.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Audio/NIVEL/Hero Immortal niveles.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Audio/new/Nivel 1 y 2.mp3" type="AudioStream" id=5]
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=6]
 [ext_resource path="res://meta/meta.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 1 fondo.jpg" type="Texture" id=8]
@@ -107,7 +107,6 @@ volume_db = -25.0
 autoplay = true
 
 [node name="reintentar_2" parent="." instance=ExtResource( 11 )]
-visible = false
 margin_left = 14.0
 margin_top = 20.0
 margin_right = 14.0

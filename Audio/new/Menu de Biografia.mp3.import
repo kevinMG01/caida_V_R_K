@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu de Biografia.mp3-727a8eb7037409a257c5d052c7c08d0e.mp3str"
+
+[deps]
+
+source_file="res://Audio/new/Menu de Biografia.mp3"
+dest_files=[ "res://.import/Menu de Biografia.mp3-727a8eb7037409a257c5d052c7c08d0e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

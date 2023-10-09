@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Menu/Controles/Biografia.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Enemigos/Globo/Sprite del globo 1.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Sprites/Menu/libro/new_libro/Pagina sprite 2 izquierda.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Menu/new_ingles/Boton del Ave Biografia.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Menu/new_ingles/Mapa de Biografia sin los botones.jpg" type="Texture" id=14]
+[ext_resource path="res://Audio/new/Menu de Biografia.mp3" type="AudioStream" id=15]
 
 [sub_resource type="StyleBoxFlat" id=25]
 bg_color = Color( 0.043684, 0.221419, 0.228227, 1 )
@@ -557,6 +558,10 @@ anims/2 = SubResource( 8 )
 anims/3 = SubResource( 9 )
 anims/4 = SubResource( 10 )
 anims/5 = SubResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+autoplay = true
 
 [connection signal="pressed" from="HBoxContainer/selecion_personajes/Control/VBoxContainer/Dron/dron" to="." method="_on_dron_pressed"]
 [connection signal="scroll_ended" from="HBoxContainer/ScrollContainer" to="." method="_on_ScrollContainer_scroll_ended"]

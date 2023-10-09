@@ -1,6 +1,15 @@
 extends Node2D
 
 
+var cartel_reintentar = preload("res://Menu/muerte/reintentar_2.tscn")
+var muerte = false
+func muertte():
+	if muerte == true:
+		var newcartel = cartel_reintentar.instance()
+		add_child(newcartel)
+		newcartel.global_position = get_tree().get_nodes_in_group("")[0].global_position
+	pass
+
 func _ready():
 	global_Var.camara_avion_apagado = true
 	global_Var.nivel = 1
@@ -9,8 +18,6 @@ func _ready():
 func _physics_process(delta):
 	bloquear_meta()
 	player()
-
-
 	pass
 
 func player():

@@ -6,7 +6,7 @@
 [ext_resource path="res://Mundo/Zonas/Zona_1/Control_pausa_N_4.gd" type="Script" id=4]
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Audio/NIVEL/Hero Immortal niveles.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Audio/new/Nivel 3 y 4.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Sprites/Mundo/Nivel 4 fondo.jpg" type="Texture" id=8]
 [ext_resource path="res://Sprites/Mundo/Nivel 4 nubes tapa vision.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Mundo/Nivel 5 nubes tapa vision.png" type="Texture" id=10]

@@ -1,11 +1,17 @@
 extends Control
 
+
+
+
 func _ready():
 	visible = false
+	pass
+
 
 func _process(delta):
 	if global_Var.deteccion_enemigo == true:
 		visible = true
+	
 
 func _on_reintentar_pressed():
 	get_tree().paused = false
@@ -25,7 +31,7 @@ func _on_reintentar_pressed():
 
 
 func _on_inventario_pressed():
-	pass # Replace with function body.
+	pass
 
 
 func _on_salir_pressed():
