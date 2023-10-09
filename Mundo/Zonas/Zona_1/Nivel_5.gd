@@ -23,6 +23,8 @@ var bloquear_salida_relentizar = true
 #//////////////////////////////////////////////////////////////////////////////////////////
 func _ready():
 	randomize()
+	$gravity_bomva.position = get_tree().get_nodes_in_group("possssssssssss")[0].global_position
+#	$Camera2D.global_position = get_tree().get_nodes_in_group("pausa")[0].global_position
 	global_Var.detener_dron = false
 	posicion_dron = 0 
 	global_Var.camara_avion_apagado = true

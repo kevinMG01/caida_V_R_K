@@ -995,6 +995,9 @@ position = Vector2( 625.5, 13999 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 7 )
 
+[node name="Position_bomba" type="Position2D" parent="." groups=["possssssssssss"]]
+position = Vector2( 2, -253 )
+
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_entered"]
 [connection signal="body_exited" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
