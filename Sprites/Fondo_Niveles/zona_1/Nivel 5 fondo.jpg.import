@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nivel 2 fondo.jpg-94ef804b316c8ef92e00ab7fa6891028.stex"
+path="res://.import/Nivel 5 fondo.jpg-a589167399b043cce7acef3d7b5bc4d2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fondo_Niveles/zona_1/Nivel 2 fondo.jpg"
-dest_files=[ "res://.import/Nivel 2 fondo.jpg-94ef804b316c8ef92e00ab7fa6891028.stex" ]
+source_file="res://Sprites/Fondo_Niveles/zona_1/Nivel 5 fondo.jpg"
+dest_files=[ "res://.import/Nivel 5 fondo.jpg-a589167399b043cce7acef3d7b5bc4d2.stex" ]
 
 [params]
 
