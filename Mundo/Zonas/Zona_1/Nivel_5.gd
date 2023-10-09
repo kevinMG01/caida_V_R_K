@@ -23,7 +23,7 @@ var bloquear_salida_relentizar = true
 #//////////////////////////////////////////////////////////////////////////////////////////
 func _ready():
 	randomize()
-	$gravity_bomva.position = get_tree().get_nodes_in_group("possssssssssss")[0].global_position
+#	$gravity_bomva.position = get_tree().get_nodes_in_group("possssssssssss")[0].global_position
 #	$Camera2D.global_position = get_tree().get_nodes_in_group("pausa")[0].global_position
 	global_Var.detener_dron = false
 	posicion_dron = 0 
@@ -31,6 +31,10 @@ func _ready():
 	global_Var.nivel = 5
 
 func _physics_process(delta):
+	if global_Var.detener_dron == false:
+		$gravity_bomva.position = get_tree().get_nodes_in_group("possssssssssss")[0].global_position
+	elif global_Var.detener_dron == true:
+		$gravity_bomva.position = get_tree().get_nodes_in_group("Position_fin_bomba")[0].global_position
 	player()
 	spawn_dron()
 	posicion_bombas_congelar()

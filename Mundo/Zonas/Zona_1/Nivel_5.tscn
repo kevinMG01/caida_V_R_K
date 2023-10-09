@@ -167,6 +167,9 @@ position = Vector2( -354, 294 )
 [node name="Player" parent="avion" instance=ExtResource( 3 )]
 position = Vector2( 658, 290 )
 
+[node name="Position_bomba" type="Position2D" parent="avion/Player" groups=["possssssssssss"]]
+position = Vector2( -661, -1250 )
+
 [node name="gravity_bomva" type="Node2D" parent="."]
 position = Vector2( 0, -253 )
 
@@ -995,8 +998,8 @@ position = Vector2( 625.5, 13999 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 7 )
 
-[node name="Position_bomba" type="Position2D" parent="." groups=["possssssssssss"]]
-position = Vector2( 2, -253 )
+[node name="Position_fin_bomba" type="Position2D" parent="." groups=["Position_fin_bomba"]]
+position = Vector2( -157, -654 )
 
 [connection signal="body_entered" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_entered"]
 [connection signal="body_exited" from="detectores_de_spawn/deteccion_dron_1" to="." method="_on_deteccion_dron_1_body_exited"]
