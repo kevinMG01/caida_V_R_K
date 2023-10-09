@@ -8,8 +8,6 @@ func _ready():
 func _physics_process(delta):
 	player()
 	bloquear_meta()
-	if global_Var.deteccion_enemigo == true:
-		
 	pass
 	
 func player():
