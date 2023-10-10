@@ -41,7 +41,7 @@ extents = Vector2( 10, 10.4869 )
 [sub_resource type="RectangleShape2D" id=5]
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 18.85, 4.21251 )
+extents = Vector2( 22.1, 7.35 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 35.5, 192 )
@@ -357,7 +357,7 @@ texture = ExtResource( 22 )
 position = Vector2( 594, -685 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fondo_nubes2/plano9"]
-position = Vector2( 116, 1914 )
+position = Vector2( 119, 1933.5 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 8 )
 
@@ -410,8 +410,8 @@ scale = Vector2( 10, 10 )
 shape = SubResource( 8 )
 
 [node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano2"]
-position = Vector2( 174, 1748 )
-scale = Vector2( 0.951402, 0.830549 )
+position = Vector2( 156, 1718 )
+scale = Vector2( 1.0271, 0.902148 )
 texture = ExtResource( 22 )
 
 [node name="plano3" type="StaticBody2D" parent="fondo_nubes2"]
@@ -558,6 +558,32 @@ position = Vector2( 421.736, -522.142 )
 scale = Vector2( 1.32452, 1.17166 )
 polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
 
+[node name="casi_sirculo12" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -695, 11639 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo12"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo12"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
+[node name="casi_sirculo13" type="StaticBody2D" parent="fondo_nubes2"]
+position = Vector2( -310, 11594 )
+
+[node name="NubeGris2" type="Sprite" parent="fondo_nubes2/casi_sirculo13"]
+position = Vector2( 968.25, 1385.25 )
+scale = Vector2( 1.28318, 1.17542 )
+texture = ExtResource( 16 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/casi_sirculo13"]
+position = Vector2( 421.736, -522.142 )
+scale = Vector2( 1.32452, 1.17166 )
+polygon = PoolVector2Array( 256, 1728, 304, 1652, 380, 1595, 437, 1566, 516, 1573, 516, 1611, 499, 1666, 468, 1704, 416, 1721, 335, 1766, 287, 1787 )
+
 [node name="sirculo" type="StaticBody2D" parent="fondo_nubes2"]
 position = Vector2( -456, 3544 )
 
@@ -570,7 +596,7 @@ position = Vector2( 643, 2274 )
 texture = ExtResource( 17 )
 
 [node name="sirculo6" type="StaticBody2D" parent="fondo_nubes2"]
-position = Vector2( -252, 10520 )
+position = Vector2( -219, 10436 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo6"]
 position = Vector2( 221, 592 )
@@ -651,7 +677,7 @@ position = Vector2( -397, -808 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo7"]
 position = Vector2( 221, 592 )
-polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+polygon = PoolVector2Array( 292, 1731, 296, 1654, 369, 1601, 439, 1586, 499, 1587, 549, 1628, 563, 1709, 518, 1770, 463, 1799, 395, 1803, 333, 1783 )
 
 [node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo7"]
 position = Vector2( 643, 2274 )
@@ -662,7 +688,7 @@ position = Vector2( 10, -486 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/sirculo8"]
 position = Vector2( 221, 592 )
-polygon = PoolVector2Array( 304, 1714, 309, 1657, 404, 1602, 466, 1597, 511, 1604, 561, 1685, 521, 1764, 480, 1792, 463, 1799, 444, 1804, 347, 1776 )
+polygon = PoolVector2Array( 288, 1725, 294, 1653, 361, 1600, 447, 1583, 520, 1595, 555, 1637, 560, 1712, 514, 1771, 463, 1799, 444, 1804, 334, 1789 )
 
 [node name="NubeGris3" type="Sprite" parent="fondo_nubes2/sirculo8"]
 position = Vector2( 643, 2274 )
@@ -985,7 +1011,7 @@ shape = SubResource( 9 )
 [node name="Area2D" type="Area2D" parent="detener_dron"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detener_dron/Area2D"]
-position = Vector2( 621.5, 13096.5 )
+position = Vector2( 605, 13368 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 6 )
 

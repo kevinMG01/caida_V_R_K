@@ -34,10 +34,10 @@ position = Vector2( 71, 8993 )
 [node name="enemigo_globo" type="Node2D" parent="."]
 
 [node name="Enemigo" parent="enemigo_globo" instance=ExtResource( 5 )]
-position = Vector2( 260, 980 )
+position = Vector2( 739, 1002 )
 
 [node name="Enemigo5" parent="enemigo_globo" instance=ExtResource( 5 )]
-position = Vector2( 48, 2764 )
+position = Vector2( 820, 2966 )
 
 [node name="Enemigo2" parent="enemigo_globo" instance=ExtResource( 5 )]
 position = Vector2( 489, 4608 )
@@ -54,7 +54,7 @@ position = Vector2( 143, 8026 )
 position = Vector2( 172, 1592 )
 
 [node name="Ave2" parent="enemigo_ave" instance=ExtResource( 4 )]
-position = Vector2( 1109, 2793 )
+position = Vector2( 1100, 2328 )
 
 [node name="Ave3" parent="enemigo_ave" instance=ExtResource( 4 )]
 position = Vector2( 1104, 3611 )
