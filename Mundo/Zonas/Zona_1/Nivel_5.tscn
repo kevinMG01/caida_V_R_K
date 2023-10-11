@@ -423,8 +423,8 @@ scale = Vector2( 10, 10 )
 shape = SubResource( 8 )
 
 [node name="NubeGris1" type="Sprite" parent="fondo_nubes2/plano3"]
-position = Vector2( 167, 1742 )
-scale = Vector2( 0.962617, 0.828758 )
+position = Vector2( 153.25, 1715.31 )
+scale = Vector2( 1.01402, 0.956145 )
 texture = ExtResource( 22 )
 
 [node name="casi_sirculo" type="StaticBody2D" parent="fondo_nubes2"]
@@ -820,7 +820,7 @@ position = Vector2( -825, 891 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="fondo_nubes2/planeador11"]
 position = Vector2( 338, 132 )
-polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 485, 1599, 567, 1599, 762, 1716, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
+polygon = PoolVector2Array( 281, 1711, 290, 1678, 452, 1646, 490, 1588, 572, 1590, 772, 1714, 681, 1773, 542, 1770, 471, 1752, 424, 1755, 356, 1738 )
 
 [node name="NubeGris4" type="Sprite" parent="fondo_nubes2/planeador11"]
 position = Vector2( 848, 1787 )
