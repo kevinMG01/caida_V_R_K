@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta cerrada.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta medio abierta.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Mundo/Avion_negro/Avion del paracaidista sprite compuerta abierta.png" type="Texture" id=4]
+[ext_resource path="res://Audio/new/Sonido para el avion.mp3" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 157, 62 )
@@ -40,3 +41,8 @@ position = Vector2( 3, 19 )
 scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 5 )
 animation = "Idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -32.0
+autoplay = true

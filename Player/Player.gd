@@ -72,6 +72,8 @@ func move_con_paracaidas():
 				cantidad = 150
 				gravedad = 70
 				movimiento.x = 0
+				$AudioStreamPlayer.play()
+				
 				$AnimatedSprite.animation = "Move_paracaida"
 				if Input.is_action_pressed("ui_left"):
 					movimiento.x -= cantidad
@@ -84,6 +86,7 @@ func move_con_paracaidas():
 				cantidad = 70
 				gravedad = 150
 				movimiento.x = 0
+				$AudioStreamPlayer.autoplay = false
 				$AnimatedSprite.animation = "Move_paracaida"
 				if Input.is_action_pressed("ui_left"):
 					movimiento.x -= cantidad

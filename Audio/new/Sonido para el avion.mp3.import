@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sonido para el avion.mp3-df4dc35dc6858d8a5be1eadf2a25c90d.mp3str"
+
+[deps]
+
+source_file="res://Audio/new/Sonido para el avion.mp3"
+dest_files=[ "res://.import/Sonido para el avion.mp3-df4dc35dc6858d8a5be1eadf2a25c90d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

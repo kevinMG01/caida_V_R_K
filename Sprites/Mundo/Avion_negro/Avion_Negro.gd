@@ -37,4 +37,5 @@ func move():
 			yield(get_tree().create_timer(7.0),"timeout")
 			if cantidad <= 0:
 				self.queue_free()
+	
 	pass

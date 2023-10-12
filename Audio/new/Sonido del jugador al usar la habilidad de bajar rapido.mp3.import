@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sonido del jugador al usar la habilidad de bajar rapido.mp3-57428fd778383bfeb489a8237a9cd67d.mp3str"
+
+[deps]
+
+source_file="res://Audio/new/Sonido del jugador al usar la habilidad de bajar rapido.mp3"
+dest_files=[ "res://.import/Sonido del jugador al usar la habilidad de bajar rapido.mp3-57428fd778383bfeb489a8237a9cd67d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
