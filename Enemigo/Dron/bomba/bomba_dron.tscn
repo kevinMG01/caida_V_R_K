@@ -45,7 +45,7 @@ shape = SubResource( 3 )
 [node name="colision_player" type="Area2D" parent="." groups=["bom_relentizar"]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="colision_player"]
-polygon = PoolVector2Array( -41, -36, -6, 45, 6, 47, 34, -31, 31, -43 )
+polygon = PoolVector2Array( -38, -46, -41, -31, 2, 46, 23, 13, 35, -20, 33, -43 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
