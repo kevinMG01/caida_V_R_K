@@ -67,28 +67,25 @@ position = Vector2( 619, 254 )
 [node name="Enemogos" type="Node2D" parent="."]
 
 [node name="Enemigo" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 425, 1002 )
+position = Vector2( 49, 954 )
 
 [node name="Enemigo3" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 642, 1673 )
+position = Vector2( 1149, 1696 )
 
 [node name="Enemigo4" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 1147.04, 2429.84 )
+position = Vector2( 700, 2444 )
 
 [node name="Enemigo5" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 201, 2987 )
+position = Vector2( 55, 3048 )
 
 [node name="Enemigo6" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 280, 4141 )
+position = Vector2( 1213, 4255 )
 
 [node name="Enemigo7" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 974, 4688 )
-
-[node name="Enemigo9" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 62, 5688 )
+position = Vector2( 62, 4951 )
 
 [node name="Enemigo8" parent="Enemogos" instance=ExtResource( 4 )]
-position = Vector2( 908, 3563 )
+position = Vector2( 669, 3785 )
 
 [node name="Control_pausa_N_2" type="Node2D" parent="."]
 pause_mode = 2
