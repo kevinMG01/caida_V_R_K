@@ -75,7 +75,7 @@ shape = SubResource( 5 )
 [node name="colicion_suelo" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colicion_suelo"]
-position = Vector2( 1.5, 4 )
+position = Vector2( 5.5, 5 )
 shape = SubResource( 6 )
 
 [connection signal="area_entered" from="detectar enemigos" to="." method="_on_detectar_enemigos_area_entered"]
