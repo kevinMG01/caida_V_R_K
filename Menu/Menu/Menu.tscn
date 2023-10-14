@@ -210,7 +210,7 @@ position = Vector2( -11, -29 )
 shape = SubResource( 20 )
 
 [node name="Position2D" type="Position2D" parent="." groups=["posicion_new"]]
-position = Vector2( -320, 85 )
+position = Vector2( -332, 93 )
 
 [connection signal="pressed" from="botones_inferiores/Tienda" to="." method="_on_Tienda_pressed"]
 [connection signal="pressed" from="botones_inferiores/Inventario" to="." method="_on_Inventario_pressed"]
