@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Sprites/Menu/Boton de Play.png" type="Texture" id=1]
 [ext_resource path="res://Menu/Menu/Menu.gd" type="Script" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Menu/Menu/Boton de Exit sprite 2.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Menu/Boton de tienda menu abandonada.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Menu/new_ingles/Boton de inventory menu cerrado.png" type="Texture" id=16]
+[ext_resource path="res://Menu/Menu/animacion_avion.gd" type="Script" id=17]
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
@@ -70,6 +71,11 @@ animations = [ {
 "name": "play_salir",
 "speed": 2.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=19]
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 39, 103.5 )
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -166,16 +172,6 @@ position = Vector2( 86, 86 )
 frames = SubResource( 18 )
 animation = "play_salir"
 
-[node name="LugarParaLasMonedasSprite1" type="Sprite" parent="."]
-position = Vector2( 304.5, 81 )
-scale = Vector2( 0.897059, 1.05128 )
-texture = ExtResource( 9 )
-
-[node name="Moneda" type="Sprite" parent="LugarParaLasMonedasSprite1"]
-position = Vector2( -123.18, 6.6586 )
-scale = Vector2( 0.231399, 0.192344 )
-texture = ExtResource( 5 )
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 volume_db = -25.0
@@ -189,8 +185,36 @@ texture = ExtResource( 15 )
 position = Vector2( 557, 445 )
 texture = ExtResource( 16 )
 
+[node name="animacion_avion" type="KinematicBody2D" parent="."]
+position = Vector2( 4, 82 )
+script = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="animacion_avion"]
+shape = SubResource( 19 )
+
+[node name="LugarParaLasMonedasSprite1" type="Sprite" parent="animacion_avion"]
+position = Vector2( -70, -3.00002 )
+scale = Vector2( 0.897059, 1.05128 )
+texture = ExtResource( 9 )
+
+[node name="Moneda" type="Sprite" parent="animacion_avion/LugarParaLasMonedasSprite1"]
+position = Vector2( -123.18, 6.6586 )
+scale = Vector2( 0.231399, 0.192344 )
+texture = ExtResource( 5 )
+
+[node name="re_spawn" type="Area2D" parent="."]
+position = Vector2( 1421, 111 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="re_spawn"]
+position = Vector2( -11, -29 )
+shape = SubResource( 20 )
+
+[node name="Position2D" type="Position2D" parent="." groups=["posicion_new"]]
+position = Vector2( -320, 85 )
+
 [connection signal="pressed" from="botones_inferiores/Tienda" to="." method="_on_Tienda_pressed"]
 [connection signal="pressed" from="botones_inferiores/Inventario" to="." method="_on_Inventario_pressed"]
 [connection signal="pressed" from="botones_inferiores/Biografia" to="." method="_on_Biografia_pressed"]
 [connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+[connection signal="body_entered" from="re_spawn" to="." method="_on_re_spawn_body_entered"]

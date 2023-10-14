@@ -35,3 +35,8 @@ func _on_Biografia_pressed():
 
 
 
+
+
+func _on_re_spawn_body_entered(body):
+	$animacion_avion.position = get_tree().get_nodes_in_group("posicion_new")[0].global_position
+	pass # Replace with function body.
