@@ -85,7 +85,10 @@ position = Vector2( -391, 258 )
 position = Vector2( 613, 223 )
 
 [node name="Enemigo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 215, 1911 )
+position = Vector2( 96, 1458 )
+
+[node name="Enemigo2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1152, 2589 )
 
 [node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
 position = Vector2( 534, 321 )
