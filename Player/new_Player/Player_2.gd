@@ -29,7 +29,6 @@ func _physics_process(delta):
 	comienzo()
 	if colicion_enemigo == false:
 		move_con_paracaidas()
-		power_up()
 		movimiento = move_and_slide(movimiento, Vector2(0, -1))
 		if global_Var.nivel == 5:
 			if esta_suelo == false:
@@ -108,12 +107,12 @@ func move_con_paracaidas():
 					$AnimatedSprite.flip_h = false
 				
 	elif esta_suelo == true:
+		$AudioStreamPlayer.stop()
 		if global_Var.nivel < 5:
 			cantidad = 150
 			gravedad = 70
 			movimiento.x = 0
 			$AnimatedSprite.animation = "Move_suelo"
-			
 			if Input.is_action_pressed("ui_left"):
 				movimiento.x -= cantidad
 				$AnimatedSprite.flip_h = true
@@ -158,5 +157,63 @@ func tocar_bombas(): # como me equiboque ahora puse los efectos al reves para no
 
 
 func _on_detectar_enemigos_body_entered(body):
-	
+	if body.is_in_group("enemigo"):
+		colicion_enemigo = true
+		global_Var.pausa = true
+		get_tree().paused = true
+		global_Var.deteccion_enemigo = true
+		pass
+	pass # Replace with function body.
+
+
+func _on_deteccion_bombas_area_entered(area):
+	if area.is_in_group("bom_relentizar"):
+		bomba_relentizante = true
+		global_Var.tocar_bombas = 2
+		yield(get_tree().create_timer(1,0),"timeout")
+		global_Var.tocar_bombas = 1
+		bomba_relentizante = false
+	elif area.is_in_group("bom_congelar"):
+		bomba_congelante = true
+		global_Var.tocar_bombas = 3
+		yield(get_tree().create_timer(1,0),"timeout")
+		global_Var.tocar_bombas = 1
+		bomba_congelante = false
+	pass
+
+
+
+func _on_detectar_enemigos_area_entered(area):
+	if area.is_in_group("obtacuo_niv_4"):
+		global_Var.nivel = 5
+		print("hola_soy yo")
+	if area.is_in_group("enemigo"):
+		colicion_enemigo = true
+		global_Var.pausa = true
+		get_tree().paused = true
+		global_Var.deteccion_enemigo = true
+	pass # Replace with function body.
+
+
+func _on_nivel_4_coli_nuves_body_entered(body):
+	if body.is_in_group("obtacuo_niv_4"):
+		global_Var.nivel = 5
+	pass # Replace with function body.
+
+
+func _on_nivel_4_coli_nuves_body_exited(body):
+	if body.is_in_group("obtacuo_niv_4"):
+		esta_suelo = false
+		global_Var.nivel = 4
+	pass # Replace with function body.
+
+
+
+func _on_collicion_suelo_body_entered(body):
+	if global_Var.nivel < 5:
+		if tiene_paracaida == false:
+			colicion_enemigo = true
+			global_Var.pausa = true
+			get_tree().paused = true
+			global_Var.deteccion_enemigo = true
 	pass # Replace with function body.

@@ -1,14 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/Player/Paracaidista.png" type="Texture" id=1]
 [ext_resource path="res://Player/new_Player/Player_2.gd" type="Script" id=2]
 [ext_resource path="res://Audio/new/Sonido del jugador al usar la habilidad de bajar rapido.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Sprites/Player/Paracaidista sprite 4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Player/Paracaidista sprite 2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Player/Paracaidista quieto.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Player/Mientras esta saltando (1).png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9, 8.5 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "Idle_suelo",
 "speed": 5.0
@@ -18,18 +23,30 @@ animations = [ {
 "name": "Move_paracaida",
 "speed": 5.0
 }, {
-"frames": [  ],
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "Move_suelo",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Up",
+"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 21.5, 48.125 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 17.5, 21.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
 
 [node name="Player_2" type="KinematicBody2D" groups=["player"]]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -2 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -40,10 +57,32 @@ animation = "Move_paracaida"
 
 [node name="detectar_enemigos" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="detectar_enemigos"]
-shape = SubResource( 2 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="detectar_enemigos"]
+polygon = PoolVector2Array( -23, -32, -21, -23, -17, -14, -15, -4, -13, 9, 0, 9, 16, 9, 16, -10, 10, -30, 7, -43, 11, -57, 5, -71, -3, -81, -15, -82, -26, -78, -32, -68, -33, -56, -30, -42 )
+
+[node name="deteccion_bombas" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deteccion_bombas"]
+position = Vector2( -9.5, -36.875 )
+shape = SubResource( 4 )
+
+[node name="nivel_4_coli_nuves" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="nivel_4_coli_nuves"]
+position = Vector2( -7.5, -10.5 )
+shape = SubResource( 5 )
+
+[node name="collicion_suelo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collicion_suelo"]
+shape = SubResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[connection signal="area_entered" from="detectar_enemigos" to="." method="_on_detectar_enemigos_area_entered"]
 [connection signal="body_entered" from="detectar_enemigos" to="." method="_on_detectar_enemigos_body_entered"]
+[connection signal="area_entered" from="deteccion_bombas" to="." method="_on_deteccion_bombas_area_entered"]
+[connection signal="body_entered" from="nivel_4_coli_nuves" to="." method="_on_nivel_4_coli_nuves_body_entered"]
+[connection signal="body_exited" from="nivel_4_coli_nuves" to="." method="_on_nivel_4_coli_nuves_body_exited"]
+[connection signal="body_entered" from="collicion_suelo" to="." method="_on_collicion_suelo_body_entered"]

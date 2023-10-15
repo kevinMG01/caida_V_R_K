@@ -9,7 +9,7 @@
 [ext_resource path="res://meta/meta.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Control_pausa_N_3.gd" type="Script" id=8]
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Player/new_Player/Player_2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Audio/new/Nivel 3 y 4.mp3" type="AudioStream" id=11]
 [ext_resource path="res://Menu/muerte/reintentar_2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Sprites/Mundo/Nivel 4 nubes tapa vision.png" type="Texture" id=13]
