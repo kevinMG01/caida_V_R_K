@@ -3,6 +3,7 @@ extends Node2D
 
 var cartel_reintentar = preload("res://Menu/muerte/reintentar_2.tscn")
 var muerte = false
+
 func muertte():
 	if muerte == true:
 		var newcartel = cartel_reintentar.instance()

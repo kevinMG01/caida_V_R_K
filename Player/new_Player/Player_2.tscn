@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprites/Player/Paracaidista.png" type="Texture" id=1]
+[ext_resource path="res://Player/new_Player/Player_2.gd" type="Script" id=2]
+[ext_resource path="res://Audio/new/Sonido del jugador al usar la habilidad de bajar rapido.mp3" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "Idle_suelo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Move_paracaida",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Move_suelo",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="Player_2" type="KinematicBody2D" groups=["player"]]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -14, -90 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 3 )
+animation = "Move_paracaida"
+
+[node name="detectar_enemigos" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectar_enemigos"]
+shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="body_entered" from="detectar_enemigos" to="." method="_on_detectar_enemigos_body_entered"]
