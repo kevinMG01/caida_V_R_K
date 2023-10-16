@@ -83,7 +83,7 @@ animations = [ {
 "frames": [ ExtResource( 22 ), ExtResource( 21 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 20.0
 } ]
 
 [sub_resource type="SpriteFrames" id=21]
@@ -227,23 +227,24 @@ position = Vector2( -70, -3.00002 )
 scale = Vector2( 0.897059, 1.05128 )
 texture = ExtResource( 9 )
 
-[node name="otro avion" type="AnimatedSprite" parent="animacion_avion/LugarParaLasMonedasSprite1"]
-position = Vector2( 371.213, 181.683 )
-scale = Vector2( 0.537158, 0.519024 )
+[node name="otro_avion" type="AnimatedSprite" parent="animacion_avion"]
+position = Vector2( 263, 188 )
+scale = Vector2( 0.481862, 0.54564 )
 frames = SubResource( 22 )
+frame = 2
 flip_h = true
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="animacion_avion/LugarParaLasMonedasSprite1"]
-position = Vector2( -123.18, 6.659 )
-scale = Vector2( 0.231, 0.192 )
+[node name="Moneda" type="Sprite" parent="animacion_avion"]
+visible = false
+position = Vector2( -180.5, 4.00003 )
+scale = Vector2( 0.207579, 0.202207 )
+texture = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="animacion_avion"]
+position = Vector2( -180.5, 4.00045 )
+scale = Vector2( 0.207221, 0.201846 )
 frames = SubResource( 21 )
 animation = "Moneda"
-
-[node name="Moneda" type="Sprite" parent="animacion_avion/LugarParaLasMonedasSprite1"]
-visible = false
-position = Vector2( -123.18, 6.6586 )
-scale = Vector2( 0.231399, 0.192344 )
-texture = ExtResource( 5 )
 
 [node name="jugar" type="Button" parent="."]
 anchor_left = 0.5

@@ -5,7 +5,8 @@ func _ready():
 	$botones_inferiores/Biografia/biografia_menu.play()
 	$botones_inferiores/Tienda/tienda_menu.play()
 	$Salir/salir_menu.play()
-
+	$animacion_avion/otro_avion.playing = true
+	$animacion_avion/AnimatedSprite.playing = true
 
 func _on_jugar_pressed():
 	get_tree().change_scene("res://Mundo/Seleccion_Zona/seleccion_Zona.tscn")
