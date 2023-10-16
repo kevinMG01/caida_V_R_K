@@ -58,7 +58,7 @@ animation = "Move_paracaida"
 [node name="detectar_enemigos" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="detectar_enemigos"]
-polygon = PoolVector2Array( -23, -32, -21, -23, -17, -14, -15, -4, -13, 9, 0, 9, 16, 9, 16, -10, 10, -30, 7, -43, 11, -57, 5, -71, -3, -81, -15, -82, -26, -78, -32, -68, -33, -56, -30, -42 )
+polygon = PoolVector2Array( -23, -32, -21, -23, -17, -14, -15, -4, -13, 9, 0, 9, 16, 9, 16, -10, 10, -30, 5, -65, 30, -147, 28, -169, 6, -189, -21, -189, -47, -173, -59, -139, -26, -69, -29, -52 )
 
 [node name="deteccion_bombas" type="Area2D" parent="."]
 
