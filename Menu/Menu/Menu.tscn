@@ -1,22 +1,32 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=51 format=2]
 
-[ext_resource path="res://Sprites/Menu/Boton de Play.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Menu/Boton de Play v2.png" type="Texture" id=1]
 [ext_resource path="res://Menu/Menu/Menu.gd" type="Script" id=2]
 [ext_resource path="res://Sprites/Menu/nuevo/Mapa Principal  fondo.jpg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de inventario menu.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Menu/Moneda.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 1.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 1.png" type="Texture" id=7]
-[ext_resource path="res://Menu/Menu/Boton de Exit sprite 1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Menu/Boton de Salir sprite 1 (2).png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Menu/Lugar para las monedas sprite 1.png" type="Texture" id=9]
 [ext_resource path="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3" type="AudioStream" id=10]
 [ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 2.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 3.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 2.png" type="Texture" id=13]
-[ext_resource path="res://Menu/Menu/Boton de Exit sprite 2.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Menu/Moneda sprite 2.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Menu/Boton de tienda menu abandonada.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Menu/new_ingles/Boton de inventory menu cerrado.png" type="Texture" id=16]
 [ext_resource path="res://Menu/Menu/animacion_avion.gd" type="Script" id=17]
+[ext_resource path="res://Sprites/Menu/Moneda sprite 1.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Menu/Moneda sprite 3.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Menu/Avioncito 3.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Menu/Avioncito 2.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Menu/Avioncito 1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 10.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 5.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 8.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube gris 6.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 3.png" type="Texture" id=27]
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
@@ -52,12 +62,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="StyleBoxEmpty" id=10]
-
-[sub_resource type="StyleBoxEmpty" id=14]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
 [sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="StyleBoxEmpty" id=15]
@@ -66,13 +70,37 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=18]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 8 ) ],
 "loop": true,
 "name": "play_salir",
 "speed": 2.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=19]
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 21 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Moneda",
+"speed": 5.0
+} ]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StreamTexture" id=23]
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 39, 103.5 )
@@ -142,21 +170,6 @@ position = Vector2( 81, 68 )
 frames = SubResource( 16 )
 animation = "play_biografia"
 
-[node name="jugar" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -192.0
-margin_top = -176.0
-margin_right = 210.0
-margin_bottom = 4.0
-custom_styles/hover = SubResource( 10 )
-custom_styles/pressed = SubResource( 14 )
-custom_styles/normal = SubResource( 4 )
-icon = ExtResource( 1 )
-expand_icon = true
-
 [node name="Salir" type="Button" parent="."]
 margin_left = 828.0
 margin_top = 1.0
@@ -185,6 +198,23 @@ texture = ExtResource( 15 )
 position = Vector2( 557, 445 )
 texture = ExtResource( 16 )
 
+[node name="NubeBlanca10" type="Sprite" parent="."]
+position = Vector2( 811, 351 )
+scale = Vector2( 0.207579, 0.202207 )
+texture = ExtResource( 25 )
+
+[node name="NubeBlanca3" type="Sprite" parent="NubeBlanca10"]
+position = Vector2( -154.159, -989.083 )
+texture = ExtResource( 27 )
+
+[node name="NubeBlanca4" type="Sprite" parent="NubeBlanca10"]
+position = Vector2( -3246.96, -291.78 )
+texture = ExtResource( 27 )
+
+[node name="NubeBlanca5" type="Sprite" parent="NubeBlanca10"]
+position = Vector2( -3338.5, -1429.23 )
+texture = ExtResource( 27 )
+
 [node name="animacion_avion" type="KinematicBody2D" parent="."]
 position = Vector2( 4, 82 )
 script = ExtResource( 17 )
@@ -197,10 +227,75 @@ position = Vector2( -70, -3.00002 )
 scale = Vector2( 0.897059, 1.05128 )
 texture = ExtResource( 9 )
 
+[node name="otro avion" type="AnimatedSprite" parent="animacion_avion/LugarParaLasMonedasSprite1"]
+position = Vector2( 371.213, 181.683 )
+scale = Vector2( 0.537158, 0.519024 )
+frames = SubResource( 22 )
+flip_h = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="animacion_avion/LugarParaLasMonedasSprite1"]
+position = Vector2( -123.18, 6.659 )
+scale = Vector2( 0.231, 0.192 )
+frames = SubResource( 21 )
+animation = "Moneda"
+
 [node name="Moneda" type="Sprite" parent="animacion_avion/LugarParaLasMonedasSprite1"]
+visible = false
 position = Vector2( -123.18, 6.6586 )
 scale = Vector2( 0.231399, 0.192344 )
 texture = ExtResource( 5 )
+
+[node name="jugar" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -176.0
+margin_right = 210.0
+margin_bottom = 4.0
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 4 )
+icon = ExtResource( 1 )
+expand_icon = true
+
+[node name="Nube1" type="Sprite" parent="."]
+position = Vector2( -176.5, 86 )
+scale = Vector2( 0.207579, 0.202207 )
+texture = SubResource( 23 )
+
+[node name="NubeGris6" type="Sprite" parent="Nube1"]
+position = Vector2( 5489.49, 885.23 )
+texture = ExtResource( 26 )
+
+[node name="Nube2" type="Sprite" parent="."]
+position = Vector2( -176.5, 86 )
+scale = Vector2( 0.207579, 0.202207 )
+
+[node name="NubeGris5" type="Sprite" parent="Nube2"]
+position = Vector2( 1057.43, 1335.26 )
+texture = ExtResource( 24 )
+
+[node name="Nube3" type="Sprite" parent="."]
+position = Vector2( -176.5, 86 )
+scale = Vector2( 0.207579, 0.202207 )
+
+[node name="NubeBlanca10" type="Sprite" parent="Nube3"]
+position = Vector2( 2232.89, -29.6729 )
+texture = ExtResource( 23 )
+
+[node name="Nube4" type="Sprite" parent="."]
+position = Vector2( -176.5, 86 )
+scale = Vector2( 0.207579, 0.202207 )
+
+[node name="NubeBlanca8" type="Sprite" parent="Nube4"]
+position = Vector2( 1409.1, 519.269 )
+texture = ExtResource( 25 )
+
+[node name="NubeBlanca9" type="Sprite" parent="Nube4"]
+position = Vector2( 3167.47, 1186.9 )
+texture = ExtResource( 25 )
 
 [node name="re_spawn" type="Area2D" parent="."]
 position = Vector2( 1421, 111 )
@@ -215,6 +310,6 @@ position = Vector2( -332, 93 )
 [connection signal="pressed" from="botones_inferiores/Tienda" to="." method="_on_Tienda_pressed"]
 [connection signal="pressed" from="botones_inferiores/Inventario" to="." method="_on_Inventario_pressed"]
 [connection signal="pressed" from="botones_inferiores/Biografia" to="." method="_on_Biografia_pressed"]
-[connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="jugar" to="." method="_on_jugar_pressed"]
 [connection signal="body_entered" from="re_spawn" to="." method="_on_re_spawn_body_entered"]
