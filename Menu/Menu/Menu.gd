@@ -32,12 +32,11 @@ func _on_Biografia_pressed():
 
 
 
-
-
-
-
-
-
 func _on_re_spawn_body_entered(body):
-	$animacion_avion.position = get_tree().get_nodes_in_group("posicion_new")[0].global_position
+	if body.is_in_group("avion"):
+		$animacion_avion.position = get_tree().get_nodes_in_group("posicion_new")[0].global_position
+	if body.is_in_group("nu_1"):
+		$Nuves/nu_1.position = get_tree().get_nodes_in_group("pos_nu_1")[0].global_position
+	if body.is_in_group("nu_2"):
+		$Nuves/nu_2.position = get_tree().get_nodes_in_group("pos_nu_2")[0].global_position
 	pass # Replace with function body.
