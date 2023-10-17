@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Player/new_Player/Player_2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Mundo/Zonas/Creditos.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Mundo/Zonas/Creditos.jpg" type="Texture" id=4]
 [ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nube Horizontal.png" type="Texture" id=5]
+[ext_resource path="res://Enemigo/Enemigo_Ave/Ave.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 52.75, 133.25 )
@@ -16,11 +18,17 @@ extents = Vector2( 52.75, 133.25 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 3.6, 1.75 )
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 22, 21.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 22, 21.5 )
+
 [node name="Creditos" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Creditos" type="Sprite" parent="."]
-position = Vector2( -9084, -2466 )
+position = Vector2( -9067, -2576 )
 scale = Vector2( 1.1208, 1 )
 texture = ExtResource( 4 )
 offset = Vector2( 8709.4, 2920 )
@@ -92,7 +100,7 @@ scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 5 )
 
 [node name="Horizontal" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
-position = Vector2( 72, -773 )
+position = Vector2( 73, -736 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Horizontal"]
 position = Vector2( 26.5, 1935 )
@@ -105,7 +113,7 @@ scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 5 )
 
 [node name="Vertical2" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
-position = Vector2( 1180, -251 )
+position = Vector2( 1178, -303 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vertical2"]
 position = Vector2( 8, 1935.5 )
@@ -118,7 +126,7 @@ scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 5 )
 
 [node name="Horizontal2" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
-position = Vector2( 1159, -142 )
+position = Vector2( 1157, -108 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Horizontal2"]
 position = Vector2( 26.5, 1935 )
@@ -131,7 +139,7 @@ scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 5 )
 
 [node name="Horizontal3" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
-position = Vector2( 1074, -198 )
+position = Vector2( 1050, -145 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Horizontal3"]
 position = Vector2( 26.5, 1935 )
@@ -142,3 +150,41 @@ shape = SubResource( 4 )
 position = Vector2( 26, 1936 )
 scale = Vector2( 0.475701, 0.573986 )
 texture = ExtResource( 5 )
+
+[node name="Horizontal4" type="StaticBody2D" parent="." groups=["obtacuo_niv_4"]]
+position = Vector2( 1057, -260 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Horizontal4"]
+position = Vector2( 26.5, 1935 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 4 )
+
+[node name="NubeGris1" type="Sprite" parent="Horizontal4"]
+position = Vector2( 26, 1936 )
+scale = Vector2( 0.475701, 0.573986 )
+texture = ExtResource( 5 )
+
+[node name="Ave" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1177, 1728 )
+
+[node name="Enemigo" parent="." instance=ExtResource( 7 )]
+position = Vector2( 103, 1087 )
+
+[node name="dron" type="Node2D" parent="."]
+
+[node name="Position_1" type="Position2D" parent="dron" groups=["dron_1"]]
+position = Vector2( -14, 386 )
+
+[node name="ir_zona_seleccion" type="Area2D" parent="."]
+position = Vector2( 1237, 3277 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ir_zona_seleccion"]
+position = Vector2( -3, -2.5 )
+shape = SubResource( 5 )
+
+[node name="primera_ves" type="Area2D" parent="."]
+position = Vector2( 1237, 3278 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="primera_ves"]
+position = Vector2( -4, -3.5 )
+shape = SubResource( 6 )
