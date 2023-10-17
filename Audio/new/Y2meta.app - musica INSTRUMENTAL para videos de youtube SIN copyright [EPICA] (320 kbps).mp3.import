@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Y2meta.app - musica INSTRUMENTAL para videos de youtube SIN copyright [EPICA] (320 kbps).mp3-c4e1019c88012d0db788efd048ef1a3b.mp3str"
+
+[deps]
+
+source_file="res://Audio/new/Y2meta.app - musica INSTRUMENTAL para videos de youtube SIN copyright [EPICA] (320 kbps).mp3"
+dest_files=[ "res://.import/Y2meta.app - musica INSTRUMENTAL para videos de youtube SIN copyright [EPICA] (320 kbps).mp3-c4e1019c88012d0db788efd048ef1a3b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
