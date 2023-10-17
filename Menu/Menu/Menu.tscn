@@ -5,17 +5,14 @@
 [ext_resource path="res://Sprites/Menu/nuevo/Mapa Principal  fondo.jpg" type="Texture" id=3]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de inventario menu.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Menu/Moneda.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 1.png" type="Texture" id=6]
+[ext_resource path="res://Menu/Menu/Boton de inventario menu cerrado.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 1.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Menu/Boton de Salir sprite 1 (2).png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Menu/Lugar para las monedas sprite 1.png" type="Texture" id=9]
 [ext_resource path="res://Audio/MENU/Cyberpunk Moonlight Sonata v2 Menu.mp3" type="AudioStream" id=10]
-[ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 2.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Menu/new_ingles/Boton de Biography sprite 3.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/Menu/nuevo/Boton de tienda menu sprite 2.png" type="Texture" id=13]
 [ext_resource path="res://Sprites/Menu/Moneda sprite 2.png" type="Texture" id=14]
 [ext_resource path="res://Sprites/Menu/Boton de tienda menu abandonada.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Menu/new_ingles/Boton de inventory menu cerrado.png" type="Texture" id=16]
 [ext_resource path="res://Menu/Menu/animacion_avion.gd" type="Script" id=17]
 [ext_resource path="res://Sprites/Menu/Moneda sprite 1.png" type="Texture" id=18]
 [ext_resource path="res://Sprites/Menu/Moneda sprite 3.png" type="Texture" id=19]
@@ -29,6 +26,9 @@
 [ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 3.png" type="Texture" id=27]
 [ext_resource path="res://Menu/Menu/nu_1.gd" type="Script" id=28]
 [ext_resource path="res://Menu/Menu/nu_2.gd" type="Script" id=29]
+[ext_resource path="res://Menu/Menu/Boton de Biografia sprite 3.png" type="Texture" id=30]
+[ext_resource path="res://Menu/Menu/Boton de Biografia sprite 1.png" type="Texture" id=31]
+[ext_resource path="res://Menu/Menu/Boton de Biografia sprite 2.png" type="Texture" id=32]
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
@@ -58,7 +58,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=16]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "play_biografia",
 "speed": 5.0
@@ -206,7 +206,7 @@ texture = ExtResource( 15 )
 
 [node name="BotonDeInventoryMenuCerrado" type="Sprite" parent="."]
 position = Vector2( 557, 445 )
-texture = ExtResource( 16 )
+texture = ExtResource( 6 )
 
 [node name="NubeBlanca10" type="Sprite" parent="."]
 position = Vector2( 811, 351 )

@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="V_R_K_(CAIDA)"
+config/name="Paracaidismo Extremo"
 run/main_scene="res://Menu/Menu/Menu.tscn"
 config/icon="res://icon.png"
 
