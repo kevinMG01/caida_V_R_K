@@ -62,6 +62,7 @@ custom_styles/normal = SubResource( 9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+stream_paused = true
 
 [connection signal="pressed" from="reintentar" to="." method="_on_reintentar_pressed"]
 [connection signal="pressed" from="inventario" to="." method="_on_inventario_pressed"]

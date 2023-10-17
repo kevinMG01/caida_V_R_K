@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Musica del jefe Dron.mp3-dc8a5d52e6cfe4ad5f75633f5471f99a.mp3str"
+
+[deps]
+
+source_file="res://Audio/new/Musica del jefe Dron.mp3"
+dest_files=[ "res://.import/Musica del jefe Dron.mp3-dc8a5d52e6cfe4ad5f75633f5471f99a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

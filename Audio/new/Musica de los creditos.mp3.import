@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Musica de los creditos.mp3-683cef5cfd9692bdc355191236245b84.mp3str"
+
+[deps]
+
+source_file="res://Audio/new/Musica de los creditos.mp3"
+dest_files=[ "res://.import/Musica de los creditos.mp3-683cef5cfd9692bdc355191236245b84.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

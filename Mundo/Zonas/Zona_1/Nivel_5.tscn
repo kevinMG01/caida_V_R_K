@@ -25,7 +25,7 @@
 [ext_resource path="res://Sprites/Mundo/nubes/Nube blanca 1.png" type="Texture" id=23]
 [ext_resource path="res://Enemigo/Enemigo_Ave/Nube Vertical.png" type="Texture" id=24]
 [ext_resource path="res://Sprites/Mundo/nubes/Nube gris 4.png" type="Texture" id=25]
-[ext_resource path="res://Audio/new/Y2meta.app - musica INSTRUMENTAL para videos de youtube SIN copyright [EPICA] (320 kbps).mp3" type="AudioStream" id=26]
+[ext_resource path="res://Audio/new/Musica del jefe Dron.mp3" type="AudioStream" id=26]
 [ext_resource path="res://Sprites/Mundo/nubes/Nube gris 7.png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=4]
