@@ -227,19 +227,15 @@ margin_right = 888.0
 margin_bottom = 279.0
 rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "             GLOBO					
-    El globo es el primer
-	obstáculo delparacaidista,
-	la cual tiene la misión de
-encontrar al paracaidista
-para terminar el reto. 
+text = "             El Globo					
+   Es un globo modificado
+para evitar que llegues a la
+meta.
 
- La movilidad es limitada,
-no cuenta con un
-desplazamiento vertical
-como otros obstáculos y
- solo se desplaza en 
-horizontal.
+ Este enemigo se mueve
+de forma horizontal pero
+rapida y antes de que tu
+bajes.
 
 "
 
@@ -335,20 +331,17 @@ margin_right = 963.0
 margin_bottom = 259.0
 rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "                AVE
-  El ave es otro obstáculo
-que dificulta al
-paracaidista a completar
-el reto, su misión es
-encontrar al paracaidista
-y terminar el reto.
+text = "                Ave Azul
+ Este enemigo aparece para 
+atacarte porque pasas por
+su territorio.
 
-Cuenta con una movilidad
-tanto vertical como
-horizontal, la cual le ayuda
-a perseguir al paracaidista
-con más vigor.
-"
+ Sera un obstaculos mas difi-
+cil ya que podra bajar y per-
+seguirte de forma horizontal 
+y  vertical aunque su movi-
+miento es mas lento que 
+el del Globo."
 
 [node name="PajaroEnemigoSprite1" type="Sprite" parent="HBoxContainer/ScrollContainer/HBoxContainer/2/Control"]
 position = Vector2( 337, 248 )
@@ -446,16 +439,17 @@ margin_bottom = 228.0
 rect_scale = Vector2( 2, 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "                Dron
+text = "                Dron Misterioso
+Este Dron es muy peligro-
+so ya que enviara señales
+para que te ataquen
+misiles gelidos y de relen-
+tizacion para que el pueda
+destrur tu paracaidas y 
+mueras.
 
-
-El Dron es un obstáculo
- peculiar, el cual, aparece
- constantemente a la vez que
- invoca unos petardos para
- que no puedas completar el
- desafío.
-"
+No fue enviado para obsta-
+culizarte."
 
 [node name="Globo" type="PanelContainer" parent="HBoxContainer/ScrollContainer/HBoxContainer/dron/Control"]
 margin_left = 37.0
