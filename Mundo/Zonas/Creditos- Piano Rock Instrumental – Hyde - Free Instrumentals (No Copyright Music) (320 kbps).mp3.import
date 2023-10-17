@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Creditos- Piano Rock Instrumental – Hyde - Free Instrumentals (No Copyright Music) (320 kbps).mp3-ebeb36e22904ba1a7c5f3e51901ccbe5.mp3str"
+
+[deps]
+
+source_file="res://Mundo/Zonas/Creditos- Piano Rock Instrumental – Hyde - Free Instrumentals (No Copyright Music) (320 kbps).mp3"
+dest_files=[ "res://.import/Creditos- Piano Rock Instrumental – Hyde - Free Instrumentals (No Copyright Music) (320 kbps).mp3-ebeb36e22904ba1a7c5f3e51901ccbe5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
