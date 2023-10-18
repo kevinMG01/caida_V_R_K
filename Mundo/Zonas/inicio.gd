@@ -18,7 +18,8 @@ func _physics_process(delta):
 	if en_pantalla == 1 :
 		$AnimatedSprite.animation = "1"
 		pass
-	##if en_pantalla == 2:
+	if en_pantalla == 2:
+		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_2.tscn")
 		##get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
 
 		##pass
