@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_1.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/Mundo/Avion_fondo_derecha/Avion_fondo.tscn" type="PackedScene" id=4]
@@ -79,10 +79,10 @@ position = Vector2( 180, 995 )
 [node name="avion" type="Node2D" parent="."]
 
 [node name="Avion_Negro" parent="avion" instance=ExtResource( 1 )]
-position = Vector2( -391, 258 )
+position = Vector2( -391, 259 )
 
-[node name="Player" parent="avion" instance=ExtResource( 10 )]
-position = Vector2( 613, 223 )
+[node name="Player_2" parent="avion" instance=ExtResource( 10 )]
+position = Vector2( 612, 219 )
 
 [node name="Enemigo" parent="." instance=ExtResource( 2 )]
 position = Vector2( 96, 1458 )

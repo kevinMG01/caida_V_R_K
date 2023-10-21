@@ -14,9 +14,9 @@ func _physics_process(delta):
 
 func player():
 	if global_Var.camara_avion_apagado == true:
-		$avion/Player.visible = false
+		$avion/Player_2.visible = false
 	elif global_Var.camara_avion_apagado == false:
-		$avion/Player.visible = true
+		$avion/Player_2.visible = true
 	pass
 
 func _on_Detener_enemigo_body_entered(body):

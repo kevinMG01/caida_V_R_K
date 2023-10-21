@@ -14,7 +14,7 @@ func _process(delta):
 	
 
 func _on_reintentar_pressed():
-	get_tree().paused = false
+	
 	if global_Var.nivel == 1:
 		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
 	if global_Var.nivel == 2:
@@ -25,6 +25,7 @@ func _on_reintentar_pressed():
 		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_4.tscn")
 	if global_Var.nivel == 5:
 		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_5.tscn")
+	get_tree().paused = false
 	global_Var.deteccion_enemigo = false
 	visible = false
 	pass # Replace with function body.
