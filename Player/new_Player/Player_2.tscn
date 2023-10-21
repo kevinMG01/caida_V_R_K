@@ -79,7 +79,7 @@ shape = SubResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -35.455
+volume_db = -30.728
 
 [connection signal="area_entered" from="detectar_enemigos" to="." method="_on_detectar_enemigos_area_entered"]
 [connection signal="body_entered" from="detectar_enemigos" to="." method="_on_detectar_enemigos_body_entered"]

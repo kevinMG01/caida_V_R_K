@@ -20,6 +20,7 @@ extents = Vector2( 19, 9.99677 )
 extents = Vector2( 41, 9.76777 )
 
 [sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 64 )
 
 [node name="Nivel_1" type="Node2D"]
 script = ExtResource( 3 )
@@ -50,7 +51,7 @@ shape = SubResource( 2 )
 [node name="suelo" type="StaticBody2D" parent="pared"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared/suelo"]
-position = Vector2( 589, 3484 )
+position = Vector2( 589, 3516 )
 scale = Vector2( 70, 1 )
 shape = SubResource( 3 )
 
