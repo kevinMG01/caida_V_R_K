@@ -29,14 +29,14 @@ func _process(delta):
 
 
 func _on_ir_zona_seleccion_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		get_tree().change_scene("res://Mundo/Seleccion_Zona/seleccion_Zona.tscn")
 	pass 
 
 
 
 func _on_primera_ves_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		global_Var.niveles_desbloqueados += 1
 		get_tree().change_scene("res://Mundo/Seleccion_Zona/seleccion_Zona.tscn")
 

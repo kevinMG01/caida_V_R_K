@@ -63,6 +63,6 @@ func move():
 
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		comenzar_area = true
 		pass

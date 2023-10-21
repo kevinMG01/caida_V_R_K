@@ -3,7 +3,7 @@
 [ext_resource path="res://Sprites/Mundo/Nivel 5 fondo.jpg" type="Texture" id=1]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_5.gd" type="Script" id=2]
 [ext_resource path="res://Player/new_Player/Player_2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=4]
 [ext_resource path="res://meta/meta.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Control_pausa_N_5.gd" type="Script" id=6]
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=7]
@@ -161,21 +161,22 @@ scale = Vector2( 70, 10 )
 shape = SubResource( 3 )
 
 [node name="avion" type="Node2D" parent="."]
+position = Vector2( 0, -1 )
 
 [node name="Avion_Negro" parent="avion" instance=ExtResource( 4 )]
-position = Vector2( -354, 294 )
+position = Vector2( -352, 296 )
 
-[node name="Player" parent="avion" instance=ExtResource( 3 )]
-position = Vector2( 658, 290 )
+[node name="Player_2" parent="avion" instance=ExtResource( 3 )]
+position = Vector2( 656, 291 )
 
-[node name="Position_bomba" type="Position2D" parent="avion/Player" groups=["possssssssssss"]]
-position = Vector2( -661, -1250 )
+[node name="Position2D" type="Position2D" parent="avion/Player_2" groups=["player_pos"]]
+position = Vector2( -59, -970 )
 
 [node name="gravity_bomva" type="Node2D" parent="."]
 position = Vector2( 0, -253 )
 
 [node name="gravity_bomvas" type="KinematicBody2D" parent="gravity_bomva"]
-position = Vector2( -272, 568 )
+position = Vector2( -785, 499 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gravity_bomva/gravity_bomvas"]

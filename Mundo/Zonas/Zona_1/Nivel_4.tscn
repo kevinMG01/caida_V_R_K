@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_4.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=2]
 [ext_resource path="res://meta/meta.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Mundo/Zonas/Zona_1/Control_pausa_N_4.gd" type="Script" id=4]
 [ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=5]
@@ -127,10 +127,10 @@ position = Vector2( 444, 10530 )
 [node name="avion" type="Node2D" parent="."]
 
 [node name="Avion_Negro" parent="avion" instance=ExtResource( 2 )]
-position = Vector2( -273, 300 )
+position = Vector2( -272, 300 )
 
-[node name="Player" parent="avion" instance=ExtResource( 6 )]
-position = Vector2( 736, 321 )
+[node name="Player_2" parent="avion" instance=ExtResource( 6 )]
+position = Vector2( 737, 322 )
 
 [node name="Control_pausa_N_4" type="Node2D" parent="."]
 pause_mode = 2

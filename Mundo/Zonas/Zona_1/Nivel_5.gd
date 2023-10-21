@@ -32,7 +32,8 @@ func _ready():
 
 func _physics_process(delta):
 	if global_Var.detener_dron == false:
-		$gravity_bomva.position = get_tree().get_nodes_in_group("possssssssssss")[0].global_position
+		$gravity_bomva.position = get_tree().get_nodes_in_group("player_pos")[0].global_position
+		pass
 	elif global_Var.detener_dron == true:
 		$gravity_bomva.position = get_tree().get_nodes_in_group("Position_fin_bomba")[0].global_position
 	player()
@@ -43,9 +44,9 @@ func _physics_process(delta):
 
 func player():
 	if global_Var.camara_avion_apagado == true:
-		$avion/Player.visible = false
+		$avion/Player_2.visible = false
 	elif global_Var.camara_avion_apagado == false:
-		$avion/Player.visible = true
+		$avion/Player_2.visible = true
 
 func _on_Detener_enemigo_body_entered(body):
 	if body.is_in_group("enemigo"):
@@ -93,7 +94,7 @@ func spawn_bombas_congelar(): # para no vorar ajajajajaj
 			newbomba3.global_position = get_tree().get_nodes_in_group(posicion_actual_comgelar[2])[0].global_position
 
 func _on_deteccion_dron_1_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		spawn_dron = true
 		posicion_dron += 1 
 		$Timer.start()
@@ -116,12 +117,12 @@ func _on_relentizar_timeout(): # jajajajajajaj era congelar
 	pass 
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		global_Var.detener_dron = true
 	pass 
 
 func _on_tocar_suelo_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		global_Var.nivel = 4
 	pass 
 

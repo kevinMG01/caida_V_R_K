@@ -1,0 +1,117 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Mundo/Zonas/Zona_1/Contro_pausa_N_1.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mundo/Nivel 4 nubes tapa vision.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Fondo_Niveles/zona_1/Nivel 1 fondo.jpg" type="Texture" id=3]
+[ext_resource path="res://Audio/new/Nivel 1 y 2.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Player/new_Player/Player_2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://meta/meta.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/Mundo/Avion_fondo_derecha/Avion_fondo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Menu/muerte/reintentar_2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Menu/Interfas_pantalla/Interfas_pantalla.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Mundo/Zonas/Zona_1/new_nivel_1/New_nivel_1.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 19, 9.99677 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41, 9.76777 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[node name="New_nivel_1" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="Nivel1Fondo" type="Sprite" parent="."]
+position = Vector2( 624, 1750 )
+texture = ExtResource( 3 )
+
+[node name="meta" parent="." instance=ExtResource( 8 )]
+position = Vector2( 122, 2866 )
+
+[node name="pared" type="Node2D" parent="."]
+
+[node name="iz" type="StaticBody2D" parent="pared"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared/iz"]
+position = Vector2( 20, 1912.5 )
+scale = Vector2( 1, 155 )
+shape = SubResource( 1 )
+
+[node name="de" type="StaticBody2D" parent="pared"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared/de"]
+position = Vector2( 1255, 1948 )
+scale = Vector2( 1, 155 )
+shape = SubResource( 2 )
+
+[node name="suelo" type="StaticBody2D" parent="pared"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared/suelo"]
+position = Vector2( 589, 3484 )
+scale = Vector2( 70, 1 )
+shape = SubResource( 3 )
+
+[node name="Contro_pausa_N_1" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="Camera_nivel_1" type="Camera2D" parent="Contro_pausa_N_1" groups=["camara"]]
+pause_mode = 2
+position = Vector2( 534, 320 )
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1250
+limit_bottom = 3500
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_bottom = 0.0
+editor_draw_drag_margin = true
+
+[node name="avion_derecha" parent="." instance=ExtResource( 9 )]
+position = Vector2( 180, 995 )
+
+[node name="avion" type="Node2D" parent="."]
+position = Vector2( 0, 40 )
+
+[node name="Avion_Negro" parent="avion" instance=ExtResource( 6 )]
+position = Vector2( -339, 225 )
+
+[node name="Player_2" parent="avion" instance=ExtResource( 5 )]
+position = Vector2( 661, 190 )
+
+[node name="Enemigo" parent="." instance=ExtResource( 7 )]
+position = Vector2( 96, 1458 )
+
+[node name="Enemigo2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1152, 2589 )
+
+[node name="pisicion_pausa" type="Position2D" parent="." groups=["pausa"]]
+position = Vector2( 534, 321 )
+
+[node name="Nivel4NubesTapaVision" type="Sprite" parent="."]
+position = Vector2( 652, 820 )
+scale = Vector2( 1.0768, 1 )
+texture = ExtResource( 2 )
+
+[node name="Interfas_pantalla" parent="." instance=ExtResource( 11 )]
+margin_left = 42.0
+margin_top = -5.0
+margin_right = 42.0
+margin_bottom = -5.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -25.0
+autoplay = true
+
+[node name="reintentar_2" parent="." instance=ExtResource( 10 )]
+margin_left = 14.0
+margin_top = 20.0
+margin_right = 14.0
+margin_bottom = 20.0

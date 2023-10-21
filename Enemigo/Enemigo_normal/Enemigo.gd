@@ -25,7 +25,7 @@ func deteccion():
 
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		jugador = body
 
 func _on_Area2D_body_exited(body):
@@ -35,7 +35,7 @@ func _on_Area2D_body_exited(body):
 
 
 func _on_muerte_payer_body_entered(body):  # ya no es muerte de player sino que es la muerte del globo
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		$AnimatedSprite.animation = "explotar"
 		$AudioStreamPlayer2D.play()
 		yield(get_tree().create_timer(1),"timeout")

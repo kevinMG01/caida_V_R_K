@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Mundo/Zonas/Zona_1/Nivel_3.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_Negro.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/Mundo/Avion_negro/Avion_negro.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sprites/Mundo/Nivel 3 fondo.jpg" type="Texture" id=3]
 [ext_resource path="res://Enemigo/Enemigo_Ave/Ave.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enemigo/Enemigo_normal/Enemigo.tscn" type="PackedScene" id=5]
@@ -98,11 +98,12 @@ shape = SubResource( 3 )
 position = Vector2( 48, 537 )
 
 [node name="avion" type="Node2D" parent="."]
+position = Vector2( -4, 1 )
 
 [node name="Avion_Negro" parent="avion" instance=ExtResource( 2 )]
-position = Vector2( -313, 286 )
+position = Vector2( -311, 285 )
 
-[node name="Player" parent="avion" instance=ExtResource( 10 )]
+[node name="Player_2" parent="avion" instance=ExtResource( 10 )]
 position = Vector2( 691, 286 )
 
 [node name="Position_pausa" type="Position2D" parent="." groups=["pausa"]]

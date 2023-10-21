@@ -19,13 +19,13 @@ func _physics_process(delta):
 		$AnimatedSprite.animation = "1"
 		pass
 	if en_pantalla == 2:
-		get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
-		##get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
+		#get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
+		get_tree().change_scene("res://Mundo/Zonas/Zona_1/new_nivel_1/New_nivel_1.tscn")
 
 		##pass
 
 
 
 func _on_enter_pressed():
-	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
+	get_tree().change_scene("res://Mundo/Zonas/Zona_1/new_nivel_1/New_nivel_1.tscn")
 	pass # Replace with function body.

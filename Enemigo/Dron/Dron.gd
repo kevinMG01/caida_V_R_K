@@ -59,6 +59,6 @@ func spawn_bomba():
 
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		jugador_libre = body
 	pass # Replace with function body.

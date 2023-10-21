@@ -45,7 +45,7 @@ func deteccion_libre():
 
 
 func _on_movimiento_laterales_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		jugador = body
 	pass 
 
@@ -56,7 +56,7 @@ func _on_movimiento_laterales_body_exited(body):
 
 
 func _on_movimoento_libre_body_entered(body):
-	if body.get_name() == "Player":
+	if body.is_in_group("player"):
 		jugador_libre = body
 	
 	pass # Replace with function body.
