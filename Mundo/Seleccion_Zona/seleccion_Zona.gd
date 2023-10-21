@@ -87,7 +87,7 @@ func niveles_bloqueados():
 #Botones de niveles
 func _on_Zona_1_N_1_pressed():
 	##get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_1.tscn")
-	get_tree().change_scene("res://Mundo/Zonas/Zona_1/Nivel_2.tscn")
+	get_tree().change_scene("res://Mundo/Zonas/inicio.tscn")
 	pass
 
 
